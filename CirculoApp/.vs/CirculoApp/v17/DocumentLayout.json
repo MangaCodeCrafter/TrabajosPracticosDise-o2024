@@ -1,0 +1,68 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\CirculoApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C220C9D9-57D5-4C2E-AEDB-CDBA07DEB0C3}|CirculoApp\\CirculoApp.csproj|c:\\users\\mym\\desktop\\escritorio\\escuela\\dise\u00F1o y desarrollo\\circuloapp\\circuloapp\\fcirculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C220C9D9-57D5-4C2E-AEDB-CDBA07DEB0C3}|CirculoApp\\CirculoApp.csproj|solutionrelative:circuloapp\\fcirculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C220C9D9-57D5-4C2E-AEDB-CDBA07DEB0C3}|CirculoApp\\CirculoApp.csproj|C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\CirculoApp\\circuloapp\\circulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C220C9D9-57D5-4C2E-AEDB-CDBA07DEB0C3}|CirculoApp\\CirculoApp.csproj|solutionrelative:circuloapp\\circulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C220C9D9-57D5-4C2E-AEDB-CDBA07DEB0C3}|CirculoApp\\CirculoApp.csproj|C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\CirculoApp\\circuloapp\\fcirculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{C220C9D9-57D5-4C2E-AEDB-CDBA07DEB0C3}|CirculoApp\\CirculoApp.csproj|solutionrelative:circuloapp\\fcirculo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Circulo.cs",
+              "DocumentMoniker": "C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\CirculoApp\\CirculoApp\\Circulo.cs",
+              "RelativeDocumentMoniker": "CirculoApp\\Circulo.cs",
+              "ToolTip": "C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\CirculoApp\\CirculoApp\\Circulo.cs",
+              "RelativeToolTip": "CirculoApp\\Circulo.cs",
+              "ViewState": "AQIAADsAAAAAAAAAAAAAAFkAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T20:29:02.948Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "fCirculo.cs",
+              "DocumentMoniker": "C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\CirculoApp\\CirculoApp\\fCirculo.cs",
+              "RelativeDocumentMoniker": "CirculoApp\\fCirculo.cs",
+              "ToolTip": "C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\CirculoApp\\CirculoApp\\fCirculo.cs",
+              "RelativeToolTip": "CirculoApp\\fCirculo.cs",
+              "ViewState": "AQIAAKEAAAAAAAAAAAAAALIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T18:51:07.754Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "fCirculo.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\CirculoApp\\CirculoApp\\fCirculo.cs",
+              "RelativeDocumentMoniker": "CirculoApp\\fCirculo.cs",
+              "ToolTip": "C:\\Users\\rocaj\\OneDrive\\Documentos\\.Comercio\\Dise\u00F1o\\Pr\u00E1ctica\\CirculoApp\\CirculoApp\\fCirculo.cs [Dise\u00F1o]",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\rocaj\\OneDrive\\Documentos\\.Comercio\\Dise\u00F1o\\Pr\u00E1ctica\\CirculoApp\\CirculoApp\\fCirculo.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-14T18:13:37.074Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

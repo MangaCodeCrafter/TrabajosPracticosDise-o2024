@@ -1,0 +1,30 @@
+C:\Users\rocaj\OneDrive\Documentos\.Comercio\Diseño\Práctica\RectanguloApp\RectanguloApp\bin\Debug\RectanguloApp.exe.config
+C:\Users\rocaj\OneDrive\Documentos\.Comercio\Diseño\Práctica\RectanguloApp\RectanguloApp\bin\Debug\RectanguloApp.exe
+C:\Users\rocaj\OneDrive\Documentos\.Comercio\Diseño\Práctica\RectanguloApp\RectanguloApp\bin\Debug\RectanguloApp.pdb
+C:\Users\rocaj\OneDrive\Documentos\.Comercio\Diseño\Práctica\RectanguloApp\RectanguloApp\obj\Debug\RectanguloApp.csproj.AssemblyReference.cache
+C:\Users\rocaj\OneDrive\Documentos\.Comercio\Diseño\Práctica\RectanguloApp\RectanguloApp\obj\Debug\RectanguloApp.fRectangulo.resources
+C:\Users\rocaj\OneDrive\Documentos\.Comercio\Diseño\Práctica\RectanguloApp\RectanguloApp\obj\Debug\RectanguloApp.Properties.Resources.resources
+C:\Users\rocaj\OneDrive\Documentos\.Comercio\Diseño\Práctica\RectanguloApp\RectanguloApp\obj\Debug\RectanguloApp.csproj.GenerateResource.cache
+C:\Users\rocaj\OneDrive\Documentos\.Comercio\Diseño\Práctica\RectanguloApp\RectanguloApp\obj\Debug\RectanguloApp.csproj.CoreCompileInputs.cache
+C:\Users\rocaj\OneDrive\Documentos\.Comercio\Diseño\Práctica\RectanguloApp\RectanguloApp\obj\Debug\RectanguloApp.exe
+C:\Users\rocaj\OneDrive\Documentos\.Comercio\Diseño\Práctica\RectanguloApp\RectanguloApp\obj\Debug\RectanguloApp.pdb
+C:\Users\manga\OneDrive\Escritorio\RectanguloApp\RectanguloApp\bin\Debug\RectanguloApp.exe.config
+C:\Users\manga\OneDrive\Escritorio\RectanguloApp\RectanguloApp\bin\Debug\RectanguloApp.exe
+C:\Users\manga\OneDrive\Escritorio\RectanguloApp\RectanguloApp\bin\Debug\RectanguloApp.pdb
+C:\Users\manga\OneDrive\Escritorio\RectanguloApp\RectanguloApp\obj\Debug\RectanguloApp.csproj.AssemblyReference.cache
+C:\Users\manga\OneDrive\Escritorio\RectanguloApp\RectanguloApp\obj\Debug\RectanguloApp.fRectangulo.resources
+C:\Users\manga\OneDrive\Escritorio\RectanguloApp\RectanguloApp\obj\Debug\RectanguloApp.Properties.Resources.resources
+C:\Users\manga\OneDrive\Escritorio\RectanguloApp\RectanguloApp\obj\Debug\RectanguloApp.csproj.GenerateResource.cache
+C:\Users\manga\OneDrive\Escritorio\RectanguloApp\RectanguloApp\obj\Debug\RectanguloApp.csproj.CoreCompileInputs.cache
+C:\Users\manga\OneDrive\Escritorio\RectanguloApp\RectanguloApp\obj\Debug\RectanguloApp.exe
+C:\Users\manga\OneDrive\Escritorio\RectanguloApp\RectanguloApp\obj\Debug\RectanguloApp.pdb
+C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\RectanguloApp\RectanguloApp\bin\Debug\RectanguloApp.exe.config
+C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\RectanguloApp\RectanguloApp\bin\Debug\RectanguloApp.exe
+C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\RectanguloApp\RectanguloApp\bin\Debug\RectanguloApp.pdb
+C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\RectanguloApp\RectanguloApp\obj\Debug\RectanguloApp.csproj.AssemblyReference.cache
+C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\RectanguloApp\RectanguloApp\obj\Debug\RectanguloApp.fRectangulo.resources
+C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\RectanguloApp\RectanguloApp\obj\Debug\RectanguloApp.Properties.Resources.resources
+C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\RectanguloApp\RectanguloApp\obj\Debug\RectanguloApp.csproj.GenerateResource.cache
+C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\RectanguloApp\RectanguloApp\obj\Debug\RectanguloApp.csproj.CoreCompileInputs.cache
+C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\RectanguloApp\RectanguloApp\obj\Debug\RectanguloApp.exe
+C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\RectanguloApp\RectanguloApp\obj\Debug\RectanguloApp.pdb

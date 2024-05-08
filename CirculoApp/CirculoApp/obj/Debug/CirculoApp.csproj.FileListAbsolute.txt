@@ -1,0 +1,50 @@
+C:\Users\rocaj\OneDrive\Documentos\.Comercio\Diseño\Práctica\CirculoApp\CirculoApp\bin\Debug\CirculoApp.exe.config
+C:\Users\rocaj\OneDrive\Documentos\.Comercio\Diseño\Práctica\CirculoApp\CirculoApp\bin\Debug\CirculoApp.exe
+C:\Users\rocaj\OneDrive\Documentos\.Comercio\Diseño\Práctica\CirculoApp\CirculoApp\bin\Debug\CirculoApp.pdb
+C:\Users\rocaj\OneDrive\Documentos\.Comercio\Diseño\Práctica\CirculoApp\CirculoApp\obj\Debug\CirculoApp.csproj.AssemblyReference.cache
+C:\Users\rocaj\OneDrive\Documentos\.Comercio\Diseño\Práctica\CirculoApp\CirculoApp\obj\Debug\CirculoApp.fCirculo.resources
+C:\Users\rocaj\OneDrive\Documentos\.Comercio\Diseño\Práctica\CirculoApp\CirculoApp\obj\Debug\CirculoApp.Properties.Resources.resources
+C:\Users\rocaj\OneDrive\Documentos\.Comercio\Diseño\Práctica\CirculoApp\CirculoApp\obj\Debug\CirculoApp.csproj.GenerateResource.cache
+C:\Users\rocaj\OneDrive\Documentos\.Comercio\Diseño\Práctica\CirculoApp\CirculoApp\obj\Debug\CirculoApp.csproj.CoreCompileInputs.cache
+C:\Users\rocaj\OneDrive\Documentos\.Comercio\Diseño\Práctica\CirculoApp\CirculoApp\obj\Debug\CirculoApp.exe
+C:\Users\rocaj\OneDrive\Documentos\.Comercio\Diseño\Práctica\CirculoApp\CirculoApp\obj\Debug\CirculoApp.pdb
+C:\Users\manga\OneDrive\Escritorio\CirculoApp\CirculoApp\bin\Debug\CirculoApp.exe.config
+C:\Users\manga\OneDrive\Escritorio\CirculoApp\CirculoApp\bin\Debug\CirculoApp.exe
+C:\Users\manga\OneDrive\Escritorio\CirculoApp\CirculoApp\bin\Debug\CirculoApp.pdb
+C:\Users\manga\OneDrive\Escritorio\CirculoApp\CirculoApp\obj\Debug\CirculoApp.csproj.AssemblyReference.cache
+C:\Users\manga\OneDrive\Escritorio\CirculoApp\CirculoApp\obj\Debug\CirculoApp.fCirculo.resources
+C:\Users\manga\OneDrive\Escritorio\CirculoApp\CirculoApp\obj\Debug\CirculoApp.Properties.Resources.resources
+C:\Users\manga\OneDrive\Escritorio\CirculoApp\CirculoApp\obj\Debug\CirculoApp.csproj.GenerateResource.cache
+C:\Users\manga\OneDrive\Escritorio\CirculoApp\CirculoApp\obj\Debug\CirculoApp.csproj.CoreCompileInputs.cache
+C:\Users\manga\OneDrive\Escritorio\CirculoApp\CirculoApp\obj\Debug\CirculoApp.exe
+C:\Users\manga\OneDrive\Escritorio\CirculoApp\CirculoApp\obj\Debug\CirculoApp.pdb
+C:\Users\rocaj\Downloads\CirculoApp\CirculoApp\bin\Debug\CirculoApp.exe.config
+C:\Users\rocaj\Downloads\CirculoApp\CirculoApp\bin\Debug\CirculoApp.exe
+C:\Users\rocaj\Downloads\CirculoApp\CirculoApp\bin\Debug\CirculoApp.pdb
+C:\Users\rocaj\Downloads\CirculoApp\CirculoApp\obj\Debug\CirculoApp.csproj.AssemblyReference.cache
+C:\Users\rocaj\Downloads\CirculoApp\CirculoApp\obj\Debug\CirculoApp.fCirculo.resources
+C:\Users\rocaj\Downloads\CirculoApp\CirculoApp\obj\Debug\CirculoApp.Properties.Resources.resources
+C:\Users\rocaj\Downloads\CirculoApp\CirculoApp\obj\Debug\CirculoApp.csproj.GenerateResource.cache
+C:\Users\rocaj\Downloads\CirculoApp\CirculoApp\obj\Debug\CirculoApp.csproj.CoreCompileInputs.cache
+C:\Users\rocaj\Downloads\CirculoApp\CirculoApp\obj\Debug\CirculoApp.exe
+C:\Users\rocaj\Downloads\CirculoApp\CirculoApp\obj\Debug\CirculoApp.pdb
+D:\Escri-dv\TEC COM ADM\2024\dis y des\Manguin\CirculoApp\CirculoApp\CirculoApp\bin\Debug\CirculoApp.exe.config
+D:\Escri-dv\TEC COM ADM\2024\dis y des\Manguin\CirculoApp\CirculoApp\CirculoApp\bin\Debug\CirculoApp.exe
+D:\Escri-dv\TEC COM ADM\2024\dis y des\Manguin\CirculoApp\CirculoApp\CirculoApp\bin\Debug\CirculoApp.pdb
+D:\Escri-dv\TEC COM ADM\2024\dis y des\Manguin\CirculoApp\CirculoApp\CirculoApp\obj\Debug\CirculoApp.csproj.AssemblyReference.cache
+D:\Escri-dv\TEC COM ADM\2024\dis y des\Manguin\CirculoApp\CirculoApp\CirculoApp\obj\Debug\CirculoApp.fCirculo.resources
+D:\Escri-dv\TEC COM ADM\2024\dis y des\Manguin\CirculoApp\CirculoApp\CirculoApp\obj\Debug\CirculoApp.Properties.Resources.resources
+D:\Escri-dv\TEC COM ADM\2024\dis y des\Manguin\CirculoApp\CirculoApp\CirculoApp\obj\Debug\CirculoApp.csproj.GenerateResource.cache
+D:\Escri-dv\TEC COM ADM\2024\dis y des\Manguin\CirculoApp\CirculoApp\CirculoApp\obj\Debug\CirculoApp.csproj.CoreCompileInputs.cache
+D:\Escri-dv\TEC COM ADM\2024\dis y des\Manguin\CirculoApp\CirculoApp\CirculoApp\obj\Debug\CirculoApp.exe
+D:\Escri-dv\TEC COM ADM\2024\dis y des\Manguin\CirculoApp\CirculoApp\CirculoApp\obj\Debug\CirculoApp.pdb
+C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\CirculoApp\CirculoApp\bin\Debug\CirculoApp.exe.config
+C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\CirculoApp\CirculoApp\bin\Debug\CirculoApp.exe
+C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\CirculoApp\CirculoApp\bin\Debug\CirculoApp.pdb
+C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\CirculoApp\CirculoApp\obj\Debug\CirculoApp.csproj.AssemblyReference.cache
+C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\CirculoApp\CirculoApp\obj\Debug\CirculoApp.fCirculo.resources
+C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\CirculoApp\CirculoApp\obj\Debug\CirculoApp.Properties.Resources.resources
+C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\CirculoApp\CirculoApp\obj\Debug\CirculoApp.csproj.GenerateResource.cache
+C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\CirculoApp\CirculoApp\obj\Debug\CirculoApp.csproj.CoreCompileInputs.cache
+C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\CirculoApp\CirculoApp\obj\Debug\CirculoApp.exe
+C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\CirculoApp\CirculoApp\obj\Debug\CirculoApp.pdb
