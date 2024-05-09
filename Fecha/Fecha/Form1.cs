@@ -151,40 +151,33 @@ namespace Fecha
         }
         private void bDiasEntre_Click(object sender, EventArgs e)
         {
+            int dia = (mtDiasEntreFechas.MaskCompleted) ? Convert.ToInt32(mtDiasEntreFechas.Text.Substring(0, 2)) : 30;
+            int mes = (mtDiasEntreFechas.MaskCompleted) ? Convert.ToInt32(mtDiasEntreFechas.Text.Substring(3, 2)) : 2;
+            int año = (mtDiasEntreFechas.MaskCompleted) ? Convert.ToInt32(mtDiasEntreFechas.Text.Substring(6, 4)) : 2000;
+            Fecha fecha = new Fecha(dia, mes, año);
+
             int index = lbFechas.SelectedIndex;
 
-            if (index >= 0)
+            if(index < 0)
             {
-                if (mtDiasEntreFechas.MaskCompleted)
-                {
-                    int dia = Convert.ToInt32(mtDiasEntreFechas.Text.Substring(0, 2));
-                    int mes = Convert.ToInt32(mtDiasEntreFechas.Text.Substring(3, 2));
-                    int año = Convert.ToInt32(mtDiasEntreFechas.Text.Substring(6, 4));
-
-                    if(Fecha.esFechaValida(dia, mes, año))
-                    {
-                        Fecha fechaComparar = new Fecha(dia, mes, año);
-                        int cantidadDias;
-
-                        cantidadDias = fechaComparar.mayorQue(aFechas[index]) ? fechaComparar.contarDiasEntre(aFechas[index]) : aFechas[index].contarDiasEntre(fechaComparar);
-                        MessageBox.Show($"Entre la fecha {aFechas[index].mostrar()} y la fecha {fechaComparar.mostrar()} hay {cantidadDias}.", "Comparar", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Ingrese una fecha valida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        mtDiasEntreFechas.Focus();
-                    }
-
-                }
-                else
-                {
-                    MessageBox.Show("Debe completar el campo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    mtDiasEntreFechas.Focus();
-                }
+                MessageBox.Show("Debe seleccionar una fecha", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (!mtDiasEntreFechas.MaskCompleted)
+            {
+                MessageBox.Show("Debe completar el campo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                mtDiasEntreFechas.Focus();
+            }
+            else if (!Fecha.esFechaValida(dia, mes, año))
+            {
+                MessageBox.Show("Ingrese una fecha valida", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                mtDiasEntreFechas.Focus();
             }
             else
             {
-                MessageBox.Show("Debe seleccionar una fecha", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                int cantidadDias;
+
+                cantidadDias = fecha.mayorQue(aFechas[index]) ? fecha.contarDiasEntre(aFechas[index]) : aFechas[index].contarDiasEntre(fecha);
+                MessageBox.Show($"Entre la fecha {aFechas[index].mostrar()} y la fecha {fecha.mostrar()} hay {cantidadDias}.", "Comparar", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

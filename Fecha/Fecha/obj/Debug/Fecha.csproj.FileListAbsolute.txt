@@ -18,3 +18,13 @@ C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\Fecha\Fecha\obj\Deb
 C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\Fecha\Fecha\obj\Debug\Fecha.csproj.CoreCompileInputs.cache
 C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\Fecha\Fecha\obj\Debug\Fecha.exe
 C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\Fecha\Fecha\obj\Debug\Fecha.pdb
+C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\Trabajos\Fecha\Fecha\bin\Debug\Fecha.exe.config
+C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\Trabajos\Fecha\Fecha\bin\Debug\Fecha.exe
+C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\Trabajos\Fecha\Fecha\bin\Debug\Fecha.pdb
+C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\Trabajos\Fecha\Fecha\obj\Debug\Fecha.csproj.AssemblyReference.cache
+C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\Trabajos\Fecha\Fecha\obj\Debug\Fecha.Form1.resources
+C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\Trabajos\Fecha\Fecha\obj\Debug\Fecha.Properties.Resources.resources
+C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\Trabajos\Fecha\Fecha\obj\Debug\Fecha.csproj.GenerateResource.cache
+C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\Trabajos\Fecha\Fecha\obj\Debug\Fecha.csproj.CoreCompileInputs.cache
+C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\Trabajos\Fecha\Fecha\obj\Debug\Fecha.exe
+C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\Trabajos\Fecha\Fecha\obj\Debug\Fecha.pdb
