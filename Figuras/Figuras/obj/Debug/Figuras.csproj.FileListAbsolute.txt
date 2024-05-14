@@ -1,0 +1,10 @@
+C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\Trabajos\Figuras\Figuras\bin\Debug\Figuras.exe.config
+C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\Trabajos\Figuras\Figuras\bin\Debug\Figuras.exe
+C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\Trabajos\Figuras\Figuras\bin\Debug\Figuras.pdb
+C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\Trabajos\Figuras\Figuras\obj\Debug\Figuras.csproj.AssemblyReference.cache
+C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\Trabajos\Figuras\Figuras\obj\Debug\Figuras.fFiguras.resources
+C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\Trabajos\Figuras\Figuras\obj\Debug\Figuras.Properties.Resources.resources
+C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\Trabajos\Figuras\Figuras\obj\Debug\Figuras.csproj.GenerateResource.cache
+C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\Trabajos\Figuras\Figuras\obj\Debug\Figuras.csproj.CoreCompileInputs.cache
+C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\Trabajos\Figuras\Figuras\obj\Debug\Figuras.exe
+C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\Trabajos\Figuras\Figuras\obj\Debug\Figuras.pdb
