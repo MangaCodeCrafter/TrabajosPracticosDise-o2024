@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lLegajo = new System.Windows.Forms.Label();
             this.lCarrera = new System.Windows.Forms.Label();
             this.lFechaIngreso = new System.Windows.Forms.Label();
@@ -53,9 +54,19 @@
             this.dtNacimiento = new System.Windows.Forms.DateTimePicker();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.epNombre = new System.Windows.Forms.ErrorProvider(this.components);
+            this.epApellido = new System.Windows.Forms.ErrorProvider(this.components);
+            this.epDni = new System.Windows.Forms.ErrorProvider(this.components);
+            this.epLegajo = new System.Windows.Forms.ErrorProvider(this.components);
+            this.epCarrera = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.epNombre)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epApellido)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epDni)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epLegajo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epCarrera)).BeginInit();
             this.SuspendLayout();
             // 
             // lLegajo
@@ -106,10 +117,15 @@
             // cbFiltro
             // 
             this.cbFiltro.FormattingEnabled = true;
-            this.cbFiltro.Location = new System.Drawing.Point(3, 43);
+            this.cbFiltro.Items.AddRange(new object[] {
+            "TODOS",
+            "Personas",
+            "Estudiantes"});
+            this.cbFiltro.Location = new System.Drawing.Point(6, 38);
             this.cbFiltro.Name = "cbFiltro";
             this.cbFiltro.Size = new System.Drawing.Size(121, 21);
             this.cbFiltro.TabIndex = 12;
+            this.cbFiltro.Text = "TODOS";
             // 
             // tCarrera
             // 
@@ -117,6 +133,7 @@
             this.tCarrera.Name = "tCarrera";
             this.tCarrera.Size = new System.Drawing.Size(100, 20);
             this.tCarrera.TabIndex = 13;
+            this.tCarrera.Validating += new System.ComponentModel.CancelEventHandler(this.tCarrera_Validating);
             // 
             // mtLegajo
             // 
@@ -125,11 +142,12 @@
             this.mtLegajo.Name = "mtLegajo";
             this.mtLegajo.Size = new System.Drawing.Size(100, 20);
             this.mtLegajo.TabIndex = 15;
+            this.mtLegajo.Validating += new System.ComponentModel.CancelEventHandler(this.mtLegajo_Validating);
             // 
             // lbPersonas
             // 
             this.lbPersonas.FormattingEnabled = true;
-            this.lbPersonas.Location = new System.Drawing.Point(3, 70);
+            this.lbPersonas.Location = new System.Drawing.Point(6, 65);
             this.lbPersonas.Name = "lbPersonas";
             this.lbPersonas.Size = new System.Drawing.Size(120, 186);
             this.lbPersonas.TabIndex = 16;
@@ -144,30 +162,33 @@
             // 
             // btBuscar
             // 
-            this.btBuscar.Location = new System.Drawing.Point(96, 308);
+            this.btBuscar.Location = new System.Drawing.Point(100, 313);
             this.btBuscar.Name = "btBuscar";
             this.btBuscar.Size = new System.Drawing.Size(75, 23);
             this.btBuscar.TabIndex = 20;
             this.btBuscar.Text = "Buscar";
             this.btBuscar.UseVisualStyleBackColor = true;
+            this.btBuscar.Click += new System.EventHandler(this.btBuscar_Click);
             // 
             // btGuardar
             // 
-            this.btGuardar.Location = new System.Drawing.Point(188, 308);
+            this.btGuardar.Location = new System.Drawing.Point(181, 313);
             this.btGuardar.Name = "btGuardar";
             this.btGuardar.Size = new System.Drawing.Size(75, 23);
             this.btGuardar.TabIndex = 21;
             this.btGuardar.Text = "Guardar";
             this.btGuardar.UseVisualStyleBackColor = true;
+            this.btGuardar.Click += new System.EventHandler(this.btGuardar_Click);
             // 
             // btCancelar
             // 
-            this.btCancelar.Location = new System.Drawing.Point(291, 308);
+            this.btCancelar.Location = new System.Drawing.Point(262, 313);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(75, 23);
             this.btCancelar.TabIndex = 22;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseVisualStyleBackColor = true;
+            this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
             // 
             // panel1
             // 
@@ -199,6 +220,7 @@
             this.chEstudiante.TabIndex = 17;
             this.chEstudiante.Text = "Estudiante";
             this.chEstudiante.UseVisualStyleBackColor = true;
+            this.chEstudiante.CheckedChanged += new System.EventHandler(this.chEstudiante_CheckedChanged);
             // 
             // lApellido
             // 
@@ -233,6 +255,7 @@
             this.tNombre.Name = "tNombre";
             this.tNombre.Size = new System.Drawing.Size(100, 20);
             this.tNombre.TabIndex = 9;
+            this.tNombre.Validating += new System.ComponentModel.CancelEventHandler(this.tNombre_Validating);
             // 
             // tApellido
             // 
@@ -240,6 +263,7 @@
             this.tApellido.Name = "tApellido";
             this.tApellido.Size = new System.Drawing.Size(100, 20);
             this.tApellido.TabIndex = 11;
+            this.tApellido.Validating += new System.ComponentModel.CancelEventHandler(this.tApellido_Validating);
             // 
             // mtDNI
             // 
@@ -248,6 +272,7 @@
             this.mtDNI.Name = "mtDNI";
             this.mtDNI.Size = new System.Drawing.Size(100, 20);
             this.mtDNI.TabIndex = 14;
+            this.mtDNI.Validating += new System.ComponentModel.CancelEventHandler(this.mtDNI_Validating);
             // 
             // dtNacimiento
             // 
@@ -287,6 +312,27 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(267, 111);
             this.panel3.TabIndex = 19;
+            this.panel3.Visible = false;
+            // 
+            // epNombre
+            // 
+            this.epNombre.ContainerControl = this;
+            // 
+            // epApellido
+            // 
+            this.epApellido.ContainerControl = this;
+            // 
+            // epDni
+            // 
+            this.epDni.ContainerControl = this;
+            // 
+            // epLegajo
+            // 
+            this.epLegajo.ContainerControl = this;
+            // 
+            // epCarrera
+            // 
+            this.epCarrera.ContainerControl = this;
             // 
             // Personas
             // 
@@ -307,6 +353,11 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.epNombre)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epApellido)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epDni)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epLegajo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epCarrera)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -337,6 +388,11 @@
         private System.Windows.Forms.DateTimePicker dtNacimiento;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.ErrorProvider epNombre;
+        private System.Windows.Forms.ErrorProvider epApellido;
+        private System.Windows.Forms.ErrorProvider epDni;
+        private System.Windows.Forms.ErrorProvider epLegajo;
+        private System.Windows.Forms.ErrorProvider epCarrera;
     }
 }
 
