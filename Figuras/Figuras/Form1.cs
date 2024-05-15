@@ -16,10 +16,5 @@ namespace Figuras
         {
             InitializeComponent();
         }
-
-        private void fFiguras_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

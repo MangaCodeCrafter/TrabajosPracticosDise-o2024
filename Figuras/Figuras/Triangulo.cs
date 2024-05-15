@@ -10,10 +10,10 @@ namespace Figuras
     {
         #region atributos
 
-        public double altura { get; set; }
-        public double baset { get; set; }
-        public double lado1 { get; set; }
-        public double lado2 { get; set; }
+        private double altura { get; set; }
+        private double baset { get; set; }
+        private double lado1 { get; set; }
+        private double lado2 { get; set; }
 
         #endregion
 
@@ -43,15 +43,19 @@ namespace Figuras
         #region metodos
         public override double area()
         {
-            throw new NotImplementedException();
+            return (baset * altura) / 2;
         }
         public override double perimetro()
         {
-            throw new NotImplementedException();
+            return baset + lado1 + lado2;
         }
         public override string mostrar()
         {
-            throw new NotImplementedException();
+            return $"Triangulo base: {this.baset}, lado 1: {this.lado1}, lado 2: {this.lado2}";
+        }
+        public static bool esValido(double baset, double altura, double lado1, double lado2)
+        {
+            return !((baset + lado1 > lado2) && (baset + lado2 > lado1) && (lado2 + lado1 > baset));
         }
         #endregion
     }

@@ -9,7 +9,7 @@ namespace Figuras
     internal class Cuadrado : Rectangulo
     {
         #region atributos
-        public double lado { get; set; }
+        private double lado { get; set; }
         #endregion
 
         #region property
@@ -23,15 +23,15 @@ namespace Figuras
         #region metodos
         public override double area()
         {
-            return 0;
+            return lado * lado;
         }
         public override double perimetro()
         {
-            return 0;
+            return lado * 4;
         }
         public override string mostrar()
         {
-            return "";
+            return $"Cuadrado lado: {this.lado}";
         }
         #endregion
 

@@ -9,8 +9,8 @@ namespace Figuras
     internal class Rectangulo : Figura
     {
         #region atributos
-        public double baset { get; set; }
-        public double altura { get; set; }
+        private double baset { get; set; }
+        private double altura { get; set; }
         #endregion
 
         #region property
@@ -29,15 +29,15 @@ namespace Figuras
         #region metodos
         public override double area()
         {
-            throw new NotImplementedException();
+            return baset * altura;
         }
         public override double perimetro()
         {
-            throw new NotImplementedException();
+            return baset * 2 + altura * 2;
         }
         public override string mostrar()
         {
-            throw new NotImplementedException();
+            return $"Rectangulo base: {this.baset}, altura: {this.altura}";
         }
         #endregion
 

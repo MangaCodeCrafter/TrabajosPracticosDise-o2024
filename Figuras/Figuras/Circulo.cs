@@ -25,15 +25,15 @@ namespace Figuras
         #region metodos
         public override double area()
         {
-            return 0; //Agregar implementación
+            return Math.PI * radio * radio;
         }
         public override double perimetro()
         {
-            return 0; //Agregar implementación
+            return Math.PI * radio * 2;
         }
         public override string mostrar()
         {
-            return $"Agregar implementación";
+            return $"Circulo radio: {this.radio}";
         }
         #endregion
 
