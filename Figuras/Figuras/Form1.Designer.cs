@@ -30,35 +30,37 @@
         {
             this.pFigura = new System.Windows.Forms.Panel();
             this.gbFigura = new System.Windows.Forms.GroupBox();
-            this.gbCirculo = new System.Windows.Forms.GroupBox();
-            this.gbCuadrado = new System.Windows.Forms.GroupBox();
-            this.gbTriangulo = new System.Windows.Forms.GroupBox();
-            this.gbRectangulo = new System.Windows.Forms.GroupBox();
             this.rbCirculo = new System.Windows.Forms.RadioButton();
             this.rbCuadrado = new System.Windows.Forms.RadioButton();
             this.rbTriangulo = new System.Windows.Forms.RadioButton();
             this.rbRectangulo = new System.Windows.Forms.RadioButton();
-            this.lbFiguras = new System.Windows.Forms.ListBox();
             this.bAgregar = new System.Windows.Forms.Button();
-            this.bArea = new System.Windows.Forms.Button();
-            this.bPerimetro = new System.Windows.Forms.Button();
-            this.bCerrar = new System.Windows.Forms.Button();
-            this.lRadio = new System.Windows.Forms.Label();
+            this.gbCirculo = new System.Windows.Forms.GroupBox();
             this.tRadio = new System.Windows.Forms.TextBox();
+            this.lRadio = new System.Windows.Forms.Label();
+            this.gbCuadrado = new System.Windows.Forms.GroupBox();
             this.tLadoCuadrado = new System.Windows.Forms.TextBox();
             this.lLadoCuadrado = new System.Windows.Forms.Label();
-            this.lBaseTriangulo = new System.Windows.Forms.Label();
-            this.lAlturaTriangulo = new System.Windows.Forms.Label();
-            this.lLado1Triangulo = new System.Windows.Forms.Label();
-            this.lLado2Triangulo = new System.Windows.Forms.Label();
+            this.gbTriangulo = new System.Windows.Forms.GroupBox();
             this.tBaseTriangulo = new System.Windows.Forms.TextBox();
             this.tAlturaTriangulo = new System.Windows.Forms.TextBox();
             this.tLado1Triangulo = new System.Windows.Forms.TextBox();
             this.tLado2Triangulo = new System.Windows.Forms.TextBox();
-            this.tBaseRectangulo = new System.Windows.Forms.TextBox();
-            this.tAlturaRectangulo = new System.Windows.Forms.TextBox();
-            this.lBaseRectangulo = new System.Windows.Forms.Label();
+            this.lBaseTriangulo = new System.Windows.Forms.Label();
+            this.lAlturaTriangulo = new System.Windows.Forms.Label();
+            this.lLado1Triangulo = new System.Windows.Forms.Label();
+            this.lLado2Triangulo = new System.Windows.Forms.Label();
+            this.gbRectangulo = new System.Windows.Forms.GroupBox();
             this.lAlturaRectangulo = new System.Windows.Forms.Label();
+            this.lBaseRectangulo = new System.Windows.Forms.Label();
+            this.tAlturaRectangulo = new System.Windows.Forms.TextBox();
+            this.tBaseRectangulo = new System.Windows.Forms.TextBox();
+            this.lbFiguras = new System.Windows.Forms.ListBox();
+            this.bArea = new System.Windows.Forms.Button();
+            this.bPerimetro = new System.Windows.Forms.Button();
+            this.bCerrar = new System.Windows.Forms.Button();
+            this.lCantidadEspecifico = new System.Windows.Forms.Label();
+            this.lCantidadFiguras = new System.Windows.Forms.Label();
             this.pFigura.SuspendLayout();
             this.gbFigura.SuspendLayout();
             this.gbCirculo.SuspendLayout();
@@ -89,58 +91,6 @@
             this.gbFigura.TabIndex = 1;
             this.gbFigura.TabStop = false;
             this.gbFigura.Text = "Figura";
-            // 
-            // gbCirculo
-            // 
-            this.gbCirculo.Controls.Add(this.tRadio);
-            this.gbCirculo.Controls.Add(this.lRadio);
-            this.gbCirculo.Location = new System.Drawing.Point(475, 38);
-            this.gbCirculo.Name = "gbCirculo";
-            this.gbCirculo.Size = new System.Drawing.Size(167, 139);
-            this.gbCirculo.TabIndex = 2;
-            this.gbCirculo.TabStop = false;
-            this.gbCirculo.Text = "Circulo";
-            // 
-            // gbCuadrado
-            // 
-            this.gbCuadrado.Controls.Add(this.tLadoCuadrado);
-            this.gbCuadrado.Controls.Add(this.lLadoCuadrado);
-            this.gbCuadrado.Location = new System.Drawing.Point(656, 38);
-            this.gbCuadrado.Name = "gbCuadrado";
-            this.gbCuadrado.Size = new System.Drawing.Size(167, 139);
-            this.gbCuadrado.TabIndex = 0;
-            this.gbCuadrado.TabStop = false;
-            this.gbCuadrado.Text = "Cuadrado";
-            // 
-            // gbTriangulo
-            // 
-            this.gbTriangulo.Controls.Add(this.tBaseTriangulo);
-            this.gbTriangulo.Controls.Add(this.tAlturaTriangulo);
-            this.gbTriangulo.Controls.Add(this.tLado1Triangulo);
-            this.gbTriangulo.Controls.Add(this.tLado2Triangulo);
-            this.gbTriangulo.Controls.Add(this.lBaseTriangulo);
-            this.gbTriangulo.Controls.Add(this.lAlturaTriangulo);
-            this.gbTriangulo.Controls.Add(this.lLado1Triangulo);
-            this.gbTriangulo.Controls.Add(this.lLado2Triangulo);
-            this.gbTriangulo.Location = new System.Drawing.Point(475, 193);
-            this.gbTriangulo.Name = "gbTriangulo";
-            this.gbTriangulo.Size = new System.Drawing.Size(167, 139);
-            this.gbTriangulo.TabIndex = 0;
-            this.gbTriangulo.TabStop = false;
-            this.gbTriangulo.Text = "Triangulo";
-            // 
-            // gbRectangulo
-            // 
-            this.gbRectangulo.Controls.Add(this.lAlturaRectangulo);
-            this.gbRectangulo.Controls.Add(this.lBaseRectangulo);
-            this.gbRectangulo.Controls.Add(this.tAlturaRectangulo);
-            this.gbRectangulo.Controls.Add(this.tBaseRectangulo);
-            this.gbRectangulo.Location = new System.Drawing.Point(656, 193);
-            this.gbRectangulo.Name = "gbRectangulo";
-            this.gbRectangulo.Size = new System.Drawing.Size(167, 139);
-            this.gbRectangulo.TabIndex = 0;
-            this.gbRectangulo.TabStop = false;
-            this.gbRectangulo.Text = "Rectangulo";
             // 
             // rbCirculo
             // 
@@ -186,15 +136,6 @@
             this.rbRectangulo.Text = "Rectangulo";
             this.rbRectangulo.UseVisualStyleBackColor = true;
             // 
-            // lbFiguras
-            // 
-            this.lbFiguras.FormattingEnabled = true;
-            this.lbFiguras.ItemHeight = 16;
-            this.lbFiguras.Location = new System.Drawing.Point(12, 242);
-            this.lbFiguras.Name = "lbFiguras";
-            this.lbFiguras.Size = new System.Drawing.Size(314, 148);
-            this.lbFiguras.TabIndex = 4;
-            // 
             // bAgregar
             // 
             this.bAgregar.Location = new System.Drawing.Point(320, 161);
@@ -204,32 +145,23 @@
             this.bAgregar.Text = "Agregar";
             this.bAgregar.UseVisualStyleBackColor = true;
             // 
-            // bArea
+            // gbCirculo
             // 
-            this.bArea.Location = new System.Drawing.Point(333, 263);
-            this.bArea.Name = "bArea";
-            this.bArea.Size = new System.Drawing.Size(75, 50);
-            this.bArea.TabIndex = 6;
-            this.bArea.Text = "Area";
-            this.bArea.UseVisualStyleBackColor = true;
+            this.gbCirculo.Controls.Add(this.tRadio);
+            this.gbCirculo.Controls.Add(this.lRadio);
+            this.gbCirculo.Location = new System.Drawing.Point(475, 38);
+            this.gbCirculo.Name = "gbCirculo";
+            this.gbCirculo.Size = new System.Drawing.Size(167, 139);
+            this.gbCirculo.TabIndex = 2;
+            this.gbCirculo.TabStop = false;
+            this.gbCirculo.Text = "Circulo";
             // 
-            // bPerimetro
+            // tRadio
             // 
-            this.bPerimetro.Location = new System.Drawing.Point(333, 319);
-            this.bPerimetro.Name = "bPerimetro";
-            this.bPerimetro.Size = new System.Drawing.Size(75, 50);
-            this.bPerimetro.TabIndex = 7;
-            this.bPerimetro.Text = "Perimetro";
-            this.bPerimetro.UseVisualStyleBackColor = true;
-            // 
-            // bCerrar
-            // 
-            this.bCerrar.Location = new System.Drawing.Point(333, 415);
-            this.bCerrar.Name = "bCerrar";
-            this.bCerrar.Size = new System.Drawing.Size(75, 50);
-            this.bCerrar.TabIndex = 6;
-            this.bCerrar.Text = "Cerrar";
-            this.bCerrar.UseVisualStyleBackColor = true;
+            this.tRadio.Location = new System.Drawing.Point(56, 68);
+            this.tRadio.Name = "tRadio";
+            this.tRadio.Size = new System.Drawing.Size(100, 22);
+            this.tRadio.TabIndex = 1;
             // 
             // lRadio
             // 
@@ -240,12 +172,16 @@
             this.lRadio.TabIndex = 0;
             this.lRadio.Text = "Radio";
             // 
-            // tRadio
+            // gbCuadrado
             // 
-            this.tRadio.Location = new System.Drawing.Point(56, 68);
-            this.tRadio.Name = "tRadio";
-            this.tRadio.Size = new System.Drawing.Size(100, 22);
-            this.tRadio.TabIndex = 1;
+            this.gbCuadrado.Controls.Add(this.tLadoCuadrado);
+            this.gbCuadrado.Controls.Add(this.lLadoCuadrado);
+            this.gbCuadrado.Location = new System.Drawing.Point(656, 38);
+            this.gbCuadrado.Name = "gbCuadrado";
+            this.gbCuadrado.Size = new System.Drawing.Size(167, 139);
+            this.gbCuadrado.TabIndex = 0;
+            this.gbCuadrado.TabStop = false;
+            this.gbCuadrado.Text = "Cuadrado";
             // 
             // tLadoCuadrado
             // 
@@ -262,6 +198,51 @@
             this.lLadoCuadrado.Size = new System.Drawing.Size(38, 16);
             this.lLadoCuadrado.TabIndex = 3;
             this.lLadoCuadrado.Text = "Lado";
+            // 
+            // gbTriangulo
+            // 
+            this.gbTriangulo.Controls.Add(this.tBaseTriangulo);
+            this.gbTriangulo.Controls.Add(this.tAlturaTriangulo);
+            this.gbTriangulo.Controls.Add(this.tLado1Triangulo);
+            this.gbTriangulo.Controls.Add(this.tLado2Triangulo);
+            this.gbTriangulo.Controls.Add(this.lBaseTriangulo);
+            this.gbTriangulo.Controls.Add(this.lAlturaTriangulo);
+            this.gbTriangulo.Controls.Add(this.lLado1Triangulo);
+            this.gbTriangulo.Controls.Add(this.lLado2Triangulo);
+            this.gbTriangulo.Location = new System.Drawing.Point(475, 193);
+            this.gbTriangulo.Name = "gbTriangulo";
+            this.gbTriangulo.Size = new System.Drawing.Size(167, 139);
+            this.gbTriangulo.TabIndex = 0;
+            this.gbTriangulo.TabStop = false;
+            this.gbTriangulo.Text = "Triangulo";
+            // 
+            // tBaseTriangulo
+            // 
+            this.tBaseTriangulo.Location = new System.Drawing.Point(56, 21);
+            this.tBaseTriangulo.Name = "tBaseTriangulo";
+            this.tBaseTriangulo.Size = new System.Drawing.Size(100, 22);
+            this.tBaseTriangulo.TabIndex = 2;
+            // 
+            // tAlturaTriangulo
+            // 
+            this.tAlturaTriangulo.Location = new System.Drawing.Point(56, 49);
+            this.tAlturaTriangulo.Name = "tAlturaTriangulo";
+            this.tAlturaTriangulo.Size = new System.Drawing.Size(100, 22);
+            this.tAlturaTriangulo.TabIndex = 3;
+            // 
+            // tLado1Triangulo
+            // 
+            this.tLado1Triangulo.Location = new System.Drawing.Point(56, 77);
+            this.tLado1Triangulo.Name = "tLado1Triangulo";
+            this.tLado1Triangulo.Size = new System.Drawing.Size(100, 22);
+            this.tLado1Triangulo.TabIndex = 4;
+            // 
+            // tLado2Triangulo
+            // 
+            this.tLado2Triangulo.Location = new System.Drawing.Point(56, 106);
+            this.tLado2Triangulo.Name = "tLado2Triangulo";
+            this.tLado2Triangulo.Size = new System.Drawing.Size(100, 22);
+            this.tLado2Triangulo.TabIndex = 5;
             // 
             // lBaseTriangulo
             // 
@@ -299,56 +280,18 @@
             this.lLado2Triangulo.TabIndex = 11;
             this.lLado2Triangulo.Text = "Lado 2";
             // 
-            // tBaseTriangulo
+            // gbRectangulo
             // 
-            this.tBaseTriangulo.Location = new System.Drawing.Point(56, 21);
-            this.tBaseTriangulo.Name = "tBaseTriangulo";
-            this.tBaseTriangulo.Size = new System.Drawing.Size(100, 22);
-            this.tBaseTriangulo.TabIndex = 2;
-            // 
-            // tAlturaTriangulo
-            // 
-            this.tAlturaTriangulo.Location = new System.Drawing.Point(56, 49);
-            this.tAlturaTriangulo.Name = "tAlturaTriangulo";
-            this.tAlturaTriangulo.Size = new System.Drawing.Size(100, 22);
-            this.tAlturaTriangulo.TabIndex = 3;
-            // 
-            // tLado1Triangulo
-            // 
-            this.tLado1Triangulo.Location = new System.Drawing.Point(56, 77);
-            this.tLado1Triangulo.Name = "tLado1Triangulo";
-            this.tLado1Triangulo.Size = new System.Drawing.Size(100, 22);
-            this.tLado1Triangulo.TabIndex = 4;
-            // 
-            // tLado2Triangulo
-            // 
-            this.tLado2Triangulo.Location = new System.Drawing.Point(56, 106);
-            this.tLado2Triangulo.Name = "tLado2Triangulo";
-            this.tLado2Triangulo.Size = new System.Drawing.Size(100, 22);
-            this.tLado2Triangulo.TabIndex = 5;
-            // 
-            // tBaseRectangulo
-            // 
-            this.tBaseRectangulo.Location = new System.Drawing.Point(56, 52);
-            this.tBaseRectangulo.Name = "tBaseRectangulo";
-            this.tBaseRectangulo.Size = new System.Drawing.Size(100, 22);
-            this.tBaseRectangulo.TabIndex = 0;
-            // 
-            // tAlturaRectangulo
-            // 
-            this.tAlturaRectangulo.Location = new System.Drawing.Point(56, 81);
-            this.tAlturaRectangulo.Name = "tAlturaRectangulo";
-            this.tAlturaRectangulo.Size = new System.Drawing.Size(100, 22);
-            this.tAlturaRectangulo.TabIndex = 1;
-            // 
-            // lBaseRectangulo
-            // 
-            this.lBaseRectangulo.AutoSize = true;
-            this.lBaseRectangulo.Location = new System.Drawing.Point(6, 55);
-            this.lBaseRectangulo.Name = "lBaseRectangulo";
-            this.lBaseRectangulo.Size = new System.Drawing.Size(39, 16);
-            this.lBaseRectangulo.TabIndex = 2;
-            this.lBaseRectangulo.Text = "Base";
+            this.gbRectangulo.Controls.Add(this.lAlturaRectangulo);
+            this.gbRectangulo.Controls.Add(this.lBaseRectangulo);
+            this.gbRectangulo.Controls.Add(this.tAlturaRectangulo);
+            this.gbRectangulo.Controls.Add(this.tBaseRectangulo);
+            this.gbRectangulo.Location = new System.Drawing.Point(656, 193);
+            this.gbRectangulo.Name = "gbRectangulo";
+            this.gbRectangulo.Size = new System.Drawing.Size(167, 139);
+            this.gbRectangulo.TabIndex = 0;
+            this.gbRectangulo.TabStop = false;
+            this.gbRectangulo.Text = "Rectangulo";
             // 
             // lAlturaRectangulo
             // 
@@ -359,11 +302,90 @@
             this.lAlturaRectangulo.TabIndex = 3;
             this.lAlturaRectangulo.Text = "Altura";
             // 
+            // lBaseRectangulo
+            // 
+            this.lBaseRectangulo.AutoSize = true;
+            this.lBaseRectangulo.Location = new System.Drawing.Point(6, 55);
+            this.lBaseRectangulo.Name = "lBaseRectangulo";
+            this.lBaseRectangulo.Size = new System.Drawing.Size(39, 16);
+            this.lBaseRectangulo.TabIndex = 2;
+            this.lBaseRectangulo.Text = "Base";
+            // 
+            // tAlturaRectangulo
+            // 
+            this.tAlturaRectangulo.Location = new System.Drawing.Point(56, 81);
+            this.tAlturaRectangulo.Name = "tAlturaRectangulo";
+            this.tAlturaRectangulo.Size = new System.Drawing.Size(100, 22);
+            this.tAlturaRectangulo.TabIndex = 1;
+            // 
+            // tBaseRectangulo
+            // 
+            this.tBaseRectangulo.Location = new System.Drawing.Point(56, 52);
+            this.tBaseRectangulo.Name = "tBaseRectangulo";
+            this.tBaseRectangulo.Size = new System.Drawing.Size(100, 22);
+            this.tBaseRectangulo.TabIndex = 0;
+            // 
+            // lbFiguras
+            // 
+            this.lbFiguras.FormattingEnabled = true;
+            this.lbFiguras.ItemHeight = 16;
+            this.lbFiguras.Location = new System.Drawing.Point(12, 242);
+            this.lbFiguras.Name = "lbFiguras";
+            this.lbFiguras.Size = new System.Drawing.Size(314, 148);
+            this.lbFiguras.TabIndex = 4;
+            // 
+            // bArea
+            // 
+            this.bArea.Location = new System.Drawing.Point(333, 263);
+            this.bArea.Name = "bArea";
+            this.bArea.Size = new System.Drawing.Size(75, 50);
+            this.bArea.TabIndex = 6;
+            this.bArea.Text = "Area";
+            this.bArea.UseVisualStyleBackColor = true;
+            // 
+            // bPerimetro
+            // 
+            this.bPerimetro.Location = new System.Drawing.Point(333, 319);
+            this.bPerimetro.Name = "bPerimetro";
+            this.bPerimetro.Size = new System.Drawing.Size(75, 50);
+            this.bPerimetro.TabIndex = 7;
+            this.bPerimetro.Text = "Perimetro";
+            this.bPerimetro.UseVisualStyleBackColor = true;
+            // 
+            // bCerrar
+            // 
+            this.bCerrar.Location = new System.Drawing.Point(333, 415);
+            this.bCerrar.Name = "bCerrar";
+            this.bCerrar.Size = new System.Drawing.Size(75, 50);
+            this.bCerrar.TabIndex = 6;
+            this.bCerrar.Text = "Cerrar";
+            this.bCerrar.UseVisualStyleBackColor = true;
+            // 
+            // lCantidadEspecifico
+            // 
+            this.lCantidadEspecifico.AutoSize = true;
+            this.lCantidadEspecifico.Location = new System.Drawing.Point(9, 415);
+            this.lCantidadEspecifico.Name = "lCantidadEspecifico";
+            this.lCantidadEspecifico.Size = new System.Drawing.Size(169, 16);
+            this.lCantidadEspecifico.TabIndex = 8;
+            this.lCantidadEspecifico.Text = "Cantidad de \"Seleccion\": 0.";
+            // 
+            // lCantidadFiguras
+            // 
+            this.lCantidadFiguras.AutoSize = true;
+            this.lCantidadFiguras.Location = new System.Drawing.Point(10, 449);
+            this.lCantidadFiguras.Name = "lCantidadFiguras";
+            this.lCantidadFiguras.Size = new System.Drawing.Size(139, 16);
+            this.lCantidadFiguras.TabIndex = 9;
+            this.lCantidadFiguras.Text = "Cantidad de figuras: 0.";
+            // 
             // fFiguras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1053, 501);
+            this.Controls.Add(this.lCantidadFiguras);
+            this.Controls.Add(this.lCantidadEspecifico);
             this.Controls.Add(this.bCerrar);
             this.Controls.Add(this.bPerimetro);
             this.Controls.Add(this.gbCirculo);
@@ -388,6 +410,7 @@
             this.gbRectangulo.ResumeLayout(false);
             this.gbRectangulo.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -424,6 +447,8 @@
         private System.Windows.Forms.Label lBaseRectangulo;
         private System.Windows.Forms.TextBox tAlturaRectangulo;
         private System.Windows.Forms.TextBox tBaseRectangulo;
+        private System.Windows.Forms.Label lCantidadEspecifico;
+        private System.Windows.Forms.Label lCantidadFiguras;
     }
 }
 
