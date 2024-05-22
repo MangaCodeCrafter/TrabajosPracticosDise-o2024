@@ -74,6 +74,10 @@
             this.pFigura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.pFigura.Controls.Add(this.gbFigura);
             this.pFigura.Controls.Add(this.bAgregar);
+            this.pFigura.Controls.Add(this.gbRectangulo);
+            this.pFigura.Controls.Add(this.gbTriangulo);
+            this.pFigura.Controls.Add(this.gbCuadrado);
+            this.pFigura.Controls.Add(this.gbCirculo);
             this.pFigura.Location = new System.Drawing.Point(13, 12);
             this.pFigura.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pFigura.Name = "pFigura";
@@ -162,7 +166,7 @@
             this.gbRectangulo.Controls.Add(this.lBaseRectangulo);
             this.gbRectangulo.Controls.Add(this.tAlturaRectangulo);
             this.gbRectangulo.Controls.Add(this.tBaseRectangulo);
-            this.gbRectangulo.Location = new System.Drawing.Point(844, 263);
+            this.gbRectangulo.Location = new System.Drawing.Point(228, 12);
             this.gbRectangulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gbRectangulo.Name = "gbRectangulo";
             this.gbRectangulo.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -216,7 +220,7 @@
             this.gbTriangulo.Controls.Add(this.lBaseTriangulo);
             this.gbTriangulo.Controls.Add(this.lLado1Triangulo);
             this.gbTriangulo.Controls.Add(this.lLado2Triangulo);
-            this.gbTriangulo.Location = new System.Drawing.Point(599, 263);
+            this.gbTriangulo.Location = new System.Drawing.Point(228, 12);
             this.gbTriangulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gbTriangulo.Name = "gbTriangulo";
             this.gbTriangulo.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -298,7 +302,7 @@
             // 
             this.gbCuadrado.Controls.Add(this.tLadoCuadrado);
             this.gbCuadrado.Controls.Add(this.lLadoCuadrado);
-            this.gbCuadrado.Location = new System.Drawing.Point(844, 58);
+            this.gbCuadrado.Location = new System.Drawing.Point(228, 12);
             this.gbCuadrado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gbCuadrado.Name = "gbCuadrado";
             this.gbCuadrado.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -328,7 +332,7 @@
             // 
             this.gbCirculo.Controls.Add(this.tRadio);
             this.gbCirculo.Controls.Add(this.lRadio);
-            this.gbCirculo.Location = new System.Drawing.Point(599, 75);
+            this.gbCirculo.Location = new System.Drawing.Point(228, 12);
             this.gbCirculo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gbCirculo.Name = "gbCirculo";
             this.gbCirculo.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -374,6 +378,7 @@
             this.bArea.TabIndex = 6;
             this.bArea.Text = "Area";
             this.bArea.UseVisualStyleBackColor = true;
+            this.bArea.Click += new System.EventHandler(this.bArea_Click);
             // 
             // bPerimetro
             // 
@@ -384,6 +389,7 @@
             this.bPerimetro.TabIndex = 7;
             this.bPerimetro.Text = "Perimetro";
             this.bPerimetro.UseVisualStyleBackColor = true;
+            this.bPerimetro.Click += new System.EventHandler(this.bPerimetro_Click);
             // 
             // bCerrar
             // 
@@ -394,15 +400,16 @@
             this.bCerrar.TabIndex = 6;
             this.bCerrar.Text = "Cerrar";
             this.bCerrar.UseVisualStyleBackColor = true;
+            this.bCerrar.Click += new System.EventHandler(this.bCerrar_Click);
             // 
             // lCantidadEspecifico
             // 
             this.lCantidadEspecifico.AutoSize = true;
             this.lCantidadEspecifico.Location = new System.Drawing.Point(9, 415);
             this.lCantidadEspecifico.Name = "lCantidadEspecifico";
-            this.lCantidadEspecifico.Size = new System.Drawing.Size(169, 16);
+            this.lCantidadEspecifico.Size = new System.Drawing.Size(164, 16);
             this.lCantidadEspecifico.TabIndex = 8;
-            this.lCantidadEspecifico.Text = "Cantidad de \"Seleccion\": 0.";
+            this.lCantidadEspecifico.Text = "Cantidad de cuadrados: 0.";
             // 
             // lCantidadFiguras
             // 
@@ -417,13 +424,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1074, 501);
+            this.ClientSize = new System.Drawing.Size(427, 501);
             this.Controls.Add(this.lCantidadFiguras);
             this.Controls.Add(this.lCantidadEspecifico);
-            this.Controls.Add(this.gbCirculo);
-            this.Controls.Add(this.gbCuadrado);
-            this.Controls.Add(this.gbTriangulo);
-            this.Controls.Add(this.gbRectangulo);
             this.Controls.Add(this.bCerrar);
             this.Controls.Add(this.bPerimetro);
             this.Controls.Add(this.bArea);

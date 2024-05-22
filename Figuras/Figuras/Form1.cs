@@ -23,24 +23,28 @@ namespace Figuras
         {
             if (rbCirculo.Checked) gbCirculo.Visible = true;
             else gbCirculo.Visible = false;
+            actualizarPantalla();
         }
 
         private void rbCuadrado_CheckedChanged(object sender, EventArgs e)
         {
             if (rbCuadrado.Checked) gbCuadrado.Visible = true;
             else gbCuadrado.Visible = false;
+            actualizarPantalla();
         }
 
         private void rbTriangulo_CheckedChanged(object sender, EventArgs e)
         {
             if (rbTriangulo.Checked) gbTriangulo.Visible = true;
             else gbTriangulo.Visible = false;
+            actualizarPantalla();
         }
 
         private void rbRectangulo_CheckedChanged(object sender, EventArgs e)
         {
             if (rbRectangulo.Checked) gbRectangulo.Visible = true;
             else gbRectangulo.Visible = false;
+            actualizarPantalla();
         }
         #endregion
         private void bAgregar_Click(object sender, EventArgs e)
@@ -63,6 +67,9 @@ namespace Figuras
             else if (rbTriangulo.Checked && tAlturaTriangulo.Text.Trim() == "") mensajeError(tAlturaTriangulo);
             else if (rbTriangulo.Checked && !tAlturaTriangulo.Text.All(char.IsDigit)) mensajeError(tAlturaTriangulo);
 
+            else if (rbTriangulo.Checked && Triangulo.esValido(Convert.ToDouble(tBaseTriangulo.Text), Convert.ToDouble(tAlturaTriangulo.Text), Convert.ToDouble(tLado1Triangulo.Text), Convert.ToDouble(tLado2Triangulo.Text))) 
+                MessageBox.Show("El triángulo no existe.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             else if (rbRectangulo.Checked && tBaseRectangulo.Text.Trim() == "") mensajeError(tBaseRectangulo);
             else if (rbRectangulo.Checked && !tBaseRectangulo.Text.All(char.IsDigit)) mensajeError(tBaseRectangulo);
 
@@ -73,23 +80,25 @@ namespace Figuras
             {
                 Circulo circulo = new Circulo(Convert.ToDouble(tRadio.Text));
                 lFiguras.Add(circulo);
-                actualizarPantalla(rbCirculo, circulo);
+                actualizarPantalla();
             }
             else if (rbCuadrado.Checked)
             {
                 Cuadrado cuadrado = new Cuadrado(Convert.ToDouble(tLadoCuadrado.Text));
                 lFiguras.Add(cuadrado);
-                actualizarPantalla(rbCuadrado, cuadrado);
+                actualizarPantalla();
             }
             else if (rbRectangulo.Checked)
             {
                 Rectangulo rectangulo = new Rectangulo(Convert.ToDouble(tBaseRectangulo.Text), Convert.ToDouble(tAlturaRectangulo.Text));
                 lFiguras.Add(rectangulo);
-                actualizarPantalla(rbRectangulo, rectangulo);
+                actualizarPantalla();
             }
             else if (rbTriangulo.Checked)
             {
-
+                Triangulo triangulo = new Triangulo(Convert.ToDouble(tBaseTriangulo.Text), Convert.ToDouble(tAlturaTriangulo.Text), Convert.ToDouble(tLado1Triangulo.Text), Convert.ToDouble(tLado2Triangulo.Text));
+                lFiguras.Add(triangulo);
+                actualizarPantalla();
             }
 
         }
@@ -108,17 +117,55 @@ namespace Figuras
             }
         }
 
-        private void actualizarPantalla(RadioButton rb, Figura figura)
+        private void actualizarPantalla()
         {
             lbFiguras.Items.Clear();
+            string figura = "rectangulos";
 
             for(int i = 0; i < lFiguras.Count; i++)
             {
-                if(rbCirculo.Checked && lFiguras[i].GetType() == figura.GetType()) lbFiguras.Items.Add(lFiguras[i].mostrar());                
-                if(rbCuadrado.Checked && lFiguras[i].GetType() == figura.GetType()) lbFiguras.Items.Add(lFiguras[i].mostrar());                
-                if(rbTriangulo.Checked && lFiguras[i].GetType() == figura.GetType()) lbFiguras.Items.Add(lFiguras[i].mostrar());                
-                if(rbRectangulo.Checked && lFiguras[i].GetType() == figura.GetType()) lbFiguras.Items.Add(lFiguras[i].mostrar());
+                if(rbCirculo.Checked && lFiguras[i].GetType() == typeof(Circulo)) lbFiguras.Items.Add(lFiguras[i].mostrar());                
+                if(rbCuadrado.Checked && lFiguras[i].GetType() == typeof(Cuadrado)) lbFiguras.Items.Add(lFiguras[i].mostrar());                
+                if(rbTriangulo.Checked && lFiguras[i].GetType() == typeof(Triangulo)) lbFiguras.Items.Add(lFiguras[i].mostrar());                
+                if(rbRectangulo.Checked && lFiguras[i].GetType() == typeof(Rectangulo)) lbFiguras.Items.Add(lFiguras[i].mostrar());
             }
+
+            if (rbCirculo.Checked) figura = "circulos";
+            if (rbCuadrado.Checked) figura = "cuadrados";
+            if (rbTriangulo.Checked) figura = "triangulos";
+
+            lCantidadFiguras.Text = $"Cantidad de figuras: {lFiguras.Count}.";
+            lCantidadEspecifico.Text = $"Cantidad de {figura}: {lbFiguras.Items.Count}.";
+        }
+
+        private Type obtenerTipo()
+        {
+            Type type = typeof(Circulo);
+
+            if (rbCuadrado.Checked) type = typeof(Cuadrado);
+            if (rbTriangulo.Checked) type = typeof(Triangulo);
+            if (rbRectangulo.Checked) type = typeof (Rectangulo);
+
+            return type;
+        }
+
+        private void bArea_Click(object sender, EventArgs e)
+        {
+            if (lbFiguras.SelectedIndex < 0) MessageBox.Show("Seleccione una figura", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+            {
+                if()
+            }
+        }
+
+        private void bPerimetro_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

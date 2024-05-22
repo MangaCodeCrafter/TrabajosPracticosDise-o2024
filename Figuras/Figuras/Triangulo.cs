@@ -17,6 +17,16 @@ namespace Figuras
 
         #endregion
 
+        #region constructor
+        public Triangulo(double baset, double altura, double lado1, double lado2)
+        {
+            this.baset = baset;
+            this.altura = altura;
+            this.lado1 = lado1;
+            this.lado2 = lado2;
+        }
+        #endregion
+
         #region property
         public double Altura
         {
@@ -55,7 +65,7 @@ namespace Figuras
         }
         public static bool esValido(double baset, double altura, double lado1, double lado2)
         {
-            return !((baset + lado1 > lado2) && (baset + lado2 > lado1) && (lado2 + lado1 > baset));
+            return !((baset + lado1 > lado2) && (baset + lado2 > lado1) && (lado2 + lado1 > baset) && (altura < lado2) && (altura < lado1) && (altura < baset));
         }
         #endregion
     }

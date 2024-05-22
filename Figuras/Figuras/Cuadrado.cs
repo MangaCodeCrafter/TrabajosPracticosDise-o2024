@@ -36,7 +36,10 @@ namespace Figuras
         #endregion
 
         #region constructor
-        public Cuadrado(double lado) : base(lado, lado) { }
+        public Cuadrado(double lado) : base(lado, lado) 
+        {
+            this.lado = lado;
+        }
         #endregion
     }
 }
