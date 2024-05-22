@@ -81,24 +81,28 @@ namespace Figuras
                 Circulo circulo = new Circulo(Convert.ToDouble(tRadio.Text));
                 lFiguras.Add(circulo);
                 actualizarPantalla();
+                tRadio.Clear(); tLadoCuadrado.Clear(); tAlturaRectangulo.Clear(); tBaseRectangulo.Clear(); tBaseTriangulo.Clear(); tAlturaTriangulo.Clear(); tLado1Triangulo.Clear(); tLado2Triangulo.Clear();
             }
             else if (rbCuadrado.Checked)
             {
                 Cuadrado cuadrado = new Cuadrado(Convert.ToDouble(tLadoCuadrado.Text));
                 lFiguras.Add(cuadrado);
                 actualizarPantalla();
+                tRadio.Clear(); tLadoCuadrado.Clear(); tAlturaRectangulo.Clear(); tBaseRectangulo.Clear(); tBaseTriangulo.Clear(); tAlturaTriangulo.Clear(); tLado1Triangulo.Clear(); tLado2Triangulo.Clear();
             }
             else if (rbRectangulo.Checked)
             {
                 Rectangulo rectangulo = new Rectangulo(Convert.ToDouble(tBaseRectangulo.Text), Convert.ToDouble(tAlturaRectangulo.Text));
                 lFiguras.Add(rectangulo);
                 actualizarPantalla();
+                tRadio.Clear(); tLadoCuadrado.Clear(); tAlturaRectangulo.Clear(); tBaseRectangulo.Clear(); tBaseTriangulo.Clear(); tAlturaTriangulo.Clear(); tLado1Triangulo.Clear(); tLado2Triangulo.Clear();
             }
             else if (rbTriangulo.Checked)
             {
                 Triangulo triangulo = new Triangulo(Convert.ToDouble(tBaseTriangulo.Text), Convert.ToDouble(tAlturaTriangulo.Text), Convert.ToDouble(tLado1Triangulo.Text), Convert.ToDouble(tLado2Triangulo.Text));
                 lFiguras.Add(triangulo);
                 actualizarPantalla();
+                tRadio.Clear(); tLadoCuadrado.Clear(); tAlturaRectangulo.Clear(); tBaseRectangulo.Clear(); tBaseTriangulo.Clear(); tAlturaTriangulo.Clear(); tLado1Triangulo.Clear(); tLado2Triangulo.Clear();
             }
 
         }
@@ -154,13 +158,17 @@ namespace Figuras
             if (lbFiguras.SelectedIndex < 0) MessageBox.Show("Seleccione una figura", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {
-                if()
+                Type tipoSeleccionado = obtenerTipo();
+                List<Figura> aux = lFiguras.FindAll(f => f.GetType() == tipoSeleccionado);
+                MessageBox.Show($"El área es: {aux[lbFiguras.SelectedIndex].area()}cm²", "Resultado:", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
         private void bPerimetro_Click(object sender, EventArgs e)
         {
-
+            Type tipoSeleccionado = obtenerTipo();
+            List<Figura> aux = lFiguras.FindAll(f => f.GetType() == tipoSeleccionado);
+            MessageBox.Show($"El perímetro es: {aux[lbFiguras.SelectedIndex].perimetro()}cm", "Resultado:", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void bCerrar_Click(object sender, EventArgs e)
