@@ -11,7 +11,6 @@ namespace Personas
     {
         #region atributos
         protected string nombre { get; set; }
-        protected string apellido { get; set; }
         protected string dni { get; set; }
         protected DateTime nacimiento { get; set; }
         #endregion
@@ -21,10 +20,9 @@ namespace Personas
         {
             this.dni = dni;
         }
-        public Persona(string nombre, string apellido, string dni, DateTime nacimiento)
+        public Persona(string nombre, string dni, DateTime nacimiento)
         {
             this.nombre = nombre;
-            this.apellido = apellido;
             this.dni = dni;
             this.nacimiento = nacimiento;
         }
@@ -35,11 +33,6 @@ namespace Personas
         {
             get { return nombre; }
             set { nombre = value; }
-        }
-        public string Apellido
-        {
-            get { return apellido; }
-            set { apellido = value; }
         }
         public string Dni
         {
@@ -54,9 +47,26 @@ namespace Personas
         #endregion
 
         #region Consultas
-        public bool Existe(Persona p)
+        public override bool Equals(object o)
         {
-            return (p.Dni == this.Dni);
+            bool igual = false;
+
+            if (o == null)
+            {
+                igual = (this == null);
+            }
+            else if (this.GetType() == o.GetType())
+            {
+                Persona p = (Persona) o;
+                igual = (dni == p.Dni);
+            }
+
+            return igual;
+        }
+
+        public override int GetHashCode()
+        {
+            return Convert.ToInt32(dni);
         }
         #endregion
 

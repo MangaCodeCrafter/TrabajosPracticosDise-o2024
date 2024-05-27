@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.ComponentModel;
 using System.Windows.Forms;
 
@@ -6,31 +8,28 @@ namespace Personas
 {
     public partial class Personas : Form
     {
-        Persona[] aPersonas;
-        Estudiante[] aEstudiantes;
-        int cantMaxima;
-        int cantidadPersonas;
-        int cantidadEstudiantes;
+        List<Persona> lPersonas;
+
+        //int cantMaxima;
+        //int cantidadPersonas;
+        //int cantidadEstudiantes;
         public Personas()
         {
             InitializeComponent();
-            cantMaxima = 10;
-            cantidadPersonas = 0;
-            cantidadEstudiantes = 0;
-            aPersonas = new Persona[cantMaxima];
-            aEstudiantes = new Estudiante[cantMaxima];
+            lPersonas = new List<Persona>();
         }
 
         private void chEstudiante_CheckedChanged(object sender, EventArgs e)
         {
-            if (chEstudiante.Checked) panel3.Visible = true;
-            else panel3.Visible = false;
+            if (rbEstudiante.Checked) pEstudiante.Visible = true;
+            else pEstudiante.Visible = false;
         }
 
         private void btGuardar_Click(object sender, EventArgs e)
         {
             Persona persona;
             Estudiante estudiante;
+            Empleado empleado;
             DialogResult result = DialogResult.None;
 
             if (!mtDNI.MaskCompleted)
@@ -38,32 +37,46 @@ namespace Personas
                 MessageBox.Show("Falta completar DNI", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 mtDNI.Focus();
             }
-            else if (chEstudiante.Checked & !mtLegajo.MaskCompleted)
+            else if (rbEstudiante.Checked & !mtLegajo.MaskCompleted)
             {
                 MessageBox.Show("Falta completar Legajo", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 mtLegajo.Focus();
             }
-            else if (!chEstudiante.Checked)
+            else if (rbEmpleado.Checked && !mtLegajoEmpleado.MaskCompleted)
             {
-                string documento = mtDNI.Text.Replace(".", "");
-
-                persona = new Persona(tNombre.Text, tApellido.Text, documento, dtNacimiento.Value);
-                if (seRepite(persona, null)) result = MessageBox.Show("La persona ya existe \n ¿Querés modificar la persona?", "Info.", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
-
-                if(result == DialogResult.Yes) Modificar(persona, null);
-                else if (result == DialogResult.None) agregarAlArregloPersona(persona);
+                MessageBox.Show("Falta completar Legajo", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                mtLegajoEmpleado.Focus();
             }
-            else if(chEstudiante.Checked)
+            else if (rbPersona.Checked)
             {
                 string documento = mtDNI.Text.Replace(".", "");
 
-                estudiante = new Estudiante(tNombre.Text, tApellido.Text, documento, dtNacimiento.Value, mtLegajo.Text, tCarrera.Text, dtIngreso.Value);
-                if (seRepite(null, estudiante)) result = MessageBox.Show("El estudiante ya existe \n ¿Querés modificar el estudiante?", "Info.", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+                persona = new Persona(tNombre.Text, documento, dtNacimiento.Value);
+                if (lPersonas.Contains(persona)) result = MessageBox.Show("La persona ya existe \n ¿Querés modificar la persona?", "Info.", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes) Modificar(persona);
+                else if (result == DialogResult.None) lPersonas.Add(persona);
+            }
+            else if(rbEstudiante.Checked)
+            {
+                string documento = mtDNI.Text.Replace(".", "");
+
+                estudiante = new Estudiante(tNombre.Text, documento, dtNacimiento.Value, mtLegajo.Text, tCarrera.Text);
+                if (lPersonas.Contains(estudiante)) result = MessageBox.Show("El estudiante ya existe \n ¿Querés modificar el estudiante?", "Info.", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
                 
-                if(result == DialogResult.Yes) Modificar(null, estudiante);
-                else if (result == DialogResult.None) agregarAlArregloEstudiante(estudiante);
+                if(result == DialogResult.Yes) Modificar(estudiante);
+                else if (result == DialogResult.None) lPersonas.Add(estudiante);
             }
-            actualizarPantallaTodos();
+            else if (rbEmpleado.Checked)
+            {
+                string documento = mtDNI.Text.Replace(".", "");
+
+                empleado = new Empleado(tNombre.Text, documento, dtNacimiento.Value, mtLegajoEmpleado.Text, tCargo.Text);
+                if (lPersonas.Contains(empleado)) result = MessageBox.Show("El empleado ya existe \n ¿Querés modificar el estudiante?", "Info.", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes) Modificar(empleado);
+                else if (result == DialogResult.None) lPersonas.Add(empleado);
+            };
         }
 
         private void btBuscar_Click(object sender, EventArgs e)
@@ -76,12 +89,7 @@ namespace Personas
                 MessageBox.Show("Falta completar DNI", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 mtDNI.Focus();
             }
-            else if (chEstudiante.Checked & !mtLegajo.MaskCompleted)
-            {
-                MessageBox.Show("Falta completar Legajo", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                mtLegajo.Focus();
-            }
-            else if (!chEstudiante.Checked)
+            else
             {
                 string documento = mtDNI.Text.Replace(".", "");
                 persona = new Persona(documento);
@@ -97,7 +105,7 @@ namespace Personas
                     dtNacimiento.Value = aPersonas[i].Nacimiento;
                 }
             }
-            else if (chEstudiante.Checked)
+            else if (rbEstudiante.Checked)
             {
                 string documento = mtDNI.Text.Replace(".", "");
                 estudiante = new Estudiante(documento, mtLegajo.Text);
@@ -115,7 +123,6 @@ namespace Personas
 
                     mtLegajo.Text = aEstudiantes[i].Legajo;
                     tCarrera.Text = aEstudiantes[i].Carrera;
-                    dtIngreso.Value = aEstudiantes[i].Ingreso;
                 }
             }
         }
@@ -155,75 +162,25 @@ namespace Personas
             if(mtLegajo.Text.Trim() == "") epLegajo.SetError(mtLegajo, "El campo debe estár completo");
         }
 
-        #region Metodos
+        #region Metodos     
+        //private void actualizarPantallaTodos()
+        //{
+        //    lbPersonas.Items.Clear();
 
-        private void agregarAlArregloPersona(Persona persona)
+        //    for (int i = 0; i < cantidadPersonas; i++)
+        //    {
+        //        lbPersonas.Items.Add(aPersonas[i].Dni);
+        //    }
+
+        //    for (int i = 0; i < cantidadEstudiantes; i++)
+        //    {
+        //        lbPersonas.Items.Add(aEstudiantes[i].Legajo);
+        //    }
+        //}
+        private void Modificar(Persona p)
         {
-            int i = cantidadPersonas - 1;
-
-            while (i >= 0 && Convert.ToInt32(aPersonas[i].Dni) > Convert.ToInt32(persona.Dni))
-            {
-                aPersonas[i + 1] = aPersonas[i];
-                i--;
-            }
-            aPersonas[i + 1] = persona;
-
-            cantidadPersonas++;
-        }        
-        private void agregarAlArregloEstudiante(Estudiante estudiante)
-        {
-            int i = cantidadEstudiantes - 1;
-
-            while (i >= 0 && Convert.ToInt32(aEstudiantes[i].Legajo) > Convert.ToInt32(estudiante.Legajo))
-            {
-                aEstudiantes[i + 1] = aEstudiantes[i];
-                i--;
-            }
-            aEstudiantes[i + 1] = estudiante;
-
-            cantidadEstudiantes++;
-        }
-        private void actualizarPantallaTodos()
-        {
-            lbPersonas.Items.Clear();
-
-            for (int i = 0; i < cantidadPersonas; i++)
-            {
-                lbPersonas.Items.Add(aPersonas[i].Dni);
-            }
-
-            for (int i = 0; i < cantidadEstudiantes; i++)
-            {
-                lbPersonas.Items.Add(aEstudiantes[i].Legajo);
-            }
-        }
-        private bool seRepite(Persona p, Estudiante e)
-        {
-            int i = (p != null) ? 0 : cantidadPersonas;
-            if(p != null) while(i < cantidadPersonas && !aPersonas[i].Existe(p)) i++;
-
-            int j = (e != null) ? 0 : cantidadEstudiantes;
-            if(e != null) while (j < cantidadEstudiantes && !aEstudiantes[j].Existe(e)) j++;
-
-            return (i < cantidadPersonas || j < cantidadEstudiantes);
-        }
-        private void Modificar(Persona p, Estudiante e)
-        {
-            int i = 0;
-
-            if(p != null) 
-            {
-                while (i < cantidadPersonas && !aPersonas[i].Existe(p)) i++;
-                if (i < cantidadPersonas) aPersonas[i] = p;
-            }
-
-            int j = 0;
-
-            if(e != null)
-            {
-                while (j < cantidadEstudiantes && !aEstudiantes[i].Existe(e)) j++;
-                if (j < cantidadEstudiantes) aEstudiantes[j] = e;
-            }
+            lPersonas.Remove(p);
+            lPersonas.Add(p);
         }
         #endregion
     }

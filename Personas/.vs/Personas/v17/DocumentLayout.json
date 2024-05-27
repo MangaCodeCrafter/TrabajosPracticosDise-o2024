@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\Trabajos\\Personas\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F118D94B-8367-4065-ADA7-663A32A9B490}|Personas\\Personas.csproj|c:\\users\\mym\\desktop\\escritorio\\escuela\\dise\u00F1o y desarrollo\\trabajos\\personas\\personas\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F118D94B-8367-4065-ADA7-663A32A9B490}|Personas\\Personas.csproj|solutionrelative:personas\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F118D94B-8367-4065-ADA7-663A32A9B490}|Personas\\Personas.csproj|C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\Trabajos\\Personas\\personas\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F118D94B-8367-4065-ADA7-663A32A9B490}|Personas\\Personas.csproj|solutionrelative:personas\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F118D94B-8367-4065-ADA7-663A32A9B490}|Personas\\Personas.csproj|C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\Trabajos\\Personas\\personas\\estudiante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F118D94B-8367-4065-ADA7-663A32A9B490}|Personas\\Personas.csproj|solutionrelative:personas\\estudiante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F118D94B-8367-4065-ADA7-663A32A9B490}|Personas\\Personas.csproj|c:\\users\\mym\\desktop\\escritorio\\escuela\\dise\u00F1o y desarrollo\\trabajos\\personas\\personas\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F118D94B-8367-4065-ADA7-663A32A9B490}|Personas\\Personas.csproj|solutionrelative:personas\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F118D94B-8367-4065-ADA7-663A32A9B490}|Personas\\Personas.csproj|c:\\users\\mym\\desktop\\escritorio\\escuela\\dise\u00F1o y desarrollo\\trabajos\\personas\\personas\\persona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F118D94B-8367-4065-ADA7-663A32A9B490}|Personas\\Personas.csproj|solutionrelative:personas\\persona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F118D94B-8367-4065-ADA7-663A32A9B490}|Personas\\Personas.csproj|C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\Trabajos\\Personas\\personas\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -22,43 +30,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form1.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\Trabajos\\Personas\\Personas\\Form1.Designer.cs",
-              "RelativeDocumentMoniker": "Personas\\Form1.Designer.cs",
-              "ToolTip": "C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\Trabajos\\Personas\\Personas\\Form1.Designer.cs*",
-              "RelativeToolTip": "Personas\\Form1.Designer.cs*",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAAwBYAAAAIAAAA",
+              "DocumentIndex": 3,
+              "Title": "Persona.cs",
+              "DocumentMoniker": "C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\Trabajos\\Personas\\Personas\\Persona.cs",
+              "RelativeDocumentMoniker": "Personas\\Persona.cs",
+              "ToolTip": "C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\Trabajos\\Personas\\Personas\\Persona.cs",
+              "RelativeToolTip": "Personas\\Persona.cs",
+              "ViewState": "AQIAADYAAAAAAAAAAAAAAEQAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-04T02:32:04.519Z",
+              "WhenOpened": "2024-05-27T03:24:46.308Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Empleado.cs",
+              "DocumentMoniker": "C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\Trabajos\\Personas\\Personas\\Empleado.cs",
+              "RelativeDocumentMoniker": "Personas\\Empleado.cs",
+              "ToolTip": "C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\Trabajos\\Personas\\Personas\\Empleado.cs",
+              "RelativeToolTip": "Personas\\Empleado.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAAD4AAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-25T22:57:37.567Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\Trabajos\\Personas\\Personas\\Form1.cs",
-              "RelativeDocumentMoniker": "Personas\\Form1.cs",
-              "ToolTip": "C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\Personas\\Personas\\Form1.cs*",
-              "RelativeToolTip": "..\\..\\Personas\\Personas\\Form1.cs*",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAANAAAA",
+              "Title": "Estudiante.cs",
+              "DocumentMoniker": "C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\Trabajos\\Personas\\Personas\\Estudiante.cs",
+              "RelativeDocumentMoniker": "Personas\\Estudiante.cs",
+              "ToolTip": "C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\Trabajos\\Personas\\Personas\\Estudiante.cs",
+              "RelativeToolTip": "Personas\\Estudiante.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAAAEEAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-01T16:49:47.598Z"
+              "WhenOpened": "2024-05-25T22:33:25.002Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\Trabajos\\Personas\\Personas\\Form1.cs",
+              "RelativeDocumentMoniker": "Personas\\Form1.cs",
+              "ToolTip": "C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\Trabajos\\Personas\\Personas\\Form1.cs",
+              "RelativeToolTip": "Personas\\Form1.cs",
+              "ViewState": "AQIAAHAAAAAAAAAAAAAAAFsAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T16:49:47.598Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Form1.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\Trabajos\\Personas\\Personas\\Form1.cs",
               "RelativeDocumentMoniker": "Personas\\Form1.cs",
-              "ToolTip": "C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\Personas\\Personas\\Form1.cs [Dise\u00F1o]*",
-              "RelativeToolTip": "..\\..\\Personas\\Personas\\Form1.cs [Dise\u00F1o]*",
+              "ToolTip": "C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\Trabajos\\Personas\\Personas\\Form1.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Personas\\Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-01T16:40:37.203Z"
+              "WhenOpened": "2024-05-01T16:40:37.203Z",
+              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         }

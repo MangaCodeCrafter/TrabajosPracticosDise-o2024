@@ -6,38 +6,35 @@ using System.Threading.Tasks;
 
 namespace Personas
 {
-    internal class Estudiante : Persona
+    internal class Empleado : Persona
     {
-        #region atributos
-        private string legajo { get; set; }
-        private string carrera { get; set; }
-        #endregion
-
-        #region constructores
-
-        public Estudiante(string dni, string legajo) : base(dni)
-        {
-            this.legajo = legajo;
-        }
-
-        public Estudiante(string nombre, string dni, DateTime nacimiento, string legajo, string carrera) : base(nombre, dni, nacimiento)
-        {
-            this.legajo = legajo;
-            this.carrera = carrera;
-        }
-
+        #region atibuto
+        public string legajo { get; set; }
+        public string cargo { get; set; }
         #endregion
 
         #region property
         public string Legajo
         {
             get { return legajo; }
-            set { legajo = value; }
+            set { this.legajo = value; }
         }
-        public string Carrera
+        public string Cargo
         {
-            get { return carrera; }
-            set { carrera = value; }
+            get { return cargo; }
+            set { this.cargo = value; }
+        }
+        #endregion
+
+        #region constructor
+        public Empleado(string nombre, string dni, DateTime nacimiento, string legajo, string cargo) : base (nombre, dni, nacimiento)
+        {
+            this.legajo = legajo;
+        }
+
+        public Empleado (string dni, string legajo) : base (dni)
+        {
+            this.legajo = legajo;
         }
         #endregion
 
@@ -52,7 +49,7 @@ namespace Personas
             }
             else if (this.GetType() == o.GetType())
             {
-                Estudiante p = (Estudiante)o;
+                Empleado p = (Empleado)o;
                 igual = (legajo == p.Legajo);
             }
 
@@ -63,10 +60,6 @@ namespace Personas
         {
             return Convert.ToInt32(dni) * Convert.ToInt32(legajo);
         }
-        #endregion
-
-        #region comandos
-
         #endregion
     }
 }
