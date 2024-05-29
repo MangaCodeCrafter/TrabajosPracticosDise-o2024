@@ -126,9 +126,18 @@ namespace Fecha
         }
         public Fecha(int dia, int mes, int año)
         {
-            this.dia = dia;
-            this.mes = mes;
-            this.año = año;
+            if(esFechaValida(dia, mes, año))
+            {
+                this.dia = dia;
+                this.mes = mes;
+                this.año = año;
+            }
+            else
+            {
+                this.dia = 01;
+                this.mes = 01;
+                this.año = 2000;
+            }
         }
         #endregion
 

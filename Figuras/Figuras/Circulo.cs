@@ -11,14 +11,14 @@ namespace Figuras
     {
 
         #region atributo
-        private double radio { get; set; }
+        private double radio;
         #endregion
 
         #region propertys
         public double Radio
         {
             get { return radio; }
-            set { radio = value; }
+            set { radio = (value > 0) ? value : 1; }
         }
         #endregion
 
@@ -31,7 +31,7 @@ namespace Figuras
         {
             return Math.PI * radio * 2;
         }
-        public override string mostrar()
+        public override string ToString()
         {
             return $"Circulo radio: {this.radio}";
         }
@@ -40,7 +40,7 @@ namespace Figuras
         #region constructor
         public Circulo(double radio)
         {
-            this.radio = radio;
+            this.radio = (radio > 0) ? radio : 1;
         }
         #endregion
     }

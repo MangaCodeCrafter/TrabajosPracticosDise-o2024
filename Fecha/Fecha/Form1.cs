@@ -17,7 +17,6 @@ namespace Fecha
             cantidad = 0;
             aFechas = new Fecha[cantidadMaxima];
         }
-        //Cambié el arreglo.
 
         #region "Botones"
         private void bAgregar_Click(object sender, EventArgs e)

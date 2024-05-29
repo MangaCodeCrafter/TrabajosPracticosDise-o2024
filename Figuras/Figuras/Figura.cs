@@ -16,8 +16,6 @@ namespace Figuras
 
         public abstract double area();
         public abstract double perimetro();
-        public abstract string mostrar();
-
         #endregion
     }
 }

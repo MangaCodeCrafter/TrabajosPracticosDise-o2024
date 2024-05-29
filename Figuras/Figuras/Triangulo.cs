@@ -10,20 +10,20 @@ namespace Figuras
     {
         #region atributos
 
-        private double altura { get; set; }
-        private double baset { get; set; }
-        private double lado1 { get; set; }
-        private double lado2 { get; set; }
+        private double altura;
+        private double baset;
+        private double lado1;
+        private double lado2;
 
         #endregion
 
         #region constructor
         public Triangulo(double baset, double altura, double lado1, double lado2)
         {
-            this.baset = baset;
-            this.altura = altura;
-            this.lado1 = lado1;
-            this.lado2 = lado2;
+            this.baset = (baset > 0) ? baset : 1;
+            this.altura = (altura > 0) ? altura : 1;
+            this.lado1 = (lado1 > 0) ? lado1 : 1;
+            this.lado2 = (lado2 > 0) ? lado2 : 1;
         }
         #endregion
 
@@ -31,22 +31,22 @@ namespace Figuras
         public double Altura
         {
             get { return altura; }
-            set { altura = value; }
+            set { altura = (value > 0) ? value : 1; }
         }
         public double Baset
         {
             get { return baset; }
-            set { baset = value; }
+            set { baset = (value > 0) ? value : 1; }
         }
         public double Lado1
         {
             get { return lado1; }
-            set { lado1 = value; }
+            set { lado1 = (value > 0) ? value : 1; }
         }
         public double Lado2
         {
             get { return lado2; }
-            set { lado2 = value; }
+            set { lado2 = (value > 0) ? value : 1; }
         }
         #endregion
 
@@ -59,7 +59,7 @@ namespace Figuras
         {
             return baset + lado1 + lado2;
         }
-        public override string mostrar()
+        public override string ToString()
         {
             return $"Triangulo base: {this.baset}, lado 1: {this.lado1}, lado 2: {this.lado2}";
         }

@@ -9,20 +9,20 @@ namespace Figuras
     internal class Rectangulo : Figura
     {
         #region atributos
-        private double baset { get; set; }
-        private double altura { get; set; }
+        private double baset;
+        private double altura;
         #endregion
 
         #region property
         public double Baset
         {
             get { return baset; }
-            set { baset = value; }
+            set { baset = (value > 0) ? value : 1; }
         }
         public double Altura 
         {
             get { return altura; }
-            set { altura = value; }
+            set { altura = (value > 0) ? value : 1; }
         }
         #endregion
 
@@ -35,7 +35,7 @@ namespace Figuras
         {
             return baset * 2 + altura * 2;
         }
-        public override string mostrar()
+        public override string ToString()
         {
             return $"Rectangulo base: {this.baset}, altura: {this.altura}";
         }
@@ -44,8 +44,8 @@ namespace Figuras
         #region constructor
         public Rectangulo(double baset, double altura)
         {
-            this.baset = baset;
-            this.altura = altura;
+            this.baset = (baset > 0) ? baset : 1;
+            this.altura = (altura > 0) ? altura : 1;
         }
         #endregion
     }

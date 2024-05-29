@@ -128,10 +128,10 @@ namespace Figuras
 
             for(int i = 0; i < lFiguras.Count; i++)
             {
-                if(rbCirculo.Checked && lFiguras[i].GetType() == typeof(Circulo)) lbFiguras.Items.Add(lFiguras[i].mostrar());                
-                if(rbCuadrado.Checked && lFiguras[i].GetType() == typeof(Cuadrado)) lbFiguras.Items.Add(lFiguras[i].mostrar());                
-                if(rbTriangulo.Checked && lFiguras[i].GetType() == typeof(Triangulo)) lbFiguras.Items.Add(lFiguras[i].mostrar());                
-                if(rbRectangulo.Checked && lFiguras[i].GetType() == typeof(Rectangulo)) lbFiguras.Items.Add(lFiguras[i].mostrar());
+                if(rbCirculo.Checked && lFiguras[i].GetType() == typeof(Circulo)) lbFiguras.Items.Add(lFiguras[i].ToString());                
+                if(rbCuadrado.Checked && lFiguras[i].GetType() == typeof(Cuadrado)) lbFiguras.Items.Add(lFiguras[i].ToString());                
+                if(rbTriangulo.Checked && lFiguras[i].GetType() == typeof(Triangulo)) lbFiguras.Items.Add(lFiguras[i].ToString());                
+                if(rbRectangulo.Checked && lFiguras[i].GetType() == typeof(Rectangulo)) lbFiguras.Items.Add(lFiguras[i].ToString());
             }
 
             if (rbCirculo.Checked) figura = "circulos";
@@ -166,9 +166,13 @@ namespace Figuras
 
         private void bPerimetro_Click(object sender, EventArgs e)
         {
-            Type tipoSeleccionado = obtenerTipo();
-            List<Figura> aux = lFiguras.FindAll(f => f.GetType() == tipoSeleccionado);
-            MessageBox.Show($"El perímetro es: {aux[lbFiguras.SelectedIndex].perimetro()}cm", "Resultado:", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (lbFiguras.SelectedIndex < 0) MessageBox.Show("Seleccione una figura", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
+            {
+                Type tipoSeleccionado = obtenerTipo();
+                List<Figura> aux = lFiguras.FindAll(f => f.GetType() == tipoSeleccionado);
+                MessageBox.Show($"El perímetro es: {aux[lbFiguras.SelectedIndex].perimetro()}cm", "Resultado:", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void bCerrar_Click(object sender, EventArgs e)

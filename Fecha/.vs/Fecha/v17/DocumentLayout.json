@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\Trabajos\\Fecha\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{885028AD-0A0C-4126-A505-5C6149B6730D}|Fecha\\Fecha.csproj|C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\Trabajos\\Fecha\\fecha\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{885028AD-0A0C-4126-A505-5C6149B6730D}|Fecha\\Fecha.csproj|c:\\users\\mym\\desktop\\escritorio\\escuela\\dise\u00F1o y desarrollo\\trabajos\\fecha\\fecha\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{885028AD-0A0C-4126-A505-5C6149B6730D}|Fecha\\Fecha.csproj|solutionrelative:fecha\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -11,7 +11,7 @@
       "RelativeMoniker": "D:0:0:{885028AD-0A0C-4126-A505-5C6149B6730D}|Fecha\\Fecha.csproj|solutionrelative:fecha\\fecha.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{885028AD-0A0C-4126-A505-5C6149B6730D}|Fecha\\Fecha.csproj|c:\\users\\mym\\desktop\\escritorio\\escuela\\dise\u00F1o y desarrollo\\trabajos\\fecha\\fecha\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{885028AD-0A0C-4126-A505-5C6149B6730D}|Fecha\\Fecha.csproj|C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\Trabajos\\Fecha\\fecha\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{885028AD-0A0C-4126-A505-5C6149B6730D}|Fecha\\Fecha.csproj|solutionrelative:fecha\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -32,7 +32,7 @@
               "RelativeDocumentMoniker": "Fecha\\Fecha.cs",
               "ToolTip": "C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\Trabajos\\Fecha\\Fecha\\Fecha.cs",
               "RelativeToolTip": "Fecha\\Fecha.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADkAAAAIAAAA",
+              "ViewState": "AQIAAHcAAAAAAAAAAADwv4sAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-03T00:20:01.261Z",
               "EditorCaption": ""
@@ -45,7 +45,7 @@
               "RelativeDocumentMoniker": "Fecha\\Form1.cs",
               "ToolTip": "C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\Trabajos\\Fecha\\Fecha\\Form1.cs",
               "RelativeToolTip": "Fecha\\Form1.cs",
-              "ViewState": "AQIAAJsAAAAAAAAAAADwv7gAAAAJAAAA",
+              "ViewState": "AQIAAMIAAAAAAAAAAAAAABIAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-03T00:20:01.633Z",
               "EditorCaption": ""
