@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\Trabajos\\Personas\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F118D94B-8367-4065-ADA7-663A32A9B490}|Personas\\Personas.csproj|C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\Trabajos\\Personas\\personas\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F118D94B-8367-4065-ADA7-663A32A9B490}|Personas\\Personas.csproj|c:\\users\\mym\\desktop\\escritorio\\escuela\\dise\u00F1o y desarrollo\\trabajos\\personas\\personas\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F118D94B-8367-4065-ADA7-663A32A9B490}|Personas\\Personas.csproj|solutionrelative:personas\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F118D94B-8367-4065-ADA7-663A32A9B490}|Personas\\Personas.csproj|c:\\users\\mym\\desktop\\escritorio\\escuela\\dise\u00F1o y desarrollo\\trabajos\\personas\\personas\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{F118D94B-8367-4065-ADA7-663A32A9B490}|Personas\\Personas.csproj|C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\Trabajos\\Personas\\personas\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{F118D94B-8367-4065-ADA7-663A32A9B490}|Personas\\Personas.csproj|solutionrelative:personas\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F118D94B-8367-4065-ADA7-663A32A9B490}|Personas\\Personas.csproj|C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\Trabajos\\Personas\\personas\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F118D94B-8367-4065-ADA7-663A32A9B490}|Personas\\Personas.csproj|solutionrelative:personas\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F118D94B-8367-4065-ADA7-663A32A9B490}|Personas\\Personas.csproj|C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\Trabajos\\Personas\\personas\\persona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F118D94B-8367-4065-ADA7-663A32A9B490}|Personas\\Personas.csproj|solutionrelative:personas\\persona.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F118D94B-8367-4065-ADA7-663A32A9B490}|Personas\\Personas.csproj|C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\Trabajos\\Personas\\personas\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F118D94B-8367-4065-ADA7-663A32A9B490}|Personas\\Personas.csproj|solutionrelative:personas\\empleado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F118D94B-8367-4065-ADA7-663A32A9B490}|Personas\\Personas.csproj|C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\Trabajos\\Personas\\personas\\estudiante.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,27 +34,29 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Persona.cs",
               "DocumentMoniker": "C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\Trabajos\\Personas\\Personas\\Persona.cs",
               "RelativeDocumentMoniker": "Personas\\Persona.cs",
               "ToolTip": "C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\Trabajos\\Personas\\Personas\\Persona.cs",
               "RelativeToolTip": "Personas\\Persona.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAAwBoAAAA2AAAA",
+              "ViewState": "AQIAAEEAAAAAAAAAAAAswE4AAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-27T03:24:46.308Z"
+              "WhenOpened": "2024-05-27T03:24:46.308Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Empleado.cs",
               "DocumentMoniker": "C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\Trabajos\\Personas\\Personas\\Empleado.cs",
               "RelativeDocumentMoniker": "Personas\\Empleado.cs",
               "ToolTip": "C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\Trabajos\\Personas\\Personas\\Empleado.cs",
               "RelativeToolTip": "Personas\\Empleado.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAxwCwAAAAtAAAA",
+              "ViewState": "AQIAABkAAAAAAAAAAAAQwCgAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-25T22:57:37.567Z"
+              "WhenOpened": "2024-05-25T22:57:37.567Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -64,9 +66,10 @@
               "RelativeDocumentMoniker": "Personas\\Estudiante.cs",
               "ToolTip": "C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\Trabajos\\Personas\\Personas\\Estudiante.cs",
               "RelativeToolTip": "Personas\\Estudiante.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAACgAAAA3AAAA",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAxwBUAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-25T22:33:25.002Z"
+              "WhenOpened": "2024-05-25T22:33:25.002Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -76,7 +79,7 @@
               "RelativeDocumentMoniker": "Personas\\Form1.cs",
               "ToolTip": "C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\Trabajos\\Personas\\Personas\\Form1.cs",
               "RelativeToolTip": "Personas\\Form1.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAwwMwAAAABAAAA",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAAAF4AAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-01T16:49:47.598Z",
               "EditorCaption": ""

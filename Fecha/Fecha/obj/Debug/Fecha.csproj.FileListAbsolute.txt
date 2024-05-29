@@ -28,3 +28,13 @@ C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\Trabajos\Fecha\Fech
 C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\Trabajos\Fecha\Fecha\obj\Debug\Fecha.csproj.CoreCompileInputs.cache
 C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\Trabajos\Fecha\Fecha\obj\Debug\Fecha.exe
 C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\Trabajos\Fecha\Fecha\obj\Debug\Fecha.pdb
+C:\Users\manga\OneDrive\Escritorio\tps\TrabajosPracticosDise-o2024-main\Fecha\Fecha\bin\Debug\Fecha.exe.config
+C:\Users\manga\OneDrive\Escritorio\tps\TrabajosPracticosDise-o2024-main\Fecha\Fecha\bin\Debug\Fecha.exe
+C:\Users\manga\OneDrive\Escritorio\tps\TrabajosPracticosDise-o2024-main\Fecha\Fecha\bin\Debug\Fecha.pdb
+C:\Users\manga\OneDrive\Escritorio\tps\TrabajosPracticosDise-o2024-main\Fecha\Fecha\obj\Debug\Fecha.csproj.AssemblyReference.cache
+C:\Users\manga\OneDrive\Escritorio\tps\TrabajosPracticosDise-o2024-main\Fecha\Fecha\obj\Debug\Fecha.Form1.resources
+C:\Users\manga\OneDrive\Escritorio\tps\TrabajosPracticosDise-o2024-main\Fecha\Fecha\obj\Debug\Fecha.Properties.Resources.resources
+C:\Users\manga\OneDrive\Escritorio\tps\TrabajosPracticosDise-o2024-main\Fecha\Fecha\obj\Debug\Fecha.csproj.GenerateResource.cache
+C:\Users\manga\OneDrive\Escritorio\tps\TrabajosPracticosDise-o2024-main\Fecha\Fecha\obj\Debug\Fecha.csproj.CoreCompileInputs.cache
+C:\Users\manga\OneDrive\Escritorio\tps\TrabajosPracticosDise-o2024-main\Fecha\Fecha\obj\Debug\Fecha.exe
+C:\Users\manga\OneDrive\Escritorio\tps\TrabajosPracticosDise-o2024-main\Fecha\Fecha\obj\Debug\Fecha.pdb

@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
+using System.Security.Cryptography;
 using System.Windows.Forms;
 
 namespace Fecha
@@ -16,32 +10,24 @@ namespace Fecha
         private int dia { get; set; }
         private int mes { get; set; }
         private int año { get; set; }
+
+        public static int dia_inicial = 1;
+        public static int mes_inicial = 1;
+        public static int año_inicial = 2000;
         #endregion
 
         #region "Consultas"
-        public int getDia()
-        {
-            return this.dia; 
-        }        
-        public int getMes()
-        {
-            return this.mes; 
-        }        
-        public int getAño()
-        {
-            return this.año; 
-        }
         public bool esIgual(Fecha fecha)
         {
-            return (fecha.getDia() == this.dia && fecha.getMes() == this.mes && fecha.getAño() == this.año);
+            return (fecha.Dia == this.dia && fecha.Mes == this.mes && fecha.Año == this.año);
         }
         public bool mayorQue(Fecha fecha)
         {
             bool mayor = false;
 
-            if(fecha.getAño() > this.año) mayor = true;
-            if(fecha.getAño() == this.año && fecha.getMes() > this.mes) mayor = true;
-            if(fecha.getAño() == this.año && fecha.getMes() == this.mes && fecha.getDia() > this.dia) mayor = true;
+            if(fecha.Año > this.año) mayor = true;
+            if(fecha.Año == this.año && fecha.Mes > this.mes) mayor = true;
+            if(fecha.Año == this.año && fecha.Mes == this.mes && fecha.Dia > this.dia) mayor = true;
 
             return mayor;
         }
@@ -56,18 +42,6 @@ namespace Fecha
         #endregion
 
         #region "Comandos"
-        public void setDia(int dia)
-        {
-            this.dia = dia;
-        }        
-        public void setMes(int mes)
-        {
-            this.mes = mes;
-        }        
-        public void setAño(int año)
-        {
-            this.año = año;
-        }
         public Fecha Incrementar()
         {
             int dia = this.dia;
@@ -120,9 +94,9 @@ namespace Fecha
         #region "Constructores"
         public Fecha()
         {
-            this.dia = 01;
-            this.mes = 01;
-            this.año = 2000;
+            this.dia = dia_inicial;
+            this.mes = mes_inicial;
+            this.año = año_inicial;
         }
         public Fecha(int dia, int mes, int año)
         {
@@ -134,9 +108,9 @@ namespace Fecha
             }
             else
             {
-                this.dia = 01;
-                this.mes = 01;
-                this.año = 2000;
+                this.dia = dia_inicial;
+                this.mes = mes_inicial;
+                this.año = año_inicial;
             }
         }
         #endregion
@@ -176,6 +150,24 @@ namespace Fecha
 
             return cantidadDias;
         }
-    }
         #endregion
+
+        #region "propiedades"
+        public int Dia
+        {
+            get { return dia; }
+            set { dia = (esFechaValida(value, mes, año)) ? value : dia_inicial; }
+        }
+        public int Mes
+        {
+            get { return mes; }
+            set { mes = (value > 0 && value < 13) ? value : mes_inicial; }
+        }
+        public int Año
+        {
+            get { return año; }
+            set { año = (esFechaValida(dia, mes, value)) ? value : año_inicial; }
+        }
+        #endregion
+    }
 }

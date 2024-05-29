@@ -20,6 +20,8 @@ namespace Personas
         public Persona(string dni)
         {
             this.dni = (dni != null && dni.Length == 8) ? dni : dniDefecto;
+            this.nombre = "";
+            this.nacimiento = new DateTime(2000, 01, 01);
         }
         public Persona(string nombre, string dni, DateTime nacimiento)
         {
@@ -74,10 +76,6 @@ namespace Personas
         {
             return $"Persona: {nombre} {dni}";
         }
-        #endregion
-
-        #region Comandos
-
         #endregion
     }
 }

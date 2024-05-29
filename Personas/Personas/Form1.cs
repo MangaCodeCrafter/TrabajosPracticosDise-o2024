@@ -92,6 +92,7 @@ namespace Personas
             };
 
             actualizarPantallaTodos();
+            limpiarCampos();
         }
 
         private void btBuscar_Click(object sender, EventArgs e)
@@ -103,25 +104,25 @@ namespace Personas
                 MessageBox.Show("Falta completar DNI", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 mtDNI.Focus();
             }
-            else if (ExisteYLugar(new Persona(mtDNI.Text.Replace(".", "")), out int i))
-            {
+            else if (!ExisteYLugar(new Persona(mtDNI.Text.Replace(".", "")), out int i)) MessageBox.Show("No se encontro ninguna persona", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            else{
                 Persona p = lPersonas[i];
-                tNombre.Text = p.Nombre; 
-                dtNacimiento.Value = p.Nacimiento; 
+                tNombre.Text = p.Nombre;
+                dtNacimiento.Value = p.Nacimiento;
                 rbPersona.Checked = true;
 
                 if (p.GetType() == typeof(Estudiante))
                 {
-                    Estudiante estudiante = (Estudiante)p; 
+                    Estudiante estudiante = (Estudiante)p;
                     rbEstudiante.Checked = true;
-                    mtLegajo.Text = estudiante.Legajo; 
+                    mtLegajo.Text = estudiante.Legajo;
                     tCarrera.Text = estudiante.Carrera;
                 }
                 else if (p.GetType() == typeof(Empleado))
                 {
-                    Empleado empleado = (Empleado)p; 
+                    Empleado empleado = (Empleado)p;
                     rbEmpleado.Checked = true;
-                    mtLegajoEmpleado.Text = empleado.Legajo; 
+                    mtLegajoEmpleado.Text = empleado.Legajo;
                     tCargo.Text = empleado.Cargo;
                 }
             }
@@ -198,6 +199,12 @@ namespace Personas
 
             posicion = i;
             return i < lPersonas.Count;
+        }
+
+        private void limpiarCampos()
+        {
+            tNombre.Clear(); mtDNI.Clear(); dtNacimiento.ResetText(); mtLegajo.Clear(); tCarrera.Clear();
+            mtLegajoEmpleado.Clear(); tCargo.Clear();
         }
         #endregion
 

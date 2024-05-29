@@ -19,6 +19,7 @@ namespace Personas
         public Estudiante(string dni, string legajo) : base(dni)
         {
             this.legajo = (legajo != null && legajo.Length == 6) ? legajo : legajoDefecto;
+            this.carrera = "";
         }
 
         public Estudiante(string nombre, string dni, DateTime nacimiento, string legajo, string carrera) : base(nombre, dni, nacimiento)

@@ -38,6 +38,7 @@ namespace Personas
         public Empleado (string dni, string legajo) : base (dni)
         {
             this.legajo = (legajo != null && legajo.Length == 6) ? legajo : legajoDefecto;
+            this.cargo = "";
         }
         #endregion
 

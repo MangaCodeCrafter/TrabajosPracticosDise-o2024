@@ -17,13 +17,14 @@ namespace Fecha
             cantidad = 0;
             aFechas = new Fecha[cantidadMaxima];
         }
+        //Cambié el arreglo.
 
         #region "Botones"
         private void bAgregar_Click(object sender, EventArgs e)
         {
-            int dia = (mtFechaAgregar.MaskCompleted) ? Convert.ToInt32(mtFechaAgregar.Text.Substring(0, 2)) : 30;
-            int mes = (mtFechaAgregar.MaskCompleted) ? Convert.ToInt32(mtFechaAgregar.Text.Substring(3, 2)) : 2;
-            int año = (mtFechaAgregar.MaskCompleted) ? Convert.ToInt32(mtFechaAgregar.Text.Substring(6, 4)): 2000;
+            int dia = (mtFechaAgregar.MaskCompleted) ? Convert.ToInt32(mtFechaAgregar.Text.Substring(0, 2)) : 0;
+            int mes = (mtFechaAgregar.MaskCompleted) ? Convert.ToInt32(mtFechaAgregar.Text.Substring(3, 2)) : 0;
+            int año = (mtFechaAgregar.MaskCompleted) ? Convert.ToInt32(mtFechaAgregar.Text.Substring(6, 4)): 0;
             Fecha fecha = new Fecha(dia, mes, año);
 
             if (!mtFechaAgregar.MaskCompleted)
@@ -51,9 +52,9 @@ namespace Fecha
 
         private void bIgual_Click(object sender, EventArgs e)
         {
-            int dia = (mtFechaComparar.MaskCompleted) ? Convert.ToInt32(mtFechaComparar.Text.Substring(0, 2)) : 30;
-            int mes = (mtFechaComparar.MaskCompleted) ? Convert.ToInt32(mtFechaComparar.Text.Substring(3, 2)) : 2;
-            int año = (mtFechaComparar.MaskCompleted) ? Convert.ToInt32(mtFechaComparar.Text.Substring(6, 4)) : 2000;
+            int dia = (mtFechaComparar.MaskCompleted) ? Convert.ToInt32(mtFechaComparar.Text.Substring(0, 2)) : 0;
+            int mes = (mtFechaComparar.MaskCompleted) ? Convert.ToInt32(mtFechaComparar.Text.Substring(3, 2)) : 0;
+            int año = (mtFechaComparar.MaskCompleted) ? Convert.ToInt32(mtFechaComparar.Text.Substring(6, 4)) : 0;
             Fecha fecha = new Fecha(dia, mes, año);
 
             int index = lbFechas.SelectedIndex;
@@ -85,9 +86,9 @@ namespace Fecha
 
         private void bMayor_Click(object sender, EventArgs e)
         {
-            int dia = (mtFechaComparar.MaskCompleted) ? Convert.ToInt32(mtFechaComparar.Text.Substring(0, 2)) : 30;
-            int mes = (mtFechaComparar.MaskCompleted) ? Convert.ToInt32(mtFechaComparar.Text.Substring(3, 2)) : 2;
-            int año = (mtFechaComparar.MaskCompleted) ? Convert.ToInt32(mtFechaComparar.Text.Substring(6, 4)) : 2000;
+            int dia = (mtFechaComparar.MaskCompleted) ? Convert.ToInt32(mtFechaComparar.Text.Substring(0, 2)) : 0;
+            int mes = (mtFechaComparar.MaskCompleted) ? Convert.ToInt32(mtFechaComparar.Text.Substring(3, 2)) : 0;
+            int año = (mtFechaComparar.MaskCompleted) ? Convert.ToInt32(mtFechaComparar.Text.Substring(6, 4)) : 0;
             Fecha fecha = new Fecha(dia, mes, año);
 
             int index = lbFechas.SelectedIndex;
@@ -118,9 +119,9 @@ namespace Fecha
 
         private void bMenor_Click(object sender, EventArgs e)
         {
-            int dia = (mtFechaComparar.MaskCompleted) ? Convert.ToInt32(mtFechaComparar.Text.Substring(0, 2)) : 30;
-            int mes = (mtFechaComparar.MaskCompleted) ? Convert.ToInt32(mtFechaComparar.Text.Substring(3, 2)) : 2;
-            int año = (mtFechaComparar.MaskCompleted) ? Convert.ToInt32(mtFechaComparar.Text.Substring(6, 4)) : 2000;
+            int dia = (mtFechaComparar.MaskCompleted) ? Convert.ToInt32(mtFechaComparar.Text.Substring(0, 2)) : 0;
+            int mes = (mtFechaComparar.MaskCompleted) ? Convert.ToInt32(mtFechaComparar.Text.Substring(3, 2)) : 0;
+            int año = (mtFechaComparar.MaskCompleted) ? Convert.ToInt32(mtFechaComparar.Text.Substring(6, 4)) : 0;
             Fecha fecha = new Fecha(dia, mes, año);
 
             int index = lbFechas.SelectedIndex;
@@ -150,9 +151,9 @@ namespace Fecha
         }
         private void bDiasEntre_Click(object sender, EventArgs e)
         {
-            int dia = (mtDiasEntreFechas.MaskCompleted) ? Convert.ToInt32(mtDiasEntreFechas.Text.Substring(0, 2)) : 30;
-            int mes = (mtDiasEntreFechas.MaskCompleted) ? Convert.ToInt32(mtDiasEntreFechas.Text.Substring(3, 2)) : 2;
-            int año = (mtDiasEntreFechas.MaskCompleted) ? Convert.ToInt32(mtDiasEntreFechas.Text.Substring(6, 4)) : 2000;
+            int dia = (mtDiasEntreFechas.MaskCompleted) ? Convert.ToInt32(mtDiasEntreFechas.Text.Substring(0, 2)) : 0;
+            int mes = (mtDiasEntreFechas.MaskCompleted) ? Convert.ToInt32(mtDiasEntreFechas.Text.Substring(3, 2)) : 0;
+            int año = (mtDiasEntreFechas.MaskCompleted) ? Convert.ToInt32(mtDiasEntreFechas.Text.Substring(6, 4)) : 0;
             Fecha fecha = new Fecha(dia, mes, año);
 
             int index = lbFechas.SelectedIndex;
@@ -182,141 +183,109 @@ namespace Fecha
 
         private void bDia_Click(object sender, EventArgs e)
         {
-            if (mtModificarEspecifico.MaskCompleted)
-            {
-                int index = lbFechas.SelectedIndex;
+            int index = lbFechas.SelectedIndex;
 
-                if(index >= 0)
-                {
-                    int dia = Convert.ToInt32(mtModificarEspecifico.Text);
-                    int mes = aFechas[index].getMes();
-                    int año = aFechas[index].getAño();
+            int dia = (mtModificarEspecifico.MaskCompleted) ? Convert.ToInt32(mtModificarEspecifico.Text) : 0;
+            int mes = (index >= 0) ? aFechas[index].Mes : 0;
+            int año = (index >= 0) ? aFechas[index].Año : 2000;
 
-                    if (dia > 0 && dia <= Fecha.ultimoDiaMes(aFechas[index].getMes(), aFechas[index].getAño()))
-                    {
-                        Fecha fecha = new Fecha(dia, mes, año);
+            Fecha fecha = new Fecha(dia, mes, año);
 
-                        if (!Existe(fecha))
-                        {
-                            eliminar();
-                            agregarAlArray(fecha);
-                        }
-                        else
-                        {
-                            MessageBox.Show("La fecha ya existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            mtModificarEspecifico.Focus();
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("El día no es válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        mtModificarEspecifico.Focus();
-                    }
-
-                }
-                else
-                {
-                    MessageBox.Show("Debe seleccionar una fecha", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else
+            if (!mtModificarEspecifico.MaskCompleted)
             {
                 MessageBox.Show("Debe completar el campo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 mtModificarEspecifico.Focus();
+            }
+            else if (index == -1)
+            {
+                MessageBox.Show("Debe seleccionar una fecha", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (!Fecha.esFechaValida(dia, mes, año))
+            {
+                MessageBox.Show("El día no es válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                mtModificarEspecifico.Focus();
+            }
+            else if (Existe(fecha))
+            {
+                MessageBox.Show("La fecha ya existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                mtModificarEspecifico.Focus();
+            }
+            else
+            {
+                eliminar(index);
+                agregarAlArray(fecha);
             }
         }
 
         private void bMes_Click(object sender, EventArgs e)
         {
-            if (mtModificarEspecifico.MaskCompleted)
-            {
-                int index = lbFechas.SelectedIndex;
+            int index = lbFechas.SelectedIndex;
 
-                if (index >= 0)
-                {
-                    int dia = aFechas[index].getDia();
-                    int mes = Convert.ToInt32(mtModificarEspecifico.Text);
-                    int año = aFechas[index].getAño();
+            int dia = (index >= 0) ? aFechas[index].Dia : 0;
+            int mes = (mtModificarEspecifico.MaskCompleted) ? Convert.ToInt32(mtModificarEspecifico.Text) : 0;
+            int año = (index >= 0) ? aFechas[index].Año : 2000;
 
-                    if (Fecha.esFechaValida(dia, mes, año))
-                    {
-                        Fecha fecha = new Fecha(dia, mes, año);
+            Fecha fecha = new Fecha(dia, mes, año);
 
-                        if (!Existe(fecha))
-                        {
-                            eliminar();
-                            agregarAlArray(fecha);
-                        }
-                        else
-                        {
-                            MessageBox.Show("La fecha ya existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            mtModificarEspecifico.Focus();
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("El mes no es válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        mtModificarEspecifico.Focus();
-                    }
-
-                }
-                else
-                {
-                    MessageBox.Show("Debe seleccionar una fecha", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else
+            if (!mtModificarEspecifico.MaskCompleted)
             {
                 MessageBox.Show("Debe completar el campo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 mtModificarEspecifico.Focus();
+            }
+            else if (index == -1)
+            {
+                MessageBox.Show("Debe seleccionar una fecha", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (!Fecha.esFechaValida(dia, mes, año))
+            {
+                MessageBox.Show("El mes no es válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                mtModificarEspecifico.Focus();
+            }
+            else if (Existe(fecha))
+            {
+                MessageBox.Show("La fecha ya existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                mtModificarEspecifico.Focus();
+            }
+            else
+            {
+                eliminar(index);
+                agregarAlArray(fecha);
             }
         }
 
         private void bAno_Click(object sender, EventArgs e)
         {
-            if (mtModificarEspecifico.MaskCompleted)
-            {
-                int index = lbFechas.SelectedIndex;
+            int index = lbFechas.SelectedIndex;
 
-                if (index >= 0)
-                {
-                    int dia = aFechas[index].getDia();
-                    int mes = aFechas[index].getMes();
-                    int año = Convert.ToInt32(mtModificarEspecifico.Text);
+            int dia = (index >= 0) ? aFechas[index].Dia : 0;
+            int mes = (index >= 0) ? aFechas[index].Mes : 0;
+            int año = (index >= 0) ? Convert.ToInt32(mtModificarEspecifico.Text) : 0;
 
-                    if (Fecha.esFechaValida(dia, mes, año))
-                    {
-                        Fecha fecha = new Fecha(dia, mes, año);
+            Fecha fecha = new Fecha(dia, mes, año);
 
-                        if (!Existe(fecha))
-                        {
-                            eliminar();
-                            agregarAlArray(fecha);
-                        }
-                        else
-                        {
-                            MessageBox.Show("La fecha ya existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
-                    else if (Fecha.esAñoBiciesto(año))
-                    {
-                        MessageBox.Show("El año es biciesto, no valido con la fecha", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    else
-                    {
-                        MessageBox.Show("El año es biciesto, no valido con la fecha", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-
-                }
-                else
-                {
-                    MessageBox.Show("Debe seleccionar una fecha", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else
+            if (!mtModificarEspecifico.MaskCompleted)
             {
                 MessageBox.Show("Debe completar el campo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 mtModificarEspecifico.Focus();
+            }
+
+            else if (index == -1)
+            {
+                MessageBox.Show("Debe seleccionar una fecha", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            else if (!Fecha.esFechaValida(dia, mes, año))
+            {
+                MessageBox.Show("El año no es válido", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (Existe(fecha))
+            {
+                MessageBox.Show("La fecha ya existe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                eliminar(index);
+                agregarAlArray(fecha);
             }
         }
     
@@ -324,72 +293,55 @@ namespace Fecha
         private void bIncrementar_Click(object sender, EventArgs e)
         {
             int index = lbFechas.SelectedIndex;
+            Fecha fechaMod = (index > 0) ? aFechas[index].Incrementar() : null;
 
-            if (index >= 0)
+            if (index < 0) MessageBox.Show("Debe seleccionar una fecha", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else if (!(cantidad == 1 || !Existe(fechaMod))) MessageBox.Show("Las fechas no se pueden repetir", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
             {
-                Fecha fechaMod = aFechas[index].Incrementar();
-
-                if (cantidad == 1 || !Existe(fechaMod))
-                {
-                    aFechas[index] = aFechas[index].Incrementar();
-                    listarFecha();
-                }
-                else
-                {
-                    MessageBox.Show("Las fechas no se pueden repetir", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                aFechas[index] = aFechas[index].Incrementar();
+                listarFecha();
             }
-            else MessageBox.Show("Debe seleccionar una fecha", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void bDecrementar_Click(object sender, EventArgs e)
         {
             int index = lbFechas.SelectedIndex;
+            Fecha fechaMod = (index > 0) ? aFechas[index].Decrementar() : null;
 
-            if (index >= 0)
+            if (index < 0) MessageBox.Show("Debe seleccionar una fecha", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else if (!(cantidad == 1 || !Existe(fechaMod))) MessageBox.Show("Las fechas no se pueden repetir", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else
             {
-                Fecha fechaMod = aFechas[index].Decrementar();
-
-                if (cantidad == 1 || !Existe(fechaMod))
-                {
-                    aFechas[index] = aFechas[index].Decrementar();
-                    listarFecha();
-                }
-                else
-                {
-                    MessageBox.Show("Las fechas no se pueden repetir", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                aFechas[index] = aFechas[index].Decrementar();
+                listarFecha();
             }
-            else MessageBox.Show("Debe seleccionar una fecha", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void bEntre_Click(object sender, EventArgs e)
         {
-            if (mtFechasEntre1.MaskCompleted && mtFechasEntre2.MaskCompleted)
+            int dia1 = (mtFechasEntre1.MaskCompleted) ? Convert.ToInt32(mtFechasEntre1.Text.Substring(0, 2)) : 0;
+            int mes1 = (mtFechasEntre1.MaskCompleted) ? Convert.ToInt32(mtFechasEntre1.Text.Substring(3, 2)) : 0;
+            int año1 = (mtFechasEntre1.MaskCompleted) ? Convert.ToInt32(mtFechasEntre1.Text.Substring(6, 4)) : 0;            
+            
+            int dia2 = (mtFechasEntre2.MaskCompleted) ? Convert.ToInt32(mtFechasEntre2.Text.Substring(0, 2)) : 0;
+            int mes2 = (mtFechasEntre2.MaskCompleted) ? Convert.ToInt32(mtFechasEntre2.Text.Substring(3, 2)) : 0;
+            int año2 = (mtFechasEntre2.MaskCompleted) ? Convert.ToInt32(mtFechasEntre2.Text.Substring(6, 4)) : 0;
+
+            if (!(mtFechasEntre1.MaskCompleted && mtFechasEntre2.MaskCompleted))
             {
-                int dia1 = Convert.ToInt32(mtFechasEntre1.Text.Substring(0, 2));
-                int mes1 = Convert.ToInt32(mtFechasEntre1.Text.Substring(3, 2));
-                int año1 = Convert.ToInt32(mtFechasEntre1.Text.Substring(6, 4));
-
-                int dia2 = Convert.ToInt32(mtFechasEntre2.Text.Substring(0, 2));
-                int mes2 = Convert.ToInt32(mtFechasEntre2.Text.Substring(3, 2));
-                int año2 = Convert.ToInt32(mtFechasEntre2.Text.Substring(6, 4));
-
-                if (Fecha.esFechaValida(dia1, mes1, año1) && Fecha.esFechaValida(dia2, mes2, año2))
-                {
-                    Fecha fechaEntre1 = new Fecha(dia1, mes1, año1);
-                    Fecha fechaEntre2 = new Fecha(dia2, mes2, año2);
-
-                    mostarFechasEntre(fechaEntre1 , fechaEntre2);
-                }
-                else
-                {
-                    MessageBox.Show("Las fechas deben ser validas", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                MessageBox.Show("Debe completar los campos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if(!(Fecha.esFechaValida(dia1, mes1, año1) && Fecha.esFechaValida(dia2, mes2, año2)))
+            {
+                MessageBox.Show("Las fechas deben ser validas", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                MessageBox.Show("Debe completar los campos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Fecha fechaEntre1 = new Fecha(dia1, mes1, año1);
+                Fecha fechaEntre2 = new Fecha(dia2, mes2, año2);
+
+                mostarFechasEntre(fechaEntre1, fechaEntre2);
             }
         }
 
@@ -439,10 +391,8 @@ namespace Fecha
             }
             return (i < cantidad);
         }
-        private void eliminar()
+        private void eliminar(int indexElemento)
         {
-            int indexElemento = lbFechas.SelectedIndex;
-
             lbFechas.Items.RemoveAt(indexElemento);
 
             for (int i = indexElemento; i < cantidad - 1; i++)
@@ -450,7 +400,7 @@ namespace Fecha
                 aFechas[i] = aFechas[i + 1];
             }
             cantidad--;
-        } //Le quité el if que comprueba selección (Se supone que ya lo estamos comprobando antes)
+        }
 
         private void mostarFechasEntre(Fecha fecha1, Fecha fecha2)
         {
@@ -484,7 +434,7 @@ namespace Fecha
             }
 
             aFechas = auxiliar;
-        } //Pa que el arreglo crezca 
+        }
         #endregion
     }
 }
