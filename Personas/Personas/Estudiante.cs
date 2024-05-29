@@ -53,7 +53,7 @@ namespace Personas
             else if (this.GetType() == o.GetType())
             {
                 Estudiante p = (Estudiante)o;
-                igual = (legajo == p.Legajo);
+                igual = (legajo == p.Legajo || dni == p.Dni);
             }
 
             return igual;
@@ -62,6 +62,11 @@ namespace Personas
         public override int GetHashCode()
         {
             return Convert.ToInt32(dni) * Convert.ToInt32(legajo);
+        }
+
+        public override string ToString()
+        {
+            return $"Estudiante: {nombre} {dni} {legajo}";
         }
         #endregion
 

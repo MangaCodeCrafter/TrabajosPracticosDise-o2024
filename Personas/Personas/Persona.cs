@@ -68,6 +68,11 @@ namespace Personas
         {
             return Convert.ToInt32(dni);
         }
+
+        public override string ToString()
+        {
+            return $"Persona: {nombre} {dni}";
+        }
         #endregion
 
         #region Comandos

@@ -77,52 +77,47 @@ namespace Personas
                 if (result == DialogResult.Yes) Modificar(empleado);
                 else if (result == DialogResult.None) lPersonas.Add(empleado);
             };
+
+            actualizarPantallaTodos();
         }
 
         private void btBuscar_Click(object sender, EventArgs e)
         {
             Persona persona;
             Estudiante estudiante;
+            Empleado empleado;
 
             if (!mtDNI.MaskCompleted)
             {
                 MessageBox.Show("Falta completar DNI", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 mtDNI.Focus();
             }
-            else
+            else if (mtDNI.MaskCompleted && rbPersona.Checked)
             {
                 string documento = mtDNI.Text.Replace(".", "");
                 persona = new Persona(documento);
 
-                if (!seRepite(persona, null)) MessageBox.Show("No se encontró a la persona", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                else
-                {
-                    int i = 0;
-                    while (i < cantidadPersonas && !aPersonas[i].Existe(persona)) i++;
+                int i = 0;
+                while (i < lPersonas.Count && !lPersonas[i].Equals(persona)) i++;
 
-                    tNombre.Text = aPersonas[i].Nombre;
-                    tApellido.Text = aPersonas[i].Apellido;
-                    dtNacimiento.Value = aPersonas[i].Nacimiento;
+                if (!lPersonas.Contains(persona)) MessageBox.Show("No se encontró a la persona", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else if (lPersonas.Contains(persona))
+                {
+                    tNombre.Text = lPersonas[i].Nombre;
+                    dtNacimiento.Value = lPersonas[i].Nacimiento;
                 }
-            }
-            else if (rbEstudiante.Checked)
-            {
-                string documento = mtDNI.Text.Replace(".", "");
-                estudiante = new Estudiante(documento, mtLegajo.Text);
 
-                if (!seRepite(null, estudiante)) MessageBox.Show("No se encontró el estudiante", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                else
+                if (lPersonas[i].GetType() == typeof(Estudiante))
                 {
-                    int i = 0;
-                    while (i < cantidadEstudiantes && !aEstudiantes[i].Existe(estudiante)) i++;
-
-                    tNombre.Text = aEstudiantes[i].Nombre;
-                    tApellido.Text = aEstudiantes[i].Apellido;
-                    mtDNI.Text = aEstudiantes[i].Dni;
-                    dtNacimiento.Value = aEstudiantes[i].Nacimiento;
-
-                    mtLegajo.Text = aEstudiantes[i].Legajo;
-                    tCarrera.Text = aEstudiantes[i].Carrera;
+                    Estudiante p = (Estudiante)lPersonas[i];
+                    mtLegajo.Text = p.Legajo;
+                    tCarrera.Text = p.Carrera;
+                }
+                else if (lPersonas[i].GetType() == typeof(Empleado))
+                {
+                    Empleado p = (Empleado)lPersonas[i];
+                    mtLegajoEmpleado.Text = p.Legajo;
+                    tCargo.Text =  p.Cargo;
                 }
             }
         }
@@ -136,12 +131,6 @@ namespace Personas
         {
             epNombre.Clear();
             if(tNombre.Text.Trim() == "") epNombre.SetError(tNombre, "El campo debe estár completo");
-        }
-
-        private void tApellido_Validating(object sender, CancelEventArgs e)
-        {
-            epApellido.Clear();
-            if (tApellido.Text.Trim() == "") epApellido.SetError(tApellido, "El campo debe estár completo");
         }
 
         private void tCarrera_Validating(object sender, CancelEventArgs e)
@@ -163,25 +152,44 @@ namespace Personas
         }
 
         #region Metodos     
-        //private void actualizarPantallaTodos()
-        //{
-        //    lbPersonas.Items.Clear();
+        private void actualizarPantallaTodos()
+        {
+            lbPersonas.Items.Clear();
 
-        //    for (int i = 0; i < cantidadPersonas; i++)
-        //    {
-        //        lbPersonas.Items.Add(aPersonas[i].Dni);
-        //    }
+            lPersonas.Sort((x, y) => x.Dni.CompareTo(y.Dni));
 
-        //    for (int i = 0; i < cantidadEstudiantes; i++)
-        //    {
-        //        lbPersonas.Items.Add(aEstudiantes[i].Legajo);
-        //    }
-        //}
+            if (cbFiltro.SelectedIndex == 0) for (int i = 0; i < lPersonas.Count; i++) lbPersonas.Items.Add(lPersonas[i].ToString());
+            if (cbFiltro.SelectedIndex == 1) for (int i = 0; i < lPersonas.Count; i++) if (lPersonas[i].GetType() == typeof(Persona)) lbPersonas.Items.Add(lPersonas[i].ToString());
+            if (cbFiltro.SelectedIndex == 2) for (int i = 0; i < lPersonas.Count; i++) if (lPersonas[i].GetType() == typeof(Estudiante)) lbPersonas.Items.Add(lPersonas[i].ToString());
+            if (cbFiltro.SelectedIndex == 3) for (int i = 0; i < lPersonas.Count; i++) if (lPersonas[i].GetType() == typeof(Empleado)) lbPersonas.Items.Add(lPersonas[i].ToString());
+            
+
+            lCantidad.Text = $"Cantidad: {lbPersonas.Items.Count}";
+        }
         private void Modificar(Persona p)
         {
             lPersonas.Remove(p);
             lPersonas.Add(p);
         }
+
+
         #endregion
+
+        private void rbEstudiante_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbEstudiante.Checked) pEstudiante.Visible = true;
+            else pEstudiante.Visible = false;
+        }
+
+        private void rbEmpleado_CheckedChanged(object sender, EventArgs e)
+        {
+            if(rbEmpleado.Checked) pEmpleado.Visible = true;
+            else pEmpleado.Visible = false;
+        }
+
+        private void cbFiltro_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            actualizarPantallaTodos();
+        }
     }
 }

@@ -109,9 +109,9 @@
             this.lCantidad.Location = new System.Drawing.Point(4, 280);
             this.lCantidad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lCantidad.Name = "lCantidad";
-            this.lCantidad.Size = new System.Drawing.Size(64, 16);
+            this.lCantidad.Size = new System.Drawing.Size(74, 16);
             this.lCantidad.TabIndex = 8;
-            this.lCantidad.Text = "Cantidad:";
+            this.lCantidad.Text = "Cantidad: 0";
             // 
             // cbFiltro
             // 
@@ -119,13 +119,15 @@
             this.cbFiltro.Items.AddRange(new object[] {
             "TODOS",
             "Personas",
-            "Estudiantes"});
-            this.cbFiltro.Location = new System.Drawing.Point(8, 47);
+            "Estudiantes",
+            "Empleados"});
+            this.cbFiltro.Location = new System.Drawing.Point(4, 48);
             this.cbFiltro.Margin = new System.Windows.Forms.Padding(4);
             this.cbFiltro.Name = "cbFiltro";
-            this.cbFiltro.Size = new System.Drawing.Size(160, 24);
+            this.cbFiltro.Size = new System.Drawing.Size(282, 24);
             this.cbFiltro.TabIndex = 12;
             this.cbFiltro.Text = "TODOS";
+            this.cbFiltro.SelectedIndexChanged += new System.EventHandler(this.cbFiltro_SelectedIndexChanged);
             // 
             // tCarrera
             // 
@@ -150,15 +152,15 @@
             // 
             this.lbPersonas.FormattingEnabled = true;
             this.lbPersonas.ItemHeight = 16;
-            this.lbPersonas.Location = new System.Drawing.Point(8, 80);
+            this.lbPersonas.Location = new System.Drawing.Point(4, 80);
             this.lbPersonas.Margin = new System.Windows.Forms.Padding(4);
             this.lbPersonas.Name = "lbPersonas";
-            this.lbPersonas.Size = new System.Drawing.Size(159, 196);
+            this.lbPersonas.Size = new System.Drawing.Size(282, 196);
             this.lbPersonas.TabIndex = 16;
             // 
             // btBuscar
             // 
-            this.btBuscar.Location = new System.Drawing.Point(133, 353);
+            this.btBuscar.Location = new System.Drawing.Point(197, 357);
             this.btBuscar.Margin = new System.Windows.Forms.Padding(4);
             this.btBuscar.Name = "btBuscar";
             this.btBuscar.Size = new System.Drawing.Size(100, 28);
@@ -169,7 +171,7 @@
             // 
             // btGuardar
             // 
-            this.btGuardar.Location = new System.Drawing.Point(241, 353);
+            this.btGuardar.Location = new System.Drawing.Point(305, 357);
             this.btGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.btGuardar.Name = "btGuardar";
             this.btGuardar.Size = new System.Drawing.Size(100, 28);
@@ -180,7 +182,7 @@
             // 
             // btCancelar
             // 
-            this.btCancelar.Location = new System.Drawing.Point(349, 353);
+            this.btCancelar.Location = new System.Drawing.Point(413, 357);
             this.btCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(100, 28);
@@ -199,7 +201,7 @@
             this.panel1.Location = new System.Drawing.Point(380, 15);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(175, 314);
+            this.panel1.Size = new System.Drawing.Size(290, 314);
             this.panel1.TabIndex = 23;
             // 
             // lNombre
@@ -287,6 +289,7 @@
             this.rbEmpleado.TabIndex = 21;
             this.rbEmpleado.Text = "Empleado";
             this.rbEmpleado.UseVisualStyleBackColor = true;
+            this.rbEmpleado.CheckedChanged += new System.EventHandler(this.rbEmpleado_CheckedChanged);
             // 
             // rbEstudiante
             // 
@@ -297,6 +300,7 @@
             this.rbEstudiante.TabIndex = 20;
             this.rbEstudiante.Text = "Estudiante";
             this.rbEstudiante.UseVisualStyleBackColor = true;
+            this.rbEstudiante.CheckedChanged += new System.EventHandler(this.rbEstudiante_CheckedChanged);
             // 
             // rbPersona
             // 
@@ -351,7 +355,7 @@
             this.pEmpleado.Controls.Add(this.lCargo);
             this.pEmpleado.Controls.Add(this.tCargo);
             this.pEmpleado.Controls.Add(this.mtLegajoEmpleado);
-            this.pEmpleado.Location = new System.Drawing.Point(577, 138);
+            this.pEmpleado.Location = new System.Drawing.Point(16, 192);
             this.pEmpleado.Margin = new System.Windows.Forms.Padding(4);
             this.pEmpleado.Name = "pEmpleado";
             this.pEmpleado.Size = new System.Drawing.Size(356, 137);
@@ -399,7 +403,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1022, 398);
+            this.ClientSize = new System.Drawing.Size(682, 398);
             this.Controls.Add(this.pEmpleado);
             this.Controls.Add(this.pEstudiante);
             this.Controls.Add(this.panel2);

@@ -30,6 +30,7 @@ namespace Personas
         public Empleado(string nombre, string dni, DateTime nacimiento, string legajo, string cargo) : base (nombre, dni, nacimiento)
         {
             this.legajo = legajo;
+            this.cargo = cargo;
         }
 
         public Empleado (string dni, string legajo) : base (dni)
@@ -50,7 +51,7 @@ namespace Personas
             else if (this.GetType() == o.GetType())
             {
                 Empleado p = (Empleado)o;
-                igual = (legajo == p.Legajo);
+                igual = (legajo == p.Legajo || dni == p.dni);
             }
 
             return igual;
@@ -59,6 +60,11 @@ namespace Personas
         public override int GetHashCode()
         {
             return Convert.ToInt32(dni) * Convert.ToInt32(legajo);
+        }
+
+        public override string ToString()
+        {
+            return $"Empleado: {nombre} {dni} {legajo}";
         }
         #endregion
     }

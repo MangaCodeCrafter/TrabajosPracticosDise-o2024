@@ -18,3 +18,13 @@ C:\Users\manga\OneDrive\Escritorio\tps\TrabajosPracticosDise-o2024-main\Personas
 C:\Users\manga\OneDrive\Escritorio\tps\TrabajosPracticosDise-o2024-main\Personas\Personas\obj\Debug\Personas.csproj.CoreCompileInputs.cache
 C:\Users\manga\OneDrive\Escritorio\tps\TrabajosPracticosDise-o2024-main\Personas\Personas\obj\Debug\Personas.exe
 C:\Users\manga\OneDrive\Escritorio\tps\TrabajosPracticosDise-o2024-main\Personas\Personas\obj\Debug\Personas.pdb
+C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\Trabajos\Personas\Personas\bin\Debug\Personas.exe.config
+C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\Trabajos\Personas\Personas\bin\Debug\Personas.exe
+C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\Trabajos\Personas\Personas\bin\Debug\Personas.pdb
+C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\Trabajos\Personas\Personas\obj\Debug\Personas.csproj.AssemblyReference.cache
+C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\Trabajos\Personas\Personas\obj\Debug\Personas.Personas.resources
+C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\Trabajos\Personas\Personas\obj\Debug\Personas.Properties.Resources.resources
+C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\Trabajos\Personas\Personas\obj\Debug\Personas.csproj.GenerateResource.cache
+C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\Trabajos\Personas\Personas\obj\Debug\Personas.csproj.CoreCompileInputs.cache
+C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\Trabajos\Personas\Personas\obj\Debug\Personas.exe
+C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\Trabajos\Personas\Personas\obj\Debug\Personas.pdb
