@@ -9,33 +9,35 @@ namespace Personas
     internal class Empleado : Persona
     {
         #region atibuto
-        public string legajo { get; set; }
-        public string cargo { get; set; }
+        private string legajo;
+        private string cargo;
+        private static string legajoDefecto = "999999";
+
         #endregion
 
         #region property
         public string Legajo
         {
             get { return legajo; }
-            set { this.legajo = value; }
+            set { this.legajo = (value != null && value.Length != 6) ? value : legajoDefecto; }
         }
         public string Cargo
         {
             get { return cargo; }
-            set { this.cargo = value; }
+            set { this.cargo = (value != null) ? value : ""; }
         }
         #endregion
 
         #region constructor
         public Empleado(string nombre, string dni, DateTime nacimiento, string legajo, string cargo) : base (nombre, dni, nacimiento)
         {
-            this.legajo = legajo;
-            this.cargo = cargo;
+            this.legajo = (legajo != null && legajo.Length == 6) ? legajo : legajoDefecto;
+            this.cargo = (cargo != null) ? cargo : "";
         }
 
         public Empleado (string dni, string legajo) : base (dni)
         {
-            this.legajo = legajo;
+            this.legajo = (legajo != null && legajo.Length == 6) ? legajo : legajoDefecto;
         }
         #endregion
 
@@ -51,7 +53,7 @@ namespace Personas
             else if (this.GetType() == o.GetType())
             {
                 Empleado p = (Empleado)o;
-                igual = (legajo == p.Legajo || dni == p.dni);
+                igual = (dni == p.dni || legajo == p.Legajo);
             }
 
             return igual;

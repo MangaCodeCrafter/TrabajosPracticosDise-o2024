@@ -52,11 +52,7 @@
             this.rbEstudiante = new System.Windows.Forms.RadioButton();
             this.rbPersona = new System.Windows.Forms.RadioButton();
             this.pEstudiante = new System.Windows.Forms.Panel();
-            this.epNombre = new System.Windows.Forms.ErrorProvider(this.components);
-            this.epApellido = new System.Windows.Forms.ErrorProvider(this.components);
-            this.epDni = new System.Windows.Forms.ErrorProvider(this.components);
-            this.epLegajo = new System.Windows.Forms.ErrorProvider(this.components);
-            this.epCarrera = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.pEmpleado = new System.Windows.Forms.Panel();
             this.lLegajoEmpleado = new System.Windows.Forms.Label();
             this.lCargo = new System.Windows.Forms.Label();
@@ -65,11 +61,7 @@
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pEstudiante.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.epNombre)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epApellido)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epDni)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epLegajo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epCarrera)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.pEmpleado.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -328,25 +320,9 @@
             this.pEstudiante.TabIndex = 19;
             this.pEstudiante.Visible = false;
             // 
-            // epNombre
+            // errorProvider
             // 
-            this.epNombre.ContainerControl = this;
-            // 
-            // epApellido
-            // 
-            this.epApellido.ContainerControl = this;
-            // 
-            // epDni
-            // 
-            this.epDni.ContainerControl = this;
-            // 
-            // epLegajo
-            // 
-            this.epLegajo.ContainerControl = this;
-            // 
-            // epCarrera
-            // 
-            this.epCarrera.ContainerControl = this;
+            this.errorProvider.ContainerControl = this;
             // 
             // pEmpleado
             // 
@@ -389,6 +365,7 @@
             this.tCargo.Name = "tCargo";
             this.tCargo.Size = new System.Drawing.Size(132, 22);
             this.tCargo.TabIndex = 13;
+            this.tCargo.Validating += new System.ComponentModel.CancelEventHandler(this.tCargo_Validating);
             // 
             // mtLegajoEmpleado
             // 
@@ -398,6 +375,7 @@
             this.mtLegajoEmpleado.Name = "mtLegajoEmpleado";
             this.mtLegajoEmpleado.Size = new System.Drawing.Size(132, 22);
             this.mtLegajoEmpleado.TabIndex = 15;
+            this.mtLegajoEmpleado.Validating += new System.ComponentModel.CancelEventHandler(this.mtLegajoEmpleado_Validating);
             // 
             // Personas
             // 
@@ -420,11 +398,7 @@
             this.panel2.PerformLayout();
             this.pEstudiante.ResumeLayout(false);
             this.pEstudiante.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.epNombre)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epApellido)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epDni)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epLegajo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.epCarrera)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.pEmpleado.ResumeLayout(false);
             this.pEmpleado.PerformLayout();
             this.ResumeLayout(false);
@@ -452,11 +426,7 @@
         private System.Windows.Forms.DateTimePicker dtNacimiento;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel pEstudiante;
-        private System.Windows.Forms.ErrorProvider epNombre;
-        private System.Windows.Forms.ErrorProvider epApellido;
-        private System.Windows.Forms.ErrorProvider epDni;
-        private System.Windows.Forms.ErrorProvider epLegajo;
-        private System.Windows.Forms.ErrorProvider epCarrera;
+        private System.Windows.Forms.ErrorProvider errorProvider;
         private System.Windows.Forms.RadioButton rbEmpleado;
         private System.Windows.Forms.RadioButton rbEstudiante;
         private System.Windows.Forms.RadioButton rbPersona;

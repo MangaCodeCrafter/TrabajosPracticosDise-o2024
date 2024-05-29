@@ -10,21 +10,22 @@ namespace Personas
     internal class Persona
     {
         #region atributos
-        protected string nombre { get; set; }
-        protected string dni { get; set; }
-        protected DateTime nacimiento { get; set; }
+        protected string nombre;
+        protected string dni;
+        protected DateTime nacimiento;
+        private static string dniDefecto = "99999999";
         #endregion
 
         #region constructores
         public Persona(string dni)
         {
-            this.dni = dni;
+            this.dni = (dni != null && dni.Length == 8) ? dni : dniDefecto;
         }
         public Persona(string nombre, string dni, DateTime nacimiento)
         {
-            this.nombre = nombre;
-            this.dni = dni;
-            this.nacimiento = nacimiento;
+            this.nombre = (nombre != null) ? nombre : "";
+            this.dni = (dni != null && dni.Length == 8) ? dni : dniDefecto;
+            this.nacimiento = (nacimiento != null) ? nacimiento : new DateTime(2000, 01, 01);
         }
         #endregion
 
@@ -32,17 +33,17 @@ namespace Personas
         public string Nombre
         {
             get { return nombre; }
-            set { nombre = value; }
+            set { nombre = (value != null) ? value : ""; }
         }
         public string Dni
         {
             get { return dni; }
-            set { dni = value; }
+            set { dni = (value != null && value.Length == 8) ? value : dniDefecto; }
         }  
         public DateTime Nacimiento
         {
             get { return nacimiento; }
-            set { nacimiento = value;}
+            set { nacimiento = (value != null) ? value : new DateTime(2000, 01, 01); }
         }
         #endregion
 

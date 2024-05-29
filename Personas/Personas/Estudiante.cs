@@ -9,21 +9,22 @@ namespace Personas
     internal class Estudiante : Persona
     {
         #region atributos
-        private string legajo { get; set; }
-        private string carrera { get; set; }
+        private string legajo;
+        private string carrera;
+        private static string legajoDefecto = "999999";
         #endregion
 
         #region constructores
 
         public Estudiante(string dni, string legajo) : base(dni)
         {
-            this.legajo = legajo;
+            this.legajo = (legajo != null && legajo.Length == 6) ? legajo : legajoDefecto;
         }
 
         public Estudiante(string nombre, string dni, DateTime nacimiento, string legajo, string carrera) : base(nombre, dni, nacimiento)
         {
-            this.legajo = legajo;
-            this.carrera = carrera;
+            this.legajo = (legajo != null && legajo.Length == 6) ? legajo : legajoDefecto;
+            this.carrera = (carrera != null) ? carrera : "";
         }
 
         #endregion
@@ -32,12 +33,12 @@ namespace Personas
         public string Legajo
         {
             get { return legajo; }
-            set { legajo = value; }
+            set { legajo = (value != null && value.Length == 6) ? value : legajoDefecto; }
         }
         public string Carrera
         {
             get { return carrera; }
-            set { carrera = value; }
+            set { carrera = (value != null) ? value : ""; }
         }
         #endregion
 
@@ -53,7 +54,7 @@ namespace Personas
             else if (this.GetType() == o.GetType())
             {
                 Estudiante p = (Estudiante)o;
-                igual = (legajo == p.Legajo || dni == p.Dni);
+                igual = (dni == p.Dni || legajo == p.Legajo);
             }
 
             return igual;

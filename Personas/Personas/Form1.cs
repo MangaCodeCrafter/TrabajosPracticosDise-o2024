@@ -9,22 +9,35 @@ namespace Personas
     public partial class Personas : Form
     {
         List<Persona> lPersonas;
-
-        //int cantMaxima;
-        //int cantidadPersonas;
-        //int cantidadEstudiantes;
         public Personas()
         {
             InitializeComponent();
             lPersonas = new List<Persona>();
         }
 
+        #region filtro y radioButton
         private void chEstudiante_CheckedChanged(object sender, EventArgs e)
         {
             if (rbEstudiante.Checked) pEstudiante.Visible = true;
             else pEstudiante.Visible = false;
         }
+        private void rbEstudiante_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbEstudiante.Checked) pEstudiante.Visible = true;
+            else pEstudiante.Visible = false;
+        }
+        private void rbEmpleado_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbEmpleado.Checked) pEmpleado.Visible = true;
+            else pEmpleado.Visible = false;
+        }
+        private void cbFiltro_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            actualizarPantallaTodos();
+        }
+        #endregion
 
+        #region botones
         private void btGuardar_Click(object sender, EventArgs e)
         {
             Persona persona;
@@ -83,41 +96,33 @@ namespace Personas
 
         private void btBuscar_Click(object sender, EventArgs e)
         {
-            Persona persona;
-            Estudiante estudiante;
-            Empleado empleado;
+            errorProvider.Clear();
 
             if (!mtDNI.MaskCompleted)
             {
                 MessageBox.Show("Falta completar DNI", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 mtDNI.Focus();
             }
-            else if (mtDNI.MaskCompleted && rbPersona.Checked)
+            else if (ExisteYLugar(new Persona(mtDNI.Text.Replace(".", "")), out int i))
             {
-                string documento = mtDNI.Text.Replace(".", "");
-                persona = new Persona(documento);
+                Persona p = lPersonas[i];
+                tNombre.Text = p.Nombre; 
+                dtNacimiento.Value = p.Nacimiento; 
+                rbPersona.Checked = true;
 
-                int i = 0;
-                while (i < lPersonas.Count && !lPersonas[i].Equals(persona)) i++;
-
-                if (!lPersonas.Contains(persona)) MessageBox.Show("No se encontró a la persona", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                else if (lPersonas.Contains(persona))
+                if (p.GetType() == typeof(Estudiante))
                 {
-                    tNombre.Text = lPersonas[i].Nombre;
-                    dtNacimiento.Value = lPersonas[i].Nacimiento;
+                    Estudiante estudiante = (Estudiante)p; 
+                    rbEstudiante.Checked = true;
+                    mtLegajo.Text = estudiante.Legajo; 
+                    tCarrera.Text = estudiante.Carrera;
                 }
-
-                if (lPersonas[i].GetType() == typeof(Estudiante))
+                else if (p.GetType() == typeof(Empleado))
                 {
-                    Estudiante p = (Estudiante)lPersonas[i];
-                    mtLegajo.Text = p.Legajo;
-                    tCarrera.Text = p.Carrera;
-                }
-                else if (lPersonas[i].GetType() == typeof(Empleado))
-                {
-                    Empleado p = (Empleado)lPersonas[i];
-                    mtLegajoEmpleado.Text = p.Legajo;
-                    tCargo.Text =  p.Cargo;
+                    Empleado empleado = (Empleado)p; 
+                    rbEmpleado.Checked = true;
+                    mtLegajoEmpleado.Text = empleado.Legajo; 
+                    tCargo.Text = empleado.Cargo;
                 }
             }
         }
@@ -126,30 +131,43 @@ namespace Personas
         {
             this.Close();
         }
+        #endregion
 
+        #region validatings        
         private void tNombre_Validating(object sender, CancelEventArgs e)
         {
-            epNombre.Clear();
-            if(tNombre.Text.Trim() == "") epNombre.SetError(tNombre, "El campo debe estár completo");
+            errorProvider.Clear();
+            if(tNombre.Text.Trim() == "") errorProvider.SetError(tNombre, "El campo debe estár completo");
         }
 
         private void tCarrera_Validating(object sender, CancelEventArgs e)
         {
-            epCarrera.Clear();
-            if (tCarrera.Text.Trim() == "") epCarrera.SetError(tCarrera, "El campo debe estár completo");
+            errorProvider.Clear();
+            if (tCarrera.Text.Trim() == "") errorProvider.SetError(tCarrera, "El campo debe estár completo");
         }
-
         private void mtDNI_Validating(object sender, CancelEventArgs e)
         {
-            epDni.Clear();
-            if(mtDNI.Text == "  .   .") epDni.SetError(mtDNI, "El campo debe estár completo");
+            errorProvider.Clear();
+            if(mtDNI.Text == "  .   .") errorProvider.SetError(mtDNI, "El campo debe estár completo");
         }
 
         private void mtLegajo_Validating(object sender, CancelEventArgs e)
         {
-            epLegajo.Clear();
-            if(mtLegajo.Text.Trim() == "") epLegajo.SetError(mtLegajo, "El campo debe estár completo");
+            errorProvider.Clear();
+            if(mtLegajo.Text.Trim() == "") errorProvider.SetError(mtLegajo, "El campo debe estár completo");
         }
+        private void mtLegajoEmpleado_Validating(object sender, CancelEventArgs e)
+        {
+            errorProvider.Clear();
+            if (!mtLegajoEmpleado.MaskCompleted) errorProvider.SetError(mtLegajoEmpleado, "El campo debe estár completo");
+        }
+
+        private void tCargo_Validating(object sender, CancelEventArgs e)
+        {
+            errorProvider.Clear();
+            if (tCargo.Text.Trim() == "") errorProvider.SetError(tCargo, "El campo debe estár completo");
+        }
+        #endregion
 
         #region Metodos     
         private void actualizarPantallaTodos()
@@ -172,24 +190,16 @@ namespace Personas
             lPersonas.Add(p);
         }
 
+        private bool ExisteYLugar (Persona p, out int posicion)
+        {
+            int i = 0;
 
+            while (i < lPersonas.Count && lPersonas[i].Dni != p.Dni) i++;
+
+            posicion = i;
+            return i < lPersonas.Count;
+        }
         #endregion
 
-        private void rbEstudiante_CheckedChanged(object sender, EventArgs e)
-        {
-            if (rbEstudiante.Checked) pEstudiante.Visible = true;
-            else pEstudiante.Visible = false;
-        }
-
-        private void rbEmpleado_CheckedChanged(object sender, EventArgs e)
-        {
-            if(rbEmpleado.Checked) pEmpleado.Visible = true;
-            else pEmpleado.Visible = false;
-        }
-
-        private void cbFiltro_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            actualizarPantallaTodos();
-        }
     }
 }
