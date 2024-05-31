@@ -38,7 +38,7 @@ namespace Personas
         public Empleado (string dni, string legajo) : base (dni)
         {
             this.legajo = (legajo != null && legajo.Length == 6) ? legajo : legajoDefecto;
-            this.cargo = "";
+            this.cargo = "Empleado";
         }
         #endregion
 
@@ -67,7 +67,7 @@ namespace Personas
 
         public override string ToString()
         {
-            return $"Empleado: {nombre} {dni} {legajo}";
+            return base.ToString() + $" {legajo}";
         }
         #endregion
     }

@@ -68,7 +68,7 @@ namespace Personas
 
         public override string ToString()
         {
-            return $"Estudiante: {nombre} {dni} {legajo}";
+            return base.ToString() + $" {legajo}";
         }
         #endregion
 
