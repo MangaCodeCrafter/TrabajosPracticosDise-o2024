@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\Trabajos\\Figuras\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{58D9D61E-3ED1-460D-A433-C6F98F6C6705}|Figuras\\Figuras.csproj|C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\Trabajos\\Figuras\\figuras\\rectangulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58D9D61E-3ED1-460D-A433-C6F98F6C6705}|Figuras\\Figuras.csproj|solutionrelative:figuras\\rectangulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{58D9D61E-3ED1-460D-A433-C6F98F6C6705}|Figuras\\Figuras.csproj|c:\\users\\mym\\desktop\\escritorio\\escuela\\dise\u00F1o y desarrollo\\trabajos\\figuras\\figuras\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58D9D61E-3ED1-460D-A433-C6F98F6C6705}|Figuras\\Figuras.csproj|solutionrelative:figuras\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{58D9D61E-3ED1-460D-A433-C6F98F6C6705}|Figuras\\Figuras.csproj|C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\Trabajos\\Figuras\\figuras\\cuadrado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58D9D61E-3ED1-460D-A433-C6F98F6C6705}|Figuras\\Figuras.csproj|solutionrelative:figuras\\cuadrado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58D9D61E-3ED1-460D-A433-C6F98F6C6705}|Figuras\\Figuras.csproj|C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\Trabajos\\Figuras\\figuras\\rectangulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58D9D61E-3ED1-460D-A433-C6F98F6C6705}|Figuras\\Figuras.csproj|solutionrelative:figuras\\rectangulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{58D9D61E-3ED1-460D-A433-C6F98F6C6705}|Figuras\\Figuras.csproj|C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\Trabajos\\Figuras\\figuras\\triangulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,11 +38,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Cuadrado.cs",
               "DocumentMoniker": "C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\Trabajos\\Figuras\\Figuras\\Cuadrado.cs",
               "RelativeDocumentMoniker": "Figuras\\Cuadrado.cs",
@@ -51,18 +51,17 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACoAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-14T23:47:40.337Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Rectangulo.cs",
               "DocumentMoniker": "C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\Trabajos\\Figuras\\Figuras\\Rectangulo.cs",
               "RelativeDocumentMoniker": "Figuras\\Rectangulo.cs",
               "ToolTip": "C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\Trabajos\\Figuras\\Figuras\\Rectangulo.cs",
               "RelativeToolTip": "Figuras\\Rectangulo.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADIAAAAFAAAA",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAwDIAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-14T23:41:09.429Z",
               "IsPinned": true,
@@ -79,8 +78,7 @@
               "ViewState": "AQIAADUAAAAAAAAAAAAkwEAAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-14T23:34:31.777Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -93,8 +91,7 @@
               "ViewState": "AQIAABkAAAAAAAAAAAAQwCcAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-14T17:14:17.456Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -107,12 +104,11 @@
               "ViewState": "AQIAAAMAAAAAAAAAAAAAABEAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-14T17:03:34.743Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\MyM\\Desktop\\Escritorio\\Escuela\\Dise\u00F1o y Desarrollo\\Trabajos\\Figuras\\Figuras\\Form1.cs",
               "RelativeDocumentMoniker": "Figuras\\Form1.cs",
@@ -134,8 +130,7 @@
               "RelativeToolTip": "Figuras\\Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-14T16:32:22.178Z",
-              "IsPinned": true,
-              "EditorCaption": " [Dise\u00F1o]"
+              "IsPinned": true
             }
           ]
         }

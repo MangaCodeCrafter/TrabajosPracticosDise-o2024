@@ -8,6 +8,21 @@ namespace Recupetorio_Gutierrez_Manuel
 {
     internal class Coleccion
     {
+        private List<Mazo> lista;
 
+        public void Agregar(Mazo m)
+        {
+            lista.Add(m);
+        }
+
+        public void Eliminar(Mazo m)
+        {
+            lista.Remove(m);
+        }
+
+        public void Filtro()
+        {
+
+        }
     }
 }

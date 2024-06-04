@@ -38,17 +38,17 @@
             this.cbFiltro = new System.Windows.Forms.ComboBox();
             this.chCartasEspeciales = new System.Windows.Forms.CheckBox();
             this.gbAcabado = new System.Windows.Forms.GroupBox();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rbPlastic = new System.Windows.Forms.RadioButton();
+            this.rbSmooth = new System.Windows.Forms.RadioButton();
+            this.rbAirCushion = new System.Windows.Forms.RadioButton();
             this.gbCantidad = new System.Windows.Forms.GroupBox();
             this.rb50 = new System.Windows.Forms.RadioButton();
             this.rb40 = new System.Windows.Forms.RadioButton();
             this.pFiltro = new System.Windows.Forms.Panel();
+            this.pEspecífico = new System.Windows.Forms.Panel();
+            this.chPersonalizado = new System.Windows.Forms.CheckBox();
             this.lFiltro = new System.Windows.Forms.Label();
             this.lMazos = new System.Windows.Forms.Label();
-            this.chPersonalizado = new System.Windows.Forms.CheckBox();
-            this.pEspecífico = new System.Windows.Forms.Panel();
             this.pBotones.SuspendLayout();
             this.gbAcabado.SuspendLayout();
             this.gbCantidad.SuspendLayout();
@@ -148,9 +148,9 @@
             // 
             // gbAcabado
             // 
-            this.gbAcabado.Controls.Add(this.radioButton3);
-            this.gbAcabado.Controls.Add(this.radioButton2);
-            this.gbAcabado.Controls.Add(this.radioButton1);
+            this.gbAcabado.Controls.Add(this.rbPlastic);
+            this.gbAcabado.Controls.Add(this.rbSmooth);
+            this.gbAcabado.Controls.Add(this.rbAirCushion);
             this.gbAcabado.Location = new System.Drawing.Point(9, 42);
             this.gbAcabado.Name = "gbAcabado";
             this.gbAcabado.Size = new System.Drawing.Size(191, 110);
@@ -158,39 +158,39 @@
             this.gbAcabado.TabStop = false;
             this.gbAcabado.Text = "Acabado";
             // 
-            // radioButton3
+            // rbPlastic
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(6, 75);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(117, 20);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Plastic Coating";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rbPlastic.AutoSize = true;
+            this.rbPlastic.Location = new System.Drawing.Point(6, 75);
+            this.rbPlastic.Name = "rbPlastic";
+            this.rbPlastic.Size = new System.Drawing.Size(117, 20);
+            this.rbPlastic.TabIndex = 2;
+            this.rbPlastic.TabStop = true;
+            this.rbPlastic.Text = "Plastic Coating";
+            this.rbPlastic.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rbSmooth
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(6, 49);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(112, 20);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Smooth Finish";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rbSmooth.AutoSize = true;
+            this.rbSmooth.Location = new System.Drawing.Point(6, 49);
+            this.rbSmooth.Name = "rbSmooth";
+            this.rbSmooth.Size = new System.Drawing.Size(112, 20);
+            this.rbSmooth.TabIndex = 1;
+            this.rbSmooth.TabStop = true;
+            this.rbSmooth.Text = "Smooth Finish";
+            this.rbSmooth.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rbAirCushion
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(6, 23);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(134, 20);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Air-Cushion Finish";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rbAirCushion.AutoSize = true;
+            this.rbAirCushion.Checked = true;
+            this.rbAirCushion.Location = new System.Drawing.Point(6, 23);
+            this.rbAirCushion.Name = "rbAirCushion";
+            this.rbAirCushion.Size = new System.Drawing.Size(134, 20);
+            this.rbAirCushion.TabIndex = 0;
+            this.rbAirCushion.TabStop = true;
+            this.rbAirCushion.Text = "Air-Cushion Finish";
+            this.rbAirCushion.UseVisualStyleBackColor = true;
             // 
             // gbCantidad
             // 
@@ -237,6 +237,27 @@
             this.pFiltro.Size = new System.Drawing.Size(226, 356);
             this.pFiltro.TabIndex = 11;
             // 
+            // pEspecífico
+            // 
+            this.pEspecífico.Controls.Add(this.gbAcabado);
+            this.pEspecífico.Controls.Add(this.chCartasEspeciales);
+            this.pEspecífico.Controls.Add(this.gbCantidad);
+            this.pEspecífico.Enabled = false;
+            this.pEspecífico.Location = new System.Drawing.Point(3, 89);
+            this.pEspecífico.Name = "pEspecífico";
+            this.pEspecífico.Size = new System.Drawing.Size(220, 252);
+            this.pEspecífico.TabIndex = 12;
+            // 
+            // chPersonalizado
+            // 
+            this.chPersonalizado.AutoSize = true;
+            this.chPersonalizado.Location = new System.Drawing.Point(40, 53);
+            this.chPersonalizado.Name = "chPersonalizado";
+            this.chPersonalizado.Size = new System.Drawing.Size(139, 20);
+            this.chPersonalizado.TabIndex = 11;
+            this.chPersonalizado.Text = "Filtrado específico";
+            this.chPersonalizado.UseVisualStyleBackColor = true;
+            // 
             // lFiltro
             // 
             this.lFiltro.AutoSize = true;
@@ -254,27 +275,6 @@
             this.lMazos.Size = new System.Drawing.Size(50, 16);
             this.lMazos.TabIndex = 13;
             this.lMazos.Text = "Mazos:";
-            // 
-            // chPersonalizado
-            // 
-            this.chPersonalizado.AutoSize = true;
-            this.chPersonalizado.Location = new System.Drawing.Point(40, 53);
-            this.chPersonalizado.Name = "chPersonalizado";
-            this.chPersonalizado.Size = new System.Drawing.Size(139, 20);
-            this.chPersonalizado.TabIndex = 11;
-            this.chPersonalizado.Text = "Filtrado específico";
-            this.chPersonalizado.UseVisualStyleBackColor = true;
-            // 
-            // pEspecífico
-            // 
-            this.pEspecífico.Controls.Add(this.gbAcabado);
-            this.pEspecífico.Controls.Add(this.chCartasEspeciales);
-            this.pEspecífico.Controls.Add(this.gbCantidad);
-            this.pEspecífico.Enabled = false;
-            this.pEspecífico.Location = new System.Drawing.Point(3, 89);
-            this.pEspecífico.Name = "pEspecífico";
-            this.pEspecífico.Size = new System.Drawing.Size(220, 252);
-            this.pEspecífico.TabIndex = 12;
             // 
             // Form1
             // 
@@ -315,9 +315,9 @@
         private System.Windows.Forms.ComboBox cbFiltro;
         private System.Windows.Forms.CheckBox chCartasEspeciales;
         private System.Windows.Forms.GroupBox gbAcabado;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rbPlastic;
+        private System.Windows.Forms.RadioButton rbSmooth;
+        private System.Windows.Forms.RadioButton rbAirCushion;
         private System.Windows.Forms.GroupBox gbCantidad;
         private System.Windows.Forms.RadioButton rb50;
         private System.Windows.Forms.RadioButton rb40;
