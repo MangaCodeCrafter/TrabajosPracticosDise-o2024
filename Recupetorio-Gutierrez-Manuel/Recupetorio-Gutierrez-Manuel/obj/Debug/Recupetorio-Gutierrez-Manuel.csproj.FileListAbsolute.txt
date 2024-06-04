@@ -8,3 +8,4 @@ C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\Trabajos\Recupetori
 C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\Trabajos\Recupetorio-Gutierrez-Manuel\Recupetorio-Gutierrez-Manuel\obj\Debug\Recupetorio-Gutierrez-Manuel.csproj.CoreCompileInputs.cache
 C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\Trabajos\Recupetorio-Gutierrez-Manuel\Recupetorio-Gutierrez-Manuel\obj\Debug\Recupetorio-Gutierrez-Manuel.exe
 C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\Trabajos\Recupetorio-Gutierrez-Manuel\Recupetorio-Gutierrez-Manuel\obj\Debug\Recupetorio-Gutierrez-Manuel.pdb
+C:\Users\MyM\Desktop\Escritorio\Escuela\Diseño y Desarrollo\Trabajos\Recupetorio-Gutierrez-Manuel\Recupetorio-Gutierrez-Manuel\obj\Debug\Recupetorio_Gutierrez_Manuel.fAgregar.resources

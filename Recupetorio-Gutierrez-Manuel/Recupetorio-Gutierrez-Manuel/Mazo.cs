@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Recupetorio_Gutierrez_Manuel
 {
-    internal abstract class Mazo
+    public abstract class Mazo
     {
         protected string marca;
         protected bool especial;

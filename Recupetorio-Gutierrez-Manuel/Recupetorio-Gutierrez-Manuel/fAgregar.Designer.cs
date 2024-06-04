@@ -1,6 +1,6 @@
 ﻿namespace Recupetorio_Gutierrez_Manuel
 {
-    partial class Form2
+    partial class fAgregar
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.gbMazo = new System.Windows.Forms.GroupBox();
             this.rbEspañol = new System.Windows.Forms.RadioButton();
             this.rbFrances = new System.Windows.Forms.RadioButton();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.chEspeciales = new System.Windows.Forms.CheckBox();
             this.gbAcabado = new System.Windows.Forms.GroupBox();
             this.rbPlastic = new System.Windows.Forms.RadioButton();
@@ -45,16 +45,18 @@
             this.dtLote = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lMarca = new System.Windows.Forms.Label();
+            this.tMarca = new System.Windows.Forms.TextBox();
             this.bGuardar = new System.Windows.Forms.Button();
             this.bCancelar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lMarca = new System.Windows.Forms.Label();
-            this.tMarca = new System.Windows.Forms.TextBox();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.gbMazo.SuspendLayout();
             this.gbAcabado.SuspendLayout();
             this.gbCantidad.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // gbMazo
@@ -75,13 +77,14 @@
             this.rbEspañol.Name = "rbEspañol";
             this.rbEspañol.Size = new System.Drawing.Size(78, 20);
             this.rbEspañol.TabIndex = 1;
-            this.rbEspañol.TabStop = true;
             this.rbEspañol.Text = "Español";
             this.rbEspañol.UseVisualStyleBackColor = true;
+            this.rbEspañol.CheckedChanged += new System.EventHandler(this.rbEspañol_CheckedChanged);
             // 
             // rbFrances
             // 
             this.rbFrances.AutoSize = true;
+            this.rbFrances.Checked = true;
             this.rbFrances.Location = new System.Drawing.Point(27, 21);
             this.rbFrances.Name = "rbFrances";
             this.rbFrances.Size = new System.Drawing.Size(77, 20);
@@ -89,6 +92,7 @@
             this.rbFrances.TabStop = true;
             this.rbFrances.Text = "Frances";
             this.rbFrances.UseVisualStyleBackColor = true;
+            this.rbFrances.CheckedChanged += new System.EventHandler(this.rbFrances_CheckedChanged);
             // 
             // chEspeciales
             // 
@@ -119,7 +123,6 @@
             this.rbPlastic.Name = "rbPlastic";
             this.rbPlastic.Size = new System.Drawing.Size(117, 20);
             this.rbPlastic.TabIndex = 2;
-            this.rbPlastic.TabStop = true;
             this.rbPlastic.Text = "Plastic Coating";
             this.rbPlastic.UseVisualStyleBackColor = true;
             // 
@@ -130,13 +133,13 @@
             this.rbSmooth.Name = "rbSmooth";
             this.rbSmooth.Size = new System.Drawing.Size(112, 20);
             this.rbSmooth.TabIndex = 1;
-            this.rbSmooth.TabStop = true;
             this.rbSmooth.Text = "Smooth Finish";
             this.rbSmooth.UseVisualStyleBackColor = true;
             // 
             // rbAirCushion
             // 
             this.rbAirCushion.AutoSize = true;
+            this.rbAirCushion.Checked = true;
             this.rbAirCushion.Location = new System.Drawing.Point(80, 21);
             this.rbAirCushion.Name = "rbAirCushion";
             this.rbAirCushion.Size = new System.Drawing.Size(134, 20);
@@ -156,6 +159,7 @@
             this.gbCantidad.TabIndex = 3;
             this.gbCantidad.TabStop = false;
             this.gbCantidad.Text = "Cantidad";
+            this.gbCantidad.Visible = false;
             // 
             // rb50
             // 
@@ -164,13 +168,13 @@
             this.rb50.Name = "rb50";
             this.rb50.Size = new System.Drawing.Size(82, 20);
             this.rb50.TabIndex = 1;
-            this.rb50.TabStop = true;
             this.rb50.Text = "50 cartas";
             this.rb50.UseVisualStyleBackColor = true;
             // 
             // rb40
             // 
             this.rb40.AutoSize = true;
+            this.rb40.Checked = true;
             this.rb40.Location = new System.Drawing.Point(27, 34);
             this.rb40.Name = "rb40";
             this.rb40.Size = new System.Drawing.Size(82, 20);
@@ -230,34 +234,6 @@
             this.panel1.Size = new System.Drawing.Size(293, 444);
             this.panel1.TabIndex = 8;
             // 
-            // bGuardar
-            // 
-            this.bGuardar.Location = new System.Drawing.Point(17, 12);
-            this.bGuardar.Name = "bGuardar";
-            this.bGuardar.Size = new System.Drawing.Size(87, 49);
-            this.bGuardar.TabIndex = 9;
-            this.bGuardar.Text = "Guardar";
-            this.bGuardar.UseVisualStyleBackColor = true;
-            // 
-            // bCancelar
-            // 
-            this.bCancelar.Location = new System.Drawing.Point(193, 12);
-            this.bCancelar.Name = "bCancelar";
-            this.bCancelar.Size = new System.Drawing.Size(82, 49);
-            this.bCancelar.TabIndex = 10;
-            this.bCancelar.Text = "Cancelar";
-            this.bCancelar.UseVisualStyleBackColor = true;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
-            this.panel2.Controls.Add(this.bGuardar);
-            this.panel2.Controls.Add(this.bCancelar);
-            this.panel2.Location = new System.Drawing.Point(12, 462);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(293, 72);
-            this.panel2.TabIndex = 11;
-            // 
             // lMarca
             // 
             this.lMarca.AutoSize = true;
@@ -274,7 +250,41 @@
             this.tMarca.Size = new System.Drawing.Size(258, 22);
             this.tMarca.TabIndex = 8;
             // 
-            // Form2
+            // bGuardar
+            // 
+            this.bGuardar.Location = new System.Drawing.Point(17, 12);
+            this.bGuardar.Name = "bGuardar";
+            this.bGuardar.Size = new System.Drawing.Size(87, 49);
+            this.bGuardar.TabIndex = 9;
+            this.bGuardar.Text = "Guardar";
+            this.bGuardar.UseVisualStyleBackColor = true;
+            this.bGuardar.Click += new System.EventHandler(this.bGuardar_Click);
+            // 
+            // bCancelar
+            // 
+            this.bCancelar.Location = new System.Drawing.Point(193, 12);
+            this.bCancelar.Name = "bCancelar";
+            this.bCancelar.Size = new System.Drawing.Size(82, 49);
+            this.bCancelar.TabIndex = 10;
+            this.bCancelar.Text = "Cancelar";
+            this.bCancelar.UseVisualStyleBackColor = true;
+            this.bCancelar.Click += new System.EventHandler(this.bCancelar_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(213)))), ((int)(((byte)(234)))));
+            this.panel2.Controls.Add(this.bGuardar);
+            this.panel2.Controls.Add(this.bCancelar);
+            this.panel2.Location = new System.Drawing.Point(12, 462);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(293, 72);
+            this.panel2.TabIndex = 11;
+            // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
+            // fAgregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -282,7 +292,7 @@
             this.ClientSize = new System.Drawing.Size(324, 534);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "Form2";
+            this.Name = "fAgregar";
             this.Text = "Form2";
             this.gbMazo.ResumeLayout(false);
             this.gbMazo.PerformLayout();
@@ -293,6 +303,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -302,7 +313,6 @@
         private System.Windows.Forms.GroupBox gbMazo;
         private System.Windows.Forms.RadioButton rbEspañol;
         private System.Windows.Forms.RadioButton rbFrances;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.CheckBox chEspeciales;
         private System.Windows.Forms.GroupBox gbAcabado;
         private System.Windows.Forms.RadioButton rbPlastic;
@@ -321,5 +331,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lMarca;
         private System.Windows.Forms.TextBox tMarca;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }

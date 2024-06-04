@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Recupetorio_Gutierrez_Manuel
 {
-    internal class Frances : Mazo
+    public class Frances : Mazo
     {
         #region atributo
         private static int cantidad = 52;

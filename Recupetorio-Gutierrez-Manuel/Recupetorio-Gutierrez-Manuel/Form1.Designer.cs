@@ -64,6 +64,7 @@
             this.bAgregar.TabIndex = 0;
             this.bAgregar.Text = "Agregar";
             this.bAgregar.UseVisualStyleBackColor = true;
+            this.bAgregar.Click += new System.EventHandler(this.bAgregar_Click);
             // 
             // bModificar
             // 

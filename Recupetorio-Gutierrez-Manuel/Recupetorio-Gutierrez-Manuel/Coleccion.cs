@@ -6,9 +6,14 @@ using System.Threading.Tasks;
 
 namespace Recupetorio_Gutierrez_Manuel
 {
-    internal class Coleccion
+    public class Coleccion
     {
         private List<Mazo> lista;
+
+        public Coleccion()
+        {
+            lista = new List<Mazo>();
+        }
 
         public void Agregar(Mazo m)
         {

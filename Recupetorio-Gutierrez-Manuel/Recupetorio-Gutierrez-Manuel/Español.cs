@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Recupetorio_Gutierrez_Manuel
 {
-    internal class Español : Mazo
+    public class Español : Mazo
     {
         #region atributo
         private int cantidad;

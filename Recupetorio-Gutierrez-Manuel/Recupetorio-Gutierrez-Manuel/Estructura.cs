@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Recupetorio_Gutierrez_Manuel
 {
-    internal class Estructura
+    public class Estructura
     {
         private string material;
         private string acabado;
