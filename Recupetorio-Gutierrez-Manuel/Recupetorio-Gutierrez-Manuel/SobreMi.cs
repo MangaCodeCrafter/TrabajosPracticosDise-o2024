@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Recupetorio_Gutierrez_Manuel
 {
-    public partial class Form3 : Form
+    public partial class SobreMi : Form
     {
-        public Form3()
+        public SobreMi()
         {
             InitializeComponent();
         }

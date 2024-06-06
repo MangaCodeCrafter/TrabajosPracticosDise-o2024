@@ -31,7 +31,7 @@ namespace Recupetorio_Gutierrez_Manuel
         #region consultas
         public override string ToString()
         {
-            return $"Mazo frances {marca} {modelo}";
+            return $"Mazo Frances {marca} {modelo}";
         }
         public override bool Equals(object obj)
         {

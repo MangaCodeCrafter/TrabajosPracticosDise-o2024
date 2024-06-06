@@ -38,21 +38,40 @@ namespace Recupetorio_Gutierrez_Manuel
         {
             if (lbMazos.SelectedIndex < 0)
             {
-                MessageBox.Show("Debe seleccionar un elemento");
+                MessageBox.Show("Debe seleccionar un elemento", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                fAgregar fAgregar = new fAgregar(coleccion, coleccionFiltrada[lbMazos.SelectedIndex]);
+                Mazo modificar = coleccionFiltrada[lbMazos.SelectedIndex];
+
+                fAgregar fAgregar = new fAgregar(coleccion, modificar);
                 fAgregar.ShowDialog();
+
+                if (fAgregar.DialogResult == DialogResult.OK)
+                {
+                    coleccion.Eliminar(modificar);
+                    filtrarLista(cbFiltro);
+                    MessageBox.Show("Se modificó correctamente.", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else MessageBox.Show("No se agregó.", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
         private void bEliminar_Click(object sender, EventArgs e)
         {
-
+            if(lbMazos.SelectedIndex < 0)
+            {
+                MessageBox.Show("Debe seleccionar un elemento", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                coleccion.Eliminar(coleccionFiltrada[lbMazos.SelectedIndex]);
+                filtrarLista(cbFiltro);
+            }
         }
         private void bAcercaDe_Click(object sender, EventArgs e)
         {
-
+            SobreMi sobreMi = new SobreMi();
+            sobreMi.ShowDialog();
         }
         private void bSalir_Click(object sender, EventArgs e)
         {
@@ -103,6 +122,7 @@ namespace Recupetorio_Gutierrez_Manuel
         private void cbFiltro_SelectedIndexChanged(object sender, EventArgs e)
         {
             filtrarLista(cbFiltro);
+            gbCantidad.Visible = (cbFiltro.SelectedIndex == 2) ? true : false;
         }
 
         private void test()
@@ -119,6 +139,48 @@ namespace Recupetorio_Gutierrez_Manuel
             coleccion.Agregar(new Español("Casino", false, DateTime.Now, new Estructura("Papel", "Air Cushion"), 40));            
             coleccion.Agregar(new Español("Casino", true, DateTime.Now, new Estructura("Papel", "Air Cushion"), 50));            
             coleccion.Agregar(new Español("Casino second", true, DateTime.Now, new Estructura("Papel", "Smooth"), 40));
+
+            filtrarLista(cbFiltro);
+        }
+
+        private void chCartasEspeciales_CheckedChanged(object sender, EventArgs e)
+        {
+            filtrarLista(cbFiltro);
+        }
+
+        private void rbAirCushion_CheckedChanged(object sender, EventArgs e)
+        {
+            filtrarLista(cbFiltro);
+        }
+
+        private void rbSmooth_CheckedChanged(object sender, EventArgs e)
+        {
+            filtrarLista(cbFiltro);
+        }
+
+        private void rbPlastic_CheckedChanged(object sender, EventArgs e)
+        {
+            filtrarLista(cbFiltro);
+        }
+
+        private void rbTodas_CheckedChanged(object sender, EventArgs e)
+        {
+            filtrarLista(cbFiltro);
+        }
+
+        private void rb40_CheckedChanged(object sender, EventArgs e)
+        {
+            filtrarLista(cbFiltro);
+        }
+
+        private void rb50_CheckedChanged(object sender, EventArgs e)
+        {
+            filtrarLista(cbFiltro);
+        }
+
+        private void rbTodasCantidad_CheckedChanged(object sender, EventArgs e)
+        {
+            filtrarLista(cbFiltro);
         }
     }
 }

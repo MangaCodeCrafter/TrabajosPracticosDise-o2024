@@ -153,6 +153,7 @@
             this.chCartasEspeciales.TabIndex = 8;
             this.chCartasEspeciales.Text = "Cartas especiales";
             this.chCartasEspeciales.UseVisualStyleBackColor = true;
+            this.chCartasEspeciales.CheckedChanged += new System.EventHandler(this.chCartasEspeciales_CheckedChanged);
             // 
             // gbAcabado
             // 
@@ -178,6 +179,7 @@
             this.rbTodas.TabStop = true;
             this.rbTodas.Text = "Todo";
             this.rbTodas.UseVisualStyleBackColor = true;
+            this.rbTodas.CheckedChanged += new System.EventHandler(this.rbTodas_CheckedChanged);
             // 
             // rbPlastic
             // 
@@ -188,6 +190,7 @@
             this.rbPlastic.TabIndex = 2;
             this.rbPlastic.Text = "Plastic Coating";
             this.rbPlastic.UseVisualStyleBackColor = true;
+            this.rbPlastic.CheckedChanged += new System.EventHandler(this.rbPlastic_CheckedChanged);
             // 
             // rbSmooth
             // 
@@ -198,6 +201,7 @@
             this.rbSmooth.TabIndex = 1;
             this.rbSmooth.Text = "Smooth Finish";
             this.rbSmooth.UseVisualStyleBackColor = true;
+            this.rbSmooth.CheckedChanged += new System.EventHandler(this.rbSmooth_CheckedChanged);
             // 
             // rbAirCushion
             // 
@@ -208,6 +212,7 @@
             this.rbAirCushion.TabIndex = 0;
             this.rbAirCushion.Text = "Air-Cushion Finish";
             this.rbAirCushion.UseVisualStyleBackColor = true;
+            this.rbAirCushion.CheckedChanged += new System.EventHandler(this.rbAirCushion_CheckedChanged);
             // 
             // gbCantidad
             // 
@@ -220,10 +225,12 @@
             this.gbCantidad.TabIndex = 10;
             this.gbCantidad.TabStop = false;
             this.gbCantidad.Text = "Cantidad";
+            this.gbCantidad.Visible = false;
             // 
             // rbTodasCantidad
             // 
             this.rbTodasCantidad.AutoSize = true;
+            this.rbTodasCantidad.Checked = true;
             this.rbTodasCantidad.Location = new System.Drawing.Point(6, 73);
             this.rbTodasCantidad.Name = "rbTodasCantidad";
             this.rbTodasCantidad.Size = new System.Drawing.Size(61, 20);
@@ -231,6 +238,7 @@
             this.rbTodasCantidad.TabStop = true;
             this.rbTodasCantidad.Text = "Todo";
             this.rbTodasCantidad.UseVisualStyleBackColor = true;
+            this.rbTodasCantidad.CheckedChanged += new System.EventHandler(this.rbTodasCantidad_CheckedChanged);
             // 
             // rb50
             // 
@@ -242,18 +250,18 @@
             this.rb50.TabStop = true;
             this.rb50.Text = "50 Cartas";
             this.rb50.UseVisualStyleBackColor = true;
+            this.rb50.CheckedChanged += new System.EventHandler(this.rb50_CheckedChanged);
             // 
             // rb40
             // 
             this.rb40.AutoSize = true;
-            this.rb40.Checked = true;
             this.rb40.Location = new System.Drawing.Point(6, 21);
             this.rb40.Name = "rb40";
             this.rb40.Size = new System.Drawing.Size(84, 20);
             this.rb40.TabIndex = 0;
-            this.rb40.TabStop = true;
             this.rb40.Text = "40 Cartas";
             this.rb40.UseVisualStyleBackColor = true;
+            this.rb40.CheckedChanged += new System.EventHandler(this.rb40_CheckedChanged);
             // 
             // pFiltro
             // 
