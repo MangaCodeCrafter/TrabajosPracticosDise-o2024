@@ -29,17 +29,29 @@ namespace Recupetorio_Gutierrez_Manuel
         #region consultas
         public override string ToString()
         {
-            throw new NotImplementedException();
+            return $"Mazo Español {marca} de {cantidad} cartas.";
         }
 
         public override bool Equals(object obj)
         {
-            throw new NotImplementedException();
+            bool igual = false;
+
+            if (obj == null)
+            {
+                igual = (this == null);
+            }
+            else if (this.GetType() == obj.GetType())
+            {
+                Español e = (Español)obj;
+                igual = (marca == e.Marca && especial == e.Especial && fechaLote == e.FechaLote && estructura.Equals(e.estructura) && cantidad == e.Cantidad);
+            }
+
+            return igual;
         }
 
         public override int GetHashCode()
         {
-            throw new NotImplementedException();
+            return marca.Length * fechaLote.Day * fechaLote.Month * fechaLote.Year * cantidad;
         }
         #endregion
     }

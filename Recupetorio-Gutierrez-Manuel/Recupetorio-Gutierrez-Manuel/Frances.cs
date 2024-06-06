@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -30,15 +31,24 @@ namespace Recupetorio_Gutierrez_Manuel
         #region consultas
         public override string ToString()
         {
-            throw new NotImplementedException();
+            return $"Mazo frances {marca} {modelo}";
         }
         public override bool Equals(object obj)
         {
-            throw new NotImplementedException();
+            bool igual = false;
+
+            if (obj == null) igual = (this == null);
+            else if (obj.GetType() == this.GetType())
+            {
+                Frances f = (Frances)obj;
+                igual = (marca == f.Marca && especial == f.Especial && fechaLote == f.FechaLote && estructura.Equals(f.estructura) && modelo == f.Modelo);
+            }
+
+            return igual;
         }
         public override int GetHashCode()
         {
-            throw new NotImplementedException();
+            return marca.Length * fechaLote.Day * fechaLote.Month * fechaLote.Year * cantidad * modelo.Length;
         }
         #endregion
     }

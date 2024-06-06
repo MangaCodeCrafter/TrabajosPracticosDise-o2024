@@ -38,10 +38,12 @@
             this.cbFiltro = new System.Windows.Forms.ComboBox();
             this.chCartasEspeciales = new System.Windows.Forms.CheckBox();
             this.gbAcabado = new System.Windows.Forms.GroupBox();
+            this.rbTodas = new System.Windows.Forms.RadioButton();
             this.rbPlastic = new System.Windows.Forms.RadioButton();
             this.rbSmooth = new System.Windows.Forms.RadioButton();
             this.rbAirCushion = new System.Windows.Forms.RadioButton();
             this.gbCantidad = new System.Windows.Forms.GroupBox();
+            this.rbTodasCantidad = new System.Windows.Forms.RadioButton();
             this.rb50 = new System.Windows.Forms.RadioButton();
             this.rb40 = new System.Windows.Forms.RadioButton();
             this.pFiltro = new System.Windows.Forms.Panel();
@@ -74,6 +76,7 @@
             this.bModificar.TabIndex = 1;
             this.bModificar.Text = "Modificar";
             this.bModificar.UseVisualStyleBackColor = true;
+            this.bModificar.Click += new System.EventHandler(this.bModificar_Click);
             // 
             // bEliminar
             // 
@@ -83,6 +86,7 @@
             this.bEliminar.TabIndex = 2;
             this.bEliminar.Text = "Eliminar";
             this.bEliminar.UseVisualStyleBackColor = true;
+            this.bEliminar.Click += new System.EventHandler(this.bEliminar_Click);
             // 
             // bAcercaDe
             // 
@@ -92,6 +96,7 @@
             this.bAcercaDe.TabIndex = 3;
             this.bAcercaDe.Text = "Sobre Nosotros";
             this.bAcercaDe.UseVisualStyleBackColor = true;
+            this.bAcercaDe.Click += new System.EventHandler(this.bAcercaDe_Click);
             // 
             // bSalir
             // 
@@ -101,6 +106,7 @@
             this.bSalir.TabIndex = 4;
             this.bSalir.Text = "Salir";
             this.bSalir.UseVisualStyleBackColor = true;
+            this.bSalir.Click += new System.EventHandler(this.bSalir_Click);
             // 
             // pBotones
             // 
@@ -110,7 +116,7 @@
             this.pBotones.Controls.Add(this.bModificar);
             this.pBotones.Controls.Add(this.bAcercaDe);
             this.pBotones.Controls.Add(this.bEliminar);
-            this.pBotones.Location = new System.Drawing.Point(475, 30);
+            this.pBotones.Location = new System.Drawing.Point(595, 30);
             this.pBotones.Name = "pBotones";
             this.pBotones.Size = new System.Drawing.Size(116, 356);
             this.pBotones.TabIndex = 5;
@@ -121,7 +127,7 @@
             this.lbMazos.ItemHeight = 16;
             this.lbMazos.Location = new System.Drawing.Point(259, 30);
             this.lbMazos.Name = "lbMazos";
-            this.lbMazos.Size = new System.Drawing.Size(191, 356);
+            this.lbMazos.Size = new System.Drawing.Size(315, 356);
             this.lbMazos.TabIndex = 6;
             // 
             // cbFiltro
@@ -136,6 +142,7 @@
             this.cbFiltro.Size = new System.Drawing.Size(191, 24);
             this.cbFiltro.TabIndex = 7;
             this.cbFiltro.Text = "TODOS";
+            this.cbFiltro.SelectedIndexChanged += new System.EventHandler(this.cbFiltro_SelectedIndexChanged);
             // 
             // chCartasEspeciales
             // 
@@ -149,15 +156,28 @@
             // 
             // gbAcabado
             // 
+            this.gbAcabado.Controls.Add(this.rbTodas);
             this.gbAcabado.Controls.Add(this.rbPlastic);
             this.gbAcabado.Controls.Add(this.rbSmooth);
             this.gbAcabado.Controls.Add(this.rbAirCushion);
             this.gbAcabado.Location = new System.Drawing.Point(9, 42);
             this.gbAcabado.Name = "gbAcabado";
-            this.gbAcabado.Size = new System.Drawing.Size(191, 110);
+            this.gbAcabado.Size = new System.Drawing.Size(191, 132);
             this.gbAcabado.TabIndex = 9;
             this.gbAcabado.TabStop = false;
             this.gbAcabado.Text = "Acabado";
+            // 
+            // rbTodas
+            // 
+            this.rbTodas.AutoSize = true;
+            this.rbTodas.Checked = true;
+            this.rbTodas.Location = new System.Drawing.Point(6, 101);
+            this.rbTodas.Name = "rbTodas";
+            this.rbTodas.Size = new System.Drawing.Size(61, 20);
+            this.rbTodas.TabIndex = 3;
+            this.rbTodas.TabStop = true;
+            this.rbTodas.Text = "Todo";
+            this.rbTodas.UseVisualStyleBackColor = true;
             // 
             // rbPlastic
             // 
@@ -166,7 +186,6 @@
             this.rbPlastic.Name = "rbPlastic";
             this.rbPlastic.Size = new System.Drawing.Size(117, 20);
             this.rbPlastic.TabIndex = 2;
-            this.rbPlastic.TabStop = true;
             this.rbPlastic.Text = "Plastic Coating";
             this.rbPlastic.UseVisualStyleBackColor = true;
             // 
@@ -177,32 +196,41 @@
             this.rbSmooth.Name = "rbSmooth";
             this.rbSmooth.Size = new System.Drawing.Size(112, 20);
             this.rbSmooth.TabIndex = 1;
-            this.rbSmooth.TabStop = true;
             this.rbSmooth.Text = "Smooth Finish";
             this.rbSmooth.UseVisualStyleBackColor = true;
             // 
             // rbAirCushion
             // 
             this.rbAirCushion.AutoSize = true;
-            this.rbAirCushion.Checked = true;
             this.rbAirCushion.Location = new System.Drawing.Point(6, 23);
             this.rbAirCushion.Name = "rbAirCushion";
             this.rbAirCushion.Size = new System.Drawing.Size(134, 20);
             this.rbAirCushion.TabIndex = 0;
-            this.rbAirCushion.TabStop = true;
             this.rbAirCushion.Text = "Air-Cushion Finish";
             this.rbAirCushion.UseVisualStyleBackColor = true;
             // 
             // gbCantidad
             // 
+            this.gbCantidad.Controls.Add(this.rbTodasCantidad);
             this.gbCantidad.Controls.Add(this.rb50);
             this.gbCantidad.Controls.Add(this.rb40);
-            this.gbCantidad.Location = new System.Drawing.Point(9, 158);
+            this.gbCantidad.Location = new System.Drawing.Point(9, 171);
             this.gbCantidad.Name = "gbCantidad";
-            this.gbCantidad.Size = new System.Drawing.Size(191, 79);
+            this.gbCantidad.Size = new System.Drawing.Size(191, 100);
             this.gbCantidad.TabIndex = 10;
             this.gbCantidad.TabStop = false;
             this.gbCantidad.Text = "Cantidad";
+            // 
+            // rbTodasCantidad
+            // 
+            this.rbTodasCantidad.AutoSize = true;
+            this.rbTodasCantidad.Location = new System.Drawing.Point(6, 73);
+            this.rbTodasCantidad.Name = "rbTodasCantidad";
+            this.rbTodasCantidad.Size = new System.Drawing.Size(61, 20);
+            this.rbTodasCantidad.TabIndex = 2;
+            this.rbTodasCantidad.TabStop = true;
+            this.rbTodasCantidad.Text = "Todo";
+            this.rbTodasCantidad.UseVisualStyleBackColor = true;
             // 
             // rb50
             // 
@@ -244,9 +272,9 @@
             this.pEspecífico.Controls.Add(this.chCartasEspeciales);
             this.pEspecífico.Controls.Add(this.gbCantidad);
             this.pEspecífico.Enabled = false;
-            this.pEspecífico.Location = new System.Drawing.Point(3, 89);
+            this.pEspecífico.Location = new System.Drawing.Point(3, 79);
             this.pEspecífico.Name = "pEspecífico";
-            this.pEspecífico.Size = new System.Drawing.Size(220, 252);
+            this.pEspecífico.Size = new System.Drawing.Size(220, 274);
             this.pEspecífico.TabIndex = 12;
             // 
             // chPersonalizado
@@ -258,6 +286,7 @@
             this.chPersonalizado.TabIndex = 11;
             this.chPersonalizado.Text = "Filtrado específico";
             this.chPersonalizado.UseVisualStyleBackColor = true;
+            this.chPersonalizado.CheckedChanged += new System.EventHandler(this.chPersonalizado_CheckedChanged);
             // 
             // lFiltro
             // 
@@ -282,7 +311,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(615, 407);
+            this.ClientSize = new System.Drawing.Size(742, 407);
             this.Controls.Add(this.lMazos);
             this.Controls.Add(this.lFiltro);
             this.Controls.Add(this.pFiltro);
@@ -327,6 +356,8 @@
         private System.Windows.Forms.Label lMazos;
         private System.Windows.Forms.Panel pEspecífico;
         private System.Windows.Forms.CheckBox chPersonalizado;
+        private System.Windows.Forms.RadioButton rbTodas;
+        private System.Windows.Forms.RadioButton rbTodasCantidad;
     }
 }
 

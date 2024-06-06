@@ -30,7 +30,7 @@ namespace Recupetorio_Gutierrez_Manuel
         public string Material
         {
             get { return material; }
-            set { this.material = (value == "Papel" || value == "Plastico") ? value : "0"; }
+            set { this.material = (value == "Papel" || value == "Plastico") ? value : ""; }
         }
         public string Acabado 
         {
@@ -38,5 +38,22 @@ namespace Recupetorio_Gutierrez_Manuel
             set { this.acabado = (value == "Air Cushion" || value == "Smooth" || value == "Plastic") ? value : ""; }
         }
         #endregion
+
+        public override bool Equals(object obj)
+        {
+            bool igual = false;
+
+            if (obj == null)
+            {
+                igual = (this == null);
+            }
+            else if (obj.GetType() == this.GetType())
+            {
+                 Estructura e = (Estructura)obj;
+                 igual = (acabado == e.Acabado && material == e.Material);
+            }
+
+            return igual;
+        }
     }
 }
