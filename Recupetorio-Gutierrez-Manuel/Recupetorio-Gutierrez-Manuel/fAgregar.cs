@@ -13,17 +13,18 @@ namespace Recupetorio_Gutierrez_Manuel
     public partial class fAgregar : Form
     {
         private Coleccion coleccion;
-        private Mazo modificar;
+        private int codigoObj = 0;
+
         public fAgregar(Coleccion c)
         {
             InitializeComponent();
             coleccion = c;
         }        
-        public fAgregar(Coleccion c, Mazo m)
+        public fAgregar(Coleccion c, int codigo)
         {
             InitializeComponent();
             coleccion = c;
-            modificar = m;
+            codigoObj = codigo;
             llenarCampos();
         }
         private void bGuardar_Click(object sender, EventArgs e)
@@ -43,21 +44,14 @@ namespace Recupetorio_Gutierrez_Manuel
                 Estructura estructura;
 
                 if (rbAirCushion.Checked) estructura = new Estructura("Papel", "Air Cushion");
-                if (rbSmooth.Checked) estructura = new Estructura("Papel", "Smooth");
+                else if (rbSmooth.Checked) estructura = new Estructura("Papel", "Smooth");
                 else estructura = new Estructura("Plastico", "Plastic");
 
-                if (rbFrances.Checked)
-                {
-                    Frances mazoFrances = new Frances(tMarca.Text, chEspeciales.Checked, dtLote.Value, estructura, tModelo.Text);
-                    coleccion.Agregar(mazoFrances);
-                }
-                else
-                {
-                    int cantidad = (rb40.Checked) ? 40 : 50;
-                    Español mazoEspañol = new Español(tMarca.Text, chEspeciales.Checked, dtLote.Value, estructura, cantidad);
-                    coleccion.Agregar(mazoEspañol);
-                }
+                int cantidad = (rb40.Checked) ? 40 : 50;
+                Type tipo = (rbFrances.Checked) ? typeof(Frances) : typeof(Español);
 
+                coleccion.insertarDatos(codigoObj, tipo, tMarca.Text, tModelo.Text, estructura, dtLote.Value, chEspeciales.Checked, cantidad);
+                
                 DialogResult = DialogResult.OK;
 
                 this.Close();
@@ -86,26 +80,38 @@ namespace Recupetorio_Gutierrez_Manuel
 
         private void llenarCampos()
         {
-            tMarca.Text = modificar.Marca;
-            dtLote.Value = modificar.FechaLote;
+            obtenerDatos(out string marca, out string modelo, out string acabado, out DateTime fechaLote, out bool especiales, out int cantidad);
 
-            if (modificar.Especial) chEspeciales.Checked = true;
+            tMarca.Text = marca;
+            dtLote.Value = fechaLote;
 
-            if (modificar.Estructura.Acabado == "Air Cushion") rbAirCushion.Checked = true;
-            else if (modificar.Estructura.Acabado == "Smooth") rbSmooth.Checked = true;
+            if (especiales) chEspeciales.Checked = true;
+
+            if (acabado == "Air Cushion") rbAirCushion.Checked = true;
+            else if (acabado == "Smooth") rbSmooth.Checked = true;
             else rbPlastic.Checked = true;
 
-            if (modificar is Frances f)
-            {
-                rbFrances.Checked = true;
-                tModelo.Text = f.Modelo;
-            }
-            else if (modificar is Español e)
-            {
-                rbEspañol.Checked = true;
-                if (e.Cantidad == 40) rb40.Checked = true;
-                else rb50.Checked = true;
-            }
+            tModelo.Text = modelo;
+
+            if(cantidad == 40) rb40.Checked = true;
+            else rb50.Checked = true;
+
+            if (cantidad == 0) rbFrances.Checked = true;
+            else rbEspañol.Checked = true;
         }
+
+        private void obtenerDatos(out string marca, out string modelo, out string acabado, out DateTime fechaLote, out bool especiales, out int cantidad )
+        {
+            Mazo mazo = coleccion.Buscar(codigoObj);
+
+            marca = mazo.Marca;
+            fechaLote = mazo.FechaLote;
+            especiales = mazo.Especial;
+            acabado = mazo.Acabado;
+            modelo = (mazo is Frances f) ? f.Modelo : "";
+            cantidad = (mazo is Español e) ? e.Cantidad : 0;
+        }
+
+
     }
 }

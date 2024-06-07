@@ -8,13 +8,15 @@ namespace Recupetorio_Gutierrez_Manuel
 {
     public abstract class Mazo
     {
+        protected int codigo;
         protected string marca;
         protected bool especial;
         protected DateTime fechaLote;
         protected Estructura estructura;
 
-        protected Mazo(string marca, bool especial, DateTime fechaLote, Estructura estructura)
+        protected Mazo(int codigo, string marca, bool especial, DateTime fechaLote, Estructura estructura)
         {
+            this.codigo = (codigo > 0) ? codigo : 0;
             this.marca = (marca != null) ? marca : "";
             this.especial = especial;
             this.fechaLote = (fechaLote != null) ? fechaLote : DateTime.Now;
@@ -22,7 +24,11 @@ namespace Recupetorio_Gutierrez_Manuel
         }
 
         #region property
-
+        public int Codigo
+        {
+            get { return codigo; }
+            set { codigo = (value > 0) ? value : 0; }
+        }
         public string Marca
         {
             get { return this.marca; }
@@ -42,6 +48,11 @@ namespace Recupetorio_Gutierrez_Manuel
         {
             get { return this.estructura; }
             set { this.estructura = (value != null) ? value : new Estructura(); }
+        }
+        public string Acabado
+        {
+            get { return this.Estructura.Acabado; }
+            set { this.Estructura.Acabado = value; }
         }
 
         #endregion

@@ -14,6 +14,7 @@ namespace Recupetorio_Gutierrez_Manuel
     {
         Coleccion coleccion;
         List<Mazo> coleccionFiltrada;
+
         public Form1()
         {
             InitializeComponent();
@@ -43,13 +44,14 @@ namespace Recupetorio_Gutierrez_Manuel
             else
             {
                 Mazo modificar = coleccionFiltrada[lbMazos.SelectedIndex];
+                int codigo = modificar.Codigo;
 
-                fAgregar fAgregar = new fAgregar(coleccion, modificar);
+                fAgregar fAgregar = new fAgregar(coleccion, codigo);
                 fAgregar.ShowDialog();
 
                 if (fAgregar.DialogResult == DialogResult.OK)
                 {
-                    coleccion.Eliminar(modificar);
+                    //coleccion.Eliminar(modificar);
                     filtrarLista(cbFiltro);
                     MessageBox.Show("Se modificó correctamente.", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -64,7 +66,7 @@ namespace Recupetorio_Gutierrez_Manuel
             }
             else
             {
-                coleccion.Eliminar(coleccionFiltrada[lbMazos.SelectedIndex]);
+                coleccion.Eliminar(coleccionFiltrada[lbMazos.SelectedIndex].Codigo);
                 filtrarLista(cbFiltro);
             }
         }
@@ -127,18 +129,18 @@ namespace Recupetorio_Gutierrez_Manuel
 
         private void test()
         {
-            coleccion.Agregar(new Frances("Bycicle", false, DateTime.Now, new Estructura("Papel", "Air Cushion"), "rojo"));            
-            coleccion.Agregar(new Frances("Bycicle", true, DateTime.Now, new Estructura("Papel", "Air Cushion"), "blanco"));            
-            coleccion.Agregar(new Frances("Bycicle", false, DateTime.Now, new Estructura("Papel", "Air Cushion"), "azul"));            
-            coleccion.Agregar(new Frances("Aviator", false, DateTime.Now, new Estructura("Papel", "Smooth"), "rojo"));            
-            coleccion.Agregar(new Frances("Aviator", true, DateTime.Now, new Estructura("Papel", "Smooth"), "blanco"));            
-            coleccion.Agregar(new Frances("Aviator", false, DateTime.Now, new Estructura("Papel", "Smooth"), "azul"));            
-            coleccion.Agregar(new Frances("Bycicle p", false, DateTime.Now, new Estructura("Papel", "Plastic"), "rojo"));            
-            coleccion.Agregar(new Frances("Bycicle p", true, DateTime.Now, new Estructura("Papel", "Plastic"), "blanco"));            
-            coleccion.Agregar(new Frances("Bycicle p", false, DateTime.Now, new Estructura("Papel", "Plastic"), "azul"));
-            coleccion.Agregar(new Español("Casino", false, DateTime.Now, new Estructura("Papel", "Air Cushion"), 40));            
-            coleccion.Agregar(new Español("Casino", true, DateTime.Now, new Estructura("Papel", "Air Cushion"), 50));            
-            coleccion.Agregar(new Español("Casino second", true, DateTime.Now, new Estructura("Papel", "Smooth"), 40));
+        //    coleccion.Agregar(new Frances(5, "Bycicle", false, DateTime.Now, new Estructura("Papel", "Air Cushion"), "rojo"));            
+        //    coleccion.Agregar(new Frances(2, "Bycicle", true, DateTime.Now, new Estructura("Papel", "Air Cushion"), "blanco"));            
+        //    coleccion.Agregar(new Frances("Bycicle", false, DateTime.Now, new Estructura("Papel", "Air Cushion"), "azul"));            
+        //    coleccion.Agregar(new Frances("Aviator", false, DateTime.Now, new Estructura("Papel", "Smooth"), "rojo"));            
+        //    coleccion.Agregar(new Frances("Aviator", true, DateTime.Now, new Estructura("Papel", "Smooth"), "blanco"));            
+        //    coleccion.Agregar(new Frances("Aviator", false, DateTime.Now, new Estructura("Papel", "Smooth"), "azul"));            
+        //    coleccion.Agregar(new Frances("Bycicle p", false, DateTime.Now, new Estructura("Papel", "Plastic"), "rojo"));            
+        //    coleccion.Agregar(new Frances("Bycicle p", true, DateTime.Now, new Estructura("Papel", "Plastic"), "blanco"));            
+        //    coleccion.Agregar(new Frances("Bycicle p", false, DateTime.Now, new Estructura("Papel", "Plastic"), "azul"));
+        //    coleccion.Agregar(new Español(34, "Casino", false, DateTime.Now, new Estructura("Papel", "Air Cushion"), 40));            
+        //    coleccion.Agregar(new Español("Casino", true, DateTime.Now, new Estructura("Papel", "Air Cushion"), 50));            
+        //    coleccion.Agregar(new Español("Casino second", true, DateTime.Now, new Estructura("Papel", "Smooth"), 40));
 
             filtrarLista(cbFiltro);
         }

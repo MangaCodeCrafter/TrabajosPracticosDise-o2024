@@ -293,7 +293,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "fAgregar";
-            this.Text = "Form2";
+            this.Text = "Agregar / Modificar";
             this.gbMazo.ResumeLayout(false);
             this.gbMazo.PerformLayout();
             this.gbAcabado.ResumeLayout(false);

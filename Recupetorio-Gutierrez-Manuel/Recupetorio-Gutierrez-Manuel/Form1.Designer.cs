@@ -326,7 +326,7 @@
             this.Controls.Add(this.lbMazos);
             this.Controls.Add(this.pBotones);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Cartas de juego!";
             this.pBotones.ResumeLayout(false);
             this.gbAcabado.ResumeLayout(false);
             this.gbAcabado.PerformLayout();

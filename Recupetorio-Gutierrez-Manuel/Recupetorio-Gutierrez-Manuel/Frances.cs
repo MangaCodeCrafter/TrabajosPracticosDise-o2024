@@ -14,7 +14,7 @@ namespace Recupetorio_Gutierrez_Manuel
         private string modelo;
         #endregion
 
-        public Frances(string marca, bool especial, DateTime fechaLote, Estructura estructura, string modelo) : base (marca, especial, fechaLote, estructura)
+        public Frances(int codigo, string marca, bool especial, DateTime fechaLote, Estructura estructura, string modelo) : base (codigo, marca, especial, fechaLote, estructura)
         {
             this.modelo = (modelo != null) ? modelo : "";
         }
@@ -41,7 +41,7 @@ namespace Recupetorio_Gutierrez_Manuel
             else if (obj.GetType() == this.GetType())
             {
                 Frances f = (Frances)obj;
-                igual = (marca == f.Marca && especial == f.Especial && fechaLote == f.FechaLote && estructura.Equals(f.estructura) && modelo == f.Modelo);
+                igual = (codigo == f.codigo && marca == f.Marca && especial == f.Especial && fechaLote == f.FechaLote && estructura.Equals(f.estructura) && modelo == f.Modelo);
             }
 
             return igual;

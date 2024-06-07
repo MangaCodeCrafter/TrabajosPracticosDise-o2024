@@ -12,7 +12,7 @@ namespace Recupetorio_Gutierrez_Manuel
         private int cantidad;
         #endregion
 
-        public Español(string marca, bool especial, DateTime fechaLote, Estructura estructura, int cantidad) : base(marca, especial, fechaLote, estructura)
+        public Español(int codigo, string marca, bool especial, DateTime fechaLote, Estructura estructura, int cantidad) : base(codigo, marca, especial, fechaLote, estructura)
         {
             this.cantidad = (cantidad == 40 || cantidad == 50) ? cantidad : 40;
         }
@@ -43,7 +43,7 @@ namespace Recupetorio_Gutierrez_Manuel
             else if (this.GetType() == obj.GetType())
             {
                 Español e = (Español)obj;
-                igual = (marca == e.Marca && especial == e.Especial && fechaLote == e.FechaLote && estructura.Equals(e.estructura) && cantidad == e.Cantidad);
+                igual = (codigo == e.codigo && marca == e.Marca && especial == e.Especial && fechaLote == e.FechaLote && estructura.Equals(e.estructura) && cantidad == e.Cantidad);
             }
 
             return igual;

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,14 +16,40 @@ namespace Recupetorio_Gutierrez_Manuel
             lista = new List<Mazo>();
         }
 
-        public void Agregar(Mazo m)
+        public void insertarDatos(int codigo, Type tipo, string marca, string modelo, Estructura estructura, DateTime fechaLote, bool especiales, int cantidad)
         {
-            lista.Add(m);
+            if(codigo > 0 && lista.Count != 0)
+            {
+                Mazo mazo = lista.Find(m => m.Codigo == codigo);
+
+                mazo.Marca = marca;
+                mazo.Estructura = estructura;
+                mazo.FechaLote = fechaLote;
+                mazo.Especial = especiales;
+
+                if (mazo is Frances f) f.Modelo = modelo;
+                if (mazo is Español e) e.Cantidad = cantidad;
+            }
+            else
+            {
+                codigo = lista.Count;
+
+                if(tipo == typeof(Frances))
+                {
+                    Frances f = new Frances(codigo, marca, especiales, fechaLote, estructura, modelo);
+                    lista.Add(f);
+                }
+                else
+                {
+                    Español e = new Español(codigo, marca, especiales, fechaLote, estructura, cantidad);
+                    lista.Add(e);
+                }
+            }
         }
 
-        public void Eliminar(Mazo m)
+        public void Eliminar(int codigo)
         {
-            lista.Remove(m);
+            lista.Remove(lista.Find(m => m.Codigo == codigo));
         }
 
         public List<Mazo> Bucar()
@@ -61,6 +88,10 @@ namespace Recupetorio_Gutierrez_Manuel
         public List<Mazo> Buscar(int cantidad, string acabado, bool especial)
         {
             return (especial == true) ? lista.FindAll(m => m is Español es && es.Cantidad == cantidad && m.Especial == especial && m.Estructura.Acabado == acabado) : lista.FindAll(m => m is Español es && es.Cantidad == cantidad && m.Estructura.Acabado == acabado);
+        }
+        public Mazo Buscar(int codigo)
+        {
+            return lista.Find(m => m.Codigo == codigo);
         }
     }
 }
